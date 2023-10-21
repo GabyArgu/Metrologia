@@ -1,0 +1,12 @@
+C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\Metrologia.exe.config
+C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\Metrologia.exe
+C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\Metrologia.pdb
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Form1.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Properties.Resources.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\CustomControls.RJControls.RJTextBox.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.GenerateResource.cache
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.exe
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.pdb
