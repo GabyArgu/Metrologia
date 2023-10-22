@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMaximi = new System.Windows.Forms.PictureBox();
@@ -114,7 +115,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImage = global::Metrologia.Properties.Resources.www;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.ForeColor = System.Drawing.Color.Coral;
             this.panel2.Location = new System.Drawing.Point(160, 324);
@@ -125,7 +126,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BackgroundImage = global::Metrologia.Properties.Resources.contra;
+            this.panel3.BackgroundImage = global::Metrologia.Properties.Resources.candado;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.ForeColor = System.Drawing.Color.Coral;
             this.panel3.Location = new System.Drawing.Point(160, 412);
@@ -135,37 +136,47 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Baloo", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(231, 139);
+            this.label1.Font = new System.Drawing.Font("Baloo", 52.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(232, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 126);
+            this.label1.Size = new System.Drawing.Size(278, 137);
             this.label1.TabIndex = 7;
             this.label1.Text = "Login";
             // 
             // btnIngresar
             // 
+            this.btnIngresar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(130)))));
             this.btnIngresar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(130)))));
             this.btnIngresar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnIngresar.BorderRadius = 8;
             this.btnIngresar.BorderSize = 0;
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.FlatAppearance.BorderSize = 0;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Baloo", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Font = new System.Drawing.Font("Baloo", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.Black;
             this.btnIngresar.Location = new System.Drawing.Point(160, 536);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnIngresar.MaximumSize = new System.Drawing.Size(475, 68);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(383, 54);
+            this.btnIngresar.Size = new System.Drawing.Size(402, 62);
             this.btnIngresar.TabIndex = 9;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.TextColor = System.Drawing.Color.Black;
             this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // txtContra
             // 
+            this.txtContra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtContra.BorderColor = System.Drawing.Color.Transparent;
             this.txtContra.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -175,19 +186,22 @@
             this.txtContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtContra.Location = new System.Drawing.Point(207, 414);
             this.txtContra.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContra.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtContra.Multiline = false;
             this.txtContra.Name = "txtContra";
             this.txtContra.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtContra.PasswordChar = false;
             this.txtContra.PlaceholderColor = System.Drawing.Color.Gray;
             this.txtContra.PlaceholderText = "  Digite su contraseña";
-            this.txtContra.Size = new System.Drawing.Size(336, 57);
+            this.txtContra.Size = new System.Drawing.Size(355, 57);
             this.txtContra.TabIndex = 6;
             this.txtContra.Texts = "";
             this.txtContra.UnderlinedStyle = false;
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtUsuario.BorderColor = System.Drawing.Color.Transparent;
             this.txtUsuario.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -197,13 +211,14 @@
             this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUsuario.Location = new System.Drawing.Point(207, 326);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtUsuario.Multiline = false;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtUsuario.PasswordChar = false;
             this.txtUsuario.PlaceholderColor = System.Drawing.Color.Gray;
             this.txtUsuario.PlaceholderText = "  Digite su usuario";
-            this.txtUsuario.Size = new System.Drawing.Size(336, 57);
+            this.txtUsuario.Size = new System.Drawing.Size(355, 57);
             this.txtUsuario.TabIndex = 4;
             this.txtUsuario.Texts = "";
             this.txtUsuario.UnderlinedStyle = false;
@@ -224,10 +239,11 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1285, 744);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximi)).EndInit();
@@ -238,6 +254,8 @@
 
         }
 
+
+        
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace Metrologia
@@ -14,8 +14,6 @@ namespace Metrologia
             InitializeComponent();
 
         }
-
-
 
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -37,5 +35,22 @@ namespace Metrologia
         {
             this.WindowState = FormWindowState.Normal;
         }
+
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            
+
+            Dashboard form2 = new Dashboard();
+
+            // Mostrar el formulario
+            form2.Show();
+
+            // Cerrar el formulario actual
+            this.Hide();
+
+
+        }
+
     }
 }
