@@ -28,61 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMaximi = new System.Windows.Forms.PictureBox();
             this.btnMin = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.fondo = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tbcCruds = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnBuscar = new System.Windows.Forms.Panel();
+            this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnEditar = new System.Windows.Forms.PictureBox();
+            this.btnEliminar = new System.Windows.Forms.PictureBox();
+            this.btnAgregar = new System.Windows.Forms.PictureBox();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
-            this.customPanel1 = new Metrologia.CustomPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUsuario = new System.Windows.Forms.PictureBox();
-            this.customPanel2 = new Metrologia.CustomPanel();
-            this.btnExtras = new System.Windows.Forms.PictureBox();
-            this.btnEquipos = new System.Windows.Forms.PictureBox();
-            this.btnEmpresas = new System.Windows.Forms.PictureBox();
-            this.btnCitas = new System.Windows.Forms.PictureBox();
-            this.btnEmpleados = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnEmpleados = new System.Windows.Forms.PictureBox();
+            this.btnCitas = new System.Windows.Forms.PictureBox();
+            this.btnEmpresas = new System.Windows.Forms.PictureBox();
+            this.btnEquipos = new System.Windows.Forms.PictureBox();
+            this.btnExtras = new System.Windows.Forms.PictureBox();
+            this.controlDash = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).BeginInit();
             this.tbcCruds.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
-            this.customPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUsuario)).BeginInit();
-            this.customPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExtras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEquipos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEmpresas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCitas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEmpleados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEmpresas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEquipos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExtras)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -136,14 +138,6 @@
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(184)))), ((int)(((byte)(26)))));
-            this.panel2.Location = new System.Drawing.Point(168, 173);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(29, 502);
-            this.panel2.TabIndex = 5;
-            // 
             // fondo
             // 
             this.fondo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -152,19 +146,11 @@
             this.fondo.BackColor = System.Drawing.Color.Transparent;
             this.fondo.BackgroundImage = global::Metrologia.Properties.Resources.blanco;
             this.fondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fondo.Location = new System.Drawing.Point(91, 108);
+            this.fondo.Location = new System.Drawing.Point(92, 108);
             this.fondo.Name = "fondo";
             this.fondo.Size = new System.Drawing.Size(1102, 567);
             this.fondo.TabIndex = 6;
             this.fondo.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
-            this.panel3.Location = new System.Drawing.Point(91, 173);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1102, 24);
-            this.panel3.TabIndex = 8;
             // 
             // tbcCruds
             // 
@@ -179,21 +165,6 @@
             this.tbcCruds.SelectedIndex = 0;
             this.tbcCruds.Size = new System.Drawing.Size(989, 505);
             this.tbcCruds.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.pictureBox5);
-            this.tabPage2.Controls.Add(this.pictureBox4);
-            this.tabPage2.Controls.Add(this.pictureBox3);
-            this.tabPage2.Controls.Add(this.dgvEmpleados);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(981, 476);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -217,6 +188,125 @@
             this.pictureBox2.Size = new System.Drawing.Size(503, 335);
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnBuscar);
+            this.tabPage2.Controls.Add(this.txtBuscar);
+            this.tabPage2.Controls.Add(this.btnEditar);
+            this.tabPage2.Controls.Add(this.btnEliminar);
+            this.tabPage2.Controls.Add(this.btnAgregar);
+            this.tabPage2.Controls.Add(this.dgvEmpleados);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(981, 476);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.White;
+            this.btnBuscar.BackgroundImage = global::Metrologia.Properties.Resources.buscar;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscar.ForeColor = System.Drawing.Color.Coral;
+            this.btnBuscar.Location = new System.Drawing.Point(901, 66);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(47, 47);
+            this.btnBuscar.TabIndex = 21;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtBuscar.BorderRadius = 12;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.CustomizableEdges.BottomRight = false;
+            this.txtBuscar.CustomizableEdges.TopRight = false;
+            this.txtBuscar.DefaultText = "";
+            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscar.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscar.Font = new System.Drawing.Font("Mohave Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(206)))), ((int)(((byte)(97)))));
+            this.txtBuscar.Location = new System.Drawing.Point(571, 68);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBuscar.MaximumSize = new System.Drawing.Size(475, 57);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.PasswordChar = '\0';
+            this.txtBuscar.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtBuscar.PlaceholderText = "  Buscar Empleados";
+            this.txtBuscar.SelectedText = "";
+            this.txtBuscar.Size = new System.Drawing.Size(330, 44);
+            this.txtBuscar.TabIndex = 22;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.BackgroundImage = global::Metrologia.Properties.Resources.editar;
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.Location = new System.Drawing.Point(420, 407);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(144, 47);
+            this.btnEditar.TabIndex = 20;
+            this.btnEditar.TabStop = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BackgroundImage = global::Metrologia.Properties.Resources.eliminar;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Location = new System.Drawing.Point(684, 407);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(144, 47);
+            this.btnEliminar.TabIndex = 19;
+            this.btnEliminar.TabStop = false;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.BackgroundImage = global::Metrologia.Properties.Resources.agregarb;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.Location = new System.Drawing.Point(135, 407);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(144, 47);
+            this.btnAgregar.TabIndex = 17;
+            this.btnAgregar.TabStop = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // dgvEmpleados
+            // 
+            this.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
+            this.dgvEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleados.Location = new System.Drawing.Point(37, 123);
+            this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.RowHeadersWidth = 51;
+            this.dgvEmpleados.RowTemplate.Height = 24;
+            this.dgvEmpleados.Size = new System.Drawing.Size(911, 265);
+            this.dgvEmpleados.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Mohave SemiBold", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
+            this.label2.Location = new System.Drawing.Point(29, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 52);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Empleados";
             // 
             // tabPage3
             // 
@@ -254,51 +344,12 @@
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mohave SemiBold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
-            this.label2.Location = new System.Drawing.Point(29, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 48);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Empleados";
-            // 
-            // dgvEmpleados
-            // 
-            this.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.dgvEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleados.Location = new System.Drawing.Point(37, 123);
-            this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.RowHeadersWidth = 51;
-            this.dgvEmpleados.RowTemplate.Height = 24;
-            this.dgvEmpleados.Size = new System.Drawing.Size(911, 265);
-            this.dgvEmpleados.TabIndex = 18;
-            // 
-            // customPanel1
-            // 
-            this.customPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
-            this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
-            this.customPanel1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
-            this.customPanel1.BorderRadius = 28;
-            this.customPanel1.BorderSize = 0;
-            this.customPanel1.Controls.Add(this.label1);
-            this.customPanel1.Controls.Add(this.pictureBox1);
-            this.customPanel1.Controls.Add(this.btnUsuario);
-            this.customPanel1.Location = new System.Drawing.Point(91, 108);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(1102, 86);
-            this.customPanel1.TabIndex = 7;
-            this.customPanel1.UnderlinedStyle = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans Extrabold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(113, 25);
+            this.label1.Location = new System.Drawing.Point(109, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(512, 38);
             this.label1.TabIndex = 16;
@@ -310,7 +361,7 @@
             this.pictureBox1.BackgroundImage = global::Metrologia.Properties.Resources.icono;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 60);
             this.pictureBox1.TabIndex = 15;
@@ -322,144 +373,128 @@
             this.btnUsuario.BackgroundImage = global::Metrologia.Properties.Resources.circulo_de_usuario__1_;
             this.btnUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsuario.Location = new System.Drawing.Point(1029, 22);
+            this.btnUsuario.Location = new System.Drawing.Point(1034, 26);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(40, 40);
             this.btnUsuario.TabIndex = 14;
             this.btnUsuario.TabStop = false;
             // 
-            // customPanel2
-            // 
-            this.customPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(184)))), ((int)(((byte)(26)))));
-            this.customPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(184)))), ((int)(((byte)(26)))));
-            this.customPanel2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(184)))), ((int)(((byte)(26)))));
-            this.customPanel2.BorderRadius = 28;
-            this.customPanel2.BorderSize = 0;
-            this.customPanel2.Controls.Add(this.btnExtras);
-            this.customPanel2.Controls.Add(this.btnEquipos);
-            this.customPanel2.Controls.Add(this.btnEmpresas);
-            this.customPanel2.Controls.Add(this.btnCitas);
-            this.customPanel2.Controls.Add(this.btnEmpleados);
-            this.customPanel2.Controls.Add(this.btnHome);
-            this.customPanel2.Location = new System.Drawing.Point(91, 157);
-            this.customPanel2.Name = "customPanel2";
-            this.customPanel2.Size = new System.Drawing.Size(98, 518);
-            this.customPanel2.TabIndex = 4;
-            this.customPanel2.UnderlinedStyle = false;
-            // 
-            // btnExtras
-            // 
-            this.btnExtras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExtras.BackgroundImage = global::Metrologia.Properties.Resources.carpeta_abierta;
-            this.btnExtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExtras.Location = new System.Drawing.Point(36, 432);
-            this.btnExtras.Name = "btnExtras";
-            this.btnExtras.Size = new System.Drawing.Size(35, 35);
-            this.btnExtras.TabIndex = 14;
-            this.btnExtras.TabStop = false;
-            this.btnExtras.Click += new System.EventHandler(this.btnExtras_Click);
-            // 
-            // btnEquipos
-            // 
-            this.btnEquipos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEquipos.BackgroundImage = global::Metrologia.Properties.Resources.herramientas;
-            this.btnEquipos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEquipos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEquipos.Location = new System.Drawing.Point(36, 361);
-            this.btnEquipos.Name = "btnEquipos";
-            this.btnEquipos.Size = new System.Drawing.Size(35, 35);
-            this.btnEquipos.TabIndex = 13;
-            this.btnEquipos.TabStop = false;
-            this.btnEquipos.Click += new System.EventHandler(this.btnEquipos_Click);
-            // 
-            // btnEmpresas
-            // 
-            this.btnEmpresas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEmpresas.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
-            this.btnEmpresas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEmpresas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmpresas.Location = new System.Drawing.Point(36, 290);
-            this.btnEmpresas.Name = "btnEmpresas";
-            this.btnEmpresas.Size = new System.Drawing.Size(35, 35);
-            this.btnEmpresas.TabIndex = 12;
-            this.btnEmpresas.TabStop = false;
-            this.btnEmpresas.Click += new System.EventHandler(this.btnEmpresas_Click);
-            // 
-            // btnCitas
-            // 
-            this.btnCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCitas.BackgroundImage = global::Metrologia.Properties.Resources.calendario_reloj;
-            this.btnCitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCitas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCitas.Location = new System.Drawing.Point(36, 219);
-            this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(35, 35);
-            this.btnCitas.TabIndex = 11;
-            this.btnCitas.TabStop = false;
-            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
-            // 
-            // btnEmpleados
-            // 
-            this.btnEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEmpleados.BackgroundImage = global::Metrologia.Properties.Resources.usuario_de_archivo;
-            this.btnEmpleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmpleados.Location = new System.Drawing.Point(36, 148);
-            this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(35, 35);
-            this.btnEmpleados.TabIndex = 10;
-            this.btnEmpleados.TabStop = false;
-            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
-            // 
             // btnHome
             // 
             this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
             this.btnHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHome.BackgroundImage")));
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Location = new System.Drawing.Point(36, 77);
+            this.btnHome.Location = new System.Drawing.Point(37, 50);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(35, 35);
             this.btnHome.TabIndex = 9;
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // pictureBox3
+            // btnEmpleados
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(37, 407);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
+            this.btnEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEmpleados.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmpleados.BackgroundImage = global::Metrologia.Properties.Resources.usuario_de_archivo;
+            this.btnEmpleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpleados.Location = new System.Drawing.Point(37, 121);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(35, 35);
+            this.btnEmpleados.TabIndex = 10;
+            this.btnEmpleados.TabStop = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
-            // pictureBox4
+            // btnCitas
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Location = new System.Drawing.Point(256, 407);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
+            this.btnCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCitas.BackColor = System.Drawing.Color.Transparent;
+            this.btnCitas.BackgroundImage = global::Metrologia.Properties.Resources.calendario_reloj;
+            this.btnCitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCitas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCitas.Location = new System.Drawing.Point(37, 192);
+            this.btnCitas.Name = "btnCitas";
+            this.btnCitas.Size = new System.Drawing.Size(35, 35);
+            this.btnCitas.TabIndex = 11;
+            this.btnCitas.TabStop = false;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
-            // pictureBox5
+            // btnEmpresas
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Location = new System.Drawing.Point(518, 407);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox5.TabIndex = 20;
-            this.pictureBox5.TabStop = false;
+            this.btnEmpresas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEmpresas.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmpresas.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
+            this.btnEmpresas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEmpresas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpresas.Location = new System.Drawing.Point(37, 263);
+            this.btnEmpresas.Name = "btnEmpresas";
+            this.btnEmpresas.Size = new System.Drawing.Size(35, 35);
+            this.btnEmpresas.TabIndex = 12;
+            this.btnEmpresas.TabStop = false;
+            this.btnEmpresas.Click += new System.EventHandler(this.btnEmpresas_Click);
+            // 
+            // btnEquipos
+            // 
+            this.btnEquipos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEquipos.BackColor = System.Drawing.Color.Transparent;
+            this.btnEquipos.BackgroundImage = global::Metrologia.Properties.Resources.herramientas;
+            this.btnEquipos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEquipos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEquipos.Location = new System.Drawing.Point(37, 334);
+            this.btnEquipos.Name = "btnEquipos";
+            this.btnEquipos.Size = new System.Drawing.Size(35, 35);
+            this.btnEquipos.TabIndex = 13;
+            this.btnEquipos.TabStop = false;
+            this.btnEquipos.Click += new System.EventHandler(this.btnEquipos_Click);
+            // 
+            // btnExtras
+            // 
+            this.btnExtras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExtras.BackColor = System.Drawing.Color.Transparent;
+            this.btnExtras.BackgroundImage = global::Metrologia.Properties.Resources.carpeta_abierta;
+            this.btnExtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExtras.Location = new System.Drawing.Point(37, 405);
+            this.btnExtras.Name = "btnExtras";
+            this.btnExtras.Size = new System.Drawing.Size(35, 35);
+            this.btnExtras.TabIndex = 14;
+            this.btnExtras.TabStop = false;
+            this.btnExtras.Click += new System.EventHandler(this.btnExtras_Click);
+            // 
+            // controlDash
+            // 
+            this.controlDash.DockIndicatorTransparencyValue = 0.88D;
+            this.controlDash.TargetControl = this.panel1;
+            this.controlDash.UseTransparentDrag = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.btnExtras);
+            this.panel2.Controls.Add(this.btnEquipos);
+            this.panel2.Controls.Add(this.btnCitas);
+            this.panel2.Controls.Add(this.btnHome);
+            this.panel2.Controls.Add(this.btnEmpleados);
+            this.panel2.Controls.Add(this.btnEmpresas);
+            this.panel2.Location = new System.Drawing.Point(91, 196);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(105, 479);
+            this.panel2.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.btnUsuario);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(91, 109);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1102, 88);
+            this.panel3.TabIndex = 12;
             // 
             // Dashboard
             // 
@@ -470,9 +505,7 @@
             this.ClientSize = new System.Drawing.Size(1285, 744);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.customPanel1);
             this.Controls.Add(this.tbcCruds);
-            this.Controls.Add(this.customPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.fondo);
             this.DoubleBuffered = true;
@@ -488,25 +521,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).EndInit();
             this.tbcCruds.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
-            this.customPanel1.ResumeLayout(false);
-            this.customPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUsuario)).EndInit();
-            this.customPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnExtras)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEquipos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEmpresas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCitas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEmpleados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEmpresas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEquipos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExtras)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -517,17 +550,7 @@
         private System.Windows.Forms.PictureBox btnMaximi;
         private System.Windows.Forms.PictureBox btnMin;
         private System.Windows.Forms.PictureBox btnSalir;
-        private CustomPanel customPanel2;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox fondo;
-        private CustomPanel customPanel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox btnHome;
-        private System.Windows.Forms.PictureBox btnEmpleados;
-        private System.Windows.Forms.PictureBox btnCitas;
-        private System.Windows.Forms.PictureBox btnEmpresas;
-        private System.Windows.Forms.PictureBox btnEquipos;
-        private System.Windows.Forms.PictureBox btnExtras;
         private System.Windows.Forms.PictureBox btnUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
@@ -541,8 +564,19 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvEmpleados;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox btnAgregar;
+        private System.Windows.Forms.PictureBox btnEliminar;
+        private System.Windows.Forms.PictureBox btnEditar;
+        private System.Windows.Forms.PictureBox btnExtras;
+        private System.Windows.Forms.PictureBox btnEquipos;
+        private System.Windows.Forms.PictureBox btnHome;
+        private System.Windows.Forms.PictureBox btnEmpresas;
+        private System.Windows.Forms.PictureBox btnEmpleados;
+        private System.Windows.Forms.PictureBox btnCitas;
+        private Guna.UI2.WinForms.Guna2DragControl controlDash;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel btnBuscar;
+        private Guna.UI2.WinForms.Guna2TextBox txtBuscar;
     }
 }

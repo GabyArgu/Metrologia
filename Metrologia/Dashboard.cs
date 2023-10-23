@@ -72,5 +72,14 @@ namespace Metrologia
             // Se muestra el panel 6 de tabControl
             tbcCruds.SelectedIndex = 5;
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+            Empleados formE = new Empleados();
+
+            // Mostrar el formulario
+            formE.Show();
+        }
     }
 }

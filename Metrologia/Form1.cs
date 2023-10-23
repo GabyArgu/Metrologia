@@ -39,7 +39,6 @@ namespace Metrologia
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            
 
             Dashboard form2 = new Dashboard();
 
@@ -48,8 +47,6 @@ namespace Metrologia
 
             // Cerrar el formulario actual
             this.Hide();
-
-
         }
 
     }

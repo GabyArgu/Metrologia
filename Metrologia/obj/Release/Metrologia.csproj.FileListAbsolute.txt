@@ -1,0 +1,15 @@
+C:\xampp\htdocs\Metrologia\Metrologia\bin\Release\Metrologia.exe.config
+C:\xampp\htdocs\Metrologia\Metrologia\bin\Release\Metrologia.exe
+C:\xampp\htdocs\Metrologia\Metrologia\bin\Release\Metrologia.pdb
+C:\xampp\htdocs\Metrologia\Metrologia\bin\Release\Guna.UI2.dll
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.Dashboard.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.Empleados.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.Form1.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.Properties.Resources.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.csproj.GenerateResource.cache
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.csproj.CopyComplete
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.exe
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Release\Metrologia.pdb
