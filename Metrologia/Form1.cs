@@ -1,8 +1,8 @@
-﻿using Metrologia.Controller;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Controlador;
 
 
 namespace Metrologia
@@ -12,7 +12,7 @@ namespace Metrologia
     {
         string usuario;
         string contrasena;
-        ModelUsuario controluser = new ModelUsuario();
+        
         public Form1()
         {
             InitializeComponent();
@@ -48,10 +48,10 @@ namespace Metrologia
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            controluser.Usuario = txtUsuario.Text;
-            controluser.Contrasena = txtContra.Text;
+            AtributosLogin.Username = txtUsuario.Text;
+            AtributosLogin.txt2 = txtContra.Text;
 
-            if (controluser.Login()==true)
+            if (LoginController.Acceso_Controller()==true)
             {
                 Dashboard form2 = new Dashboard();
 

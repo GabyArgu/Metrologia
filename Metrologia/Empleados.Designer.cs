@@ -46,6 +46,16 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtNombreUser = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pnlContrasena = new System.Windows.Forms.Panel();
+            this.txtContra = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pnlConfirmar = new System.Windows.Forms.Panel();
+            this.txtConfirmContra = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pnlCodigoEmpleado = new System.Windows.Forms.Panel();
+            this.txtCodigoEmpleado = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbEstado = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
@@ -69,16 +79,16 @@
             this.txtNombre.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtNombre.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtNombre.Location = new System.Drawing.Point(74, 126);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNombre.MaximumSize = new System.Drawing.Size(475, 57);
+            this.txtNombre.Location = new System.Drawing.Point(54, 197);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNombre.MaximumSize = new System.Drawing.Size(356, 46);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtNombre.PlaceholderText = "  Digite el nombre";
             this.txtNombre.SelectedText = "";
-            this.txtNombre.Size = new System.Drawing.Size(414, 47);
-            this.txtNombre.TabIndex = 12;
+            this.txtNombre.Size = new System.Drawing.Size(310, 38);
+            this.txtNombre.TabIndex = 13;
             // 
             // txtApellido
             // 
@@ -99,15 +109,15 @@
             this.txtApellido.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtApellido.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtApellido.Location = new System.Drawing.Point(74, 202);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtApellido.MaximumSize = new System.Drawing.Size(475, 57);
+            this.txtApellido.Location = new System.Drawing.Point(54, 260);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtApellido.MaximumSize = new System.Drawing.Size(356, 46);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.PasswordChar = '\0';
             this.txtApellido.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtApellido.PlaceholderText = "  Digite el apellido";
             this.txtApellido.SelectedText = "";
-            this.txtApellido.Size = new System.Drawing.Size(414, 47);
+            this.txtApellido.Size = new System.Drawing.Size(310, 38);
             this.txtApellido.TabIndex = 14;
             // 
             // txtCorreo
@@ -129,16 +139,16 @@
             this.txtCorreo.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtCorreo.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtCorreo.Location = new System.Drawing.Point(74, 277);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCorreo.MaximumSize = new System.Drawing.Size(475, 57);
+            this.txtCorreo.Location = new System.Drawing.Point(54, 320);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCorreo.MaximumSize = new System.Drawing.Size(356, 46);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtCorreo.PlaceholderText = "  Digite el correo";
             this.txtCorreo.SelectedText = "";
-            this.txtCorreo.Size = new System.Drawing.Size(414, 47);
-            this.txtCorreo.TabIndex = 16;
+            this.txtCorreo.Size = new System.Drawing.Size(310, 38);
+            this.txtCorreo.TabIndex = 15;
             // 
             // txtTelefono
             // 
@@ -159,16 +169,16 @@
             this.txtTelefono.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtTelefono.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtTelefono.Location = new System.Drawing.Point(74, 356);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTelefono.MaximumSize = new System.Drawing.Size(475, 57);
+            this.txtTelefono.Location = new System.Drawing.Point(54, 381);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtTelefono.MaximumSize = new System.Drawing.Size(356, 46);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtTelefono.PlaceholderText = "  Digite el telefono";
             this.txtTelefono.SelectedText = "";
-            this.txtTelefono.Size = new System.Drawing.Size(414, 47);
-            this.txtTelefono.TabIndex = 18;
+            this.txtTelefono.Size = new System.Drawing.Size(310, 38);
+            this.txtTelefono.TabIndex = 16;
             // 
             // cbCargo
             // 
@@ -184,10 +194,11 @@
             this.cbCargo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbCargo.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbCargo.ItemHeight = 30;
-            this.cbCargo.Location = new System.Drawing.Point(74, 436);
+            this.cbCargo.Location = new System.Drawing.Point(54, 443);
+            this.cbCargo.Margin = new System.Windows.Forms.Padding(2);
             this.cbCargo.Name = "cbCargo";
-            this.cbCargo.Size = new System.Drawing.Size(414, 36);
-            this.cbCargo.TabIndex = 21;
+            this.cbCargo.Size = new System.Drawing.Size(312, 36);
+            this.cbCargo.TabIndex = 17;
             // 
             // btnAceptar
             // 
@@ -205,12 +216,14 @@
             this.btnAceptar.ForeColor = System.Drawing.Color.Black;
             this.btnAceptar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnAceptar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnAceptar.Location = new System.Drawing.Point(352, 532);
-            this.btnAceptar.MaximumSize = new System.Drawing.Size(525, 64);
+            this.btnAceptar.Location = new System.Drawing.Point(260, 698);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAceptar.MaximumSize = new System.Drawing.Size(394, 52);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(139, 47);
+            this.btnAceptar.Size = new System.Drawing.Size(104, 38);
             this.btnAceptar.TabIndex = 22;
             this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -229,10 +242,11 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnCancelar.Location = new System.Drawing.Point(156, 532);
-            this.btnCancelar.MaximumSize = new System.Drawing.Size(525, 64);
+            this.btnCancelar.Location = new System.Drawing.Point(133, 698);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.MaximumSize = new System.Drawing.Size(394, 52);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(146, 47);
+            this.btnCancelar.Size = new System.Drawing.Size(110, 38);
             this.btnCancelar.TabIndex = 23;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -242,8 +256,9 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(521, 32);
+            this.panel1.Size = new System.Drawing.Size(391, 26);
             this.panel1.TabIndex = 1;
             // 
             // btnSalir
@@ -252,9 +267,10 @@
             this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Location = new System.Drawing.Point(480, 6);
+            this.btnSalir.Location = new System.Drawing.Point(360, 5);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.Size = new System.Drawing.Size(15, 16);
             this.btnSalir.TabIndex = 2;
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -272,9 +288,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mohave SemiBold", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
-            this.label2.Location = new System.Drawing.Point(15, 47);
+            this.label2.Location = new System.Drawing.Point(11, 38);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 52);
+            this.label2.Size = new System.Drawing.Size(139, 42);
             this.label2.TabIndex = 24;
             this.label2.Text = "Empleados";
             // 
@@ -284,9 +301,10 @@
             this.panel6.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel6.ForeColor = System.Drawing.Color.Coral;
-            this.panel6.Location = new System.Drawing.Point(24, 433);
+            this.panel6.Location = new System.Drawing.Point(16, 441);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(50, 50);
+            this.panel6.Size = new System.Drawing.Size(38, 41);
             this.panel6.TabIndex = 19;
             // 
             // panel5
@@ -295,9 +313,10 @@
             this.panel5.BackgroundImage = global::Metrologia.Properties.Resources.telefono;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.ForeColor = System.Drawing.Color.Coral;
-            this.panel5.Location = new System.Drawing.Point(24, 354);
+            this.panel5.Location = new System.Drawing.Point(16, 380);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(50, 50);
+            this.panel5.Size = new System.Drawing.Size(38, 41);
             this.panel5.TabIndex = 17;
             // 
             // panel4
@@ -306,9 +325,10 @@
             this.panel4.BackgroundImage = global::Metrologia.Properties.Resources.correo;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel4.ForeColor = System.Drawing.Color.Coral;
-            this.panel4.Location = new System.Drawing.Point(24, 275);
+            this.panel4.Location = new System.Drawing.Point(16, 318);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(50, 50);
+            this.panel4.Size = new System.Drawing.Size(38, 41);
             this.panel4.TabIndex = 15;
             // 
             // panel3
@@ -317,9 +337,10 @@
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.ForeColor = System.Drawing.Color.Coral;
-            this.panel3.Location = new System.Drawing.Point(24, 200);
+            this.panel3.Location = new System.Drawing.Point(16, 258);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(50, 50);
+            this.panel3.Size = new System.Drawing.Size(38, 41);
             this.panel3.TabIndex = 13;
             // 
             // panel2
@@ -328,17 +349,229 @@
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.ForeColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(24, 124);
+            this.panel2.Location = new System.Drawing.Point(16, 196);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(50, 50);
+            this.panel2.Size = new System.Drawing.Size(38, 41);
             this.panel2.TabIndex = 11;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
+            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel8.ForeColor = System.Drawing.Color.Coral;
+            this.panel8.Location = new System.Drawing.Point(16, 138);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(38, 41);
+            this.panel8.TabIndex = 27;
+            // 
+            // txtNombreUser
+            // 
+            this.txtNombreUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreUser.BackColor = System.Drawing.Color.Transparent;
+            this.txtNombreUser.BorderRadius = 12;
+            this.txtNombreUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreUser.CustomizableEdges.BottomLeft = false;
+            this.txtNombreUser.CustomizableEdges.TopLeft = false;
+            this.txtNombreUser.DefaultText = "";
+            this.txtNombreUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNombreUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNombreUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtNombreUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtNombreUser.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtNombreUser.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtNombreUser.Location = new System.Drawing.Point(54, 139);
+            this.txtNombreUser.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNombreUser.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtNombreUser.Name = "txtNombreUser";
+            this.txtNombreUser.PasswordChar = '\0';
+            this.txtNombreUser.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtNombreUser.PlaceholderText = "  Digite el nombre de usuario";
+            this.txtNombreUser.SelectedText = "";
+            this.txtNombreUser.Size = new System.Drawing.Size(310, 38);
+            this.txtNombreUser.TabIndex = 12;
+            // 
+            // pnlContrasena
+            // 
+            this.pnlContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.pnlContrasena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlContrasena.BackgroundImage")));
+            this.pnlContrasena.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlContrasena.ForeColor = System.Drawing.Color.Coral;
+            this.pnlContrasena.Location = new System.Drawing.Point(16, 565);
+            this.pnlContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlContrasena.Name = "pnlContrasena";
+            this.pnlContrasena.Size = new System.Drawing.Size(38, 41);
+            this.pnlContrasena.TabIndex = 29;
+            // 
+            // txtContra
+            // 
+            this.txtContra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtContra.BackColor = System.Drawing.Color.Transparent;
+            this.txtContra.BorderRadius = 12;
+            this.txtContra.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContra.CustomizableEdges.BottomLeft = false;
+            this.txtContra.CustomizableEdges.TopLeft = false;
+            this.txtContra.DefaultText = "";
+            this.txtContra.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtContra.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtContra.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContra.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtContra.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtContra.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtContra.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtContra.Location = new System.Drawing.Point(54, 566);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtContra.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.PasswordChar = '\0';
+            this.txtContra.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtContra.PlaceholderText = "  Digite la contraseña";
+            this.txtContra.SelectedText = "";
+            this.txtContra.Size = new System.Drawing.Size(310, 38);
+            this.txtContra.TabIndex = 18;
+            // 
+            // pnlConfirmar
+            // 
+            this.pnlConfirmar.BackColor = System.Drawing.Color.Transparent;
+            this.pnlConfirmar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlConfirmar.BackgroundImage")));
+            this.pnlConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlConfirmar.ForeColor = System.Drawing.Color.Coral;
+            this.pnlConfirmar.Location = new System.Drawing.Point(16, 628);
+            this.pnlConfirmar.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlConfirmar.Name = "pnlConfirmar";
+            this.pnlConfirmar.Size = new System.Drawing.Size(38, 41);
+            this.pnlConfirmar.TabIndex = 31;
+            // 
+            // txtConfirmContra
+            // 
+            this.txtConfirmContra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConfirmContra.BackColor = System.Drawing.Color.Transparent;
+            this.txtConfirmContra.BorderRadius = 12;
+            this.txtConfirmContra.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmContra.CustomizableEdges.BottomLeft = false;
+            this.txtConfirmContra.CustomizableEdges.TopLeft = false;
+            this.txtConfirmContra.DefaultText = "";
+            this.txtConfirmContra.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmContra.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmContra.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmContra.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmContra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtConfirmContra.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtConfirmContra.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtConfirmContra.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmContra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtConfirmContra.Location = new System.Drawing.Point(54, 629);
+            this.txtConfirmContra.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtConfirmContra.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtConfirmContra.Name = "txtConfirmContra";
+            this.txtConfirmContra.PasswordChar = '\0';
+            this.txtConfirmContra.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtConfirmContra.PlaceholderText = "  Confirmar contraseña";
+            this.txtConfirmContra.SelectedText = "";
+            this.txtConfirmContra.Size = new System.Drawing.Size(310, 38);
+            this.txtConfirmContra.TabIndex = 30;
+            // 
+            // pnlCodigoEmpleado
+            // 
+            this.pnlCodigoEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCodigoEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCodigoEmpleado.BackgroundImage")));
+            this.pnlCodigoEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlCodigoEmpleado.ForeColor = System.Drawing.Color.Coral;
+            this.pnlCodigoEmpleado.Location = new System.Drawing.Point(16, 82);
+            this.pnlCodigoEmpleado.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlCodigoEmpleado.Name = "pnlCodigoEmpleado";
+            this.pnlCodigoEmpleado.Size = new System.Drawing.Size(38, 41);
+            this.pnlCodigoEmpleado.TabIndex = 33;
+            // 
+            // txtCodigoEmpleado
+            // 
+            this.txtCodigoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodigoEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.txtCodigoEmpleado.BorderRadius = 12;
+            this.txtCodigoEmpleado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigoEmpleado.CustomizableEdges.BottomLeft = false;
+            this.txtCodigoEmpleado.CustomizableEdges.TopLeft = false;
+            this.txtCodigoEmpleado.DefaultText = "";
+            this.txtCodigoEmpleado.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCodigoEmpleado.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCodigoEmpleado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigoEmpleado.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigoEmpleado.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtCodigoEmpleado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtCodigoEmpleado.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtCodigoEmpleado.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoEmpleado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtCodigoEmpleado.Location = new System.Drawing.Point(54, 83);
+            this.txtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCodigoEmpleado.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
+            this.txtCodigoEmpleado.PasswordChar = '\0';
+            this.txtCodigoEmpleado.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtCodigoEmpleado.PlaceholderText = "  Digite el nombre de usuario";
+            this.txtCodigoEmpleado.ReadOnly = true;
+            this.txtCodigoEmpleado.SelectedText = "";
+            this.txtCodigoEmpleado.Size = new System.Drawing.Size(310, 38);
+            this.txtCodigoEmpleado.TabIndex = 32;
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.BackColor = System.Drawing.Color.Transparent;
+            this.cbEstado.CustomizableEdges.BottomLeft = false;
+            this.cbEstado.CustomizableEdges.TopLeft = false;
+            this.cbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEstado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEstado.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
+            this.cbEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbEstado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEstado.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEstado.ItemHeight = 30;
+            this.cbEstado.Location = new System.Drawing.Point(54, 506);
+            this.cbEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(312, 36);
+            this.cbEstado.TabIndex = 34;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel10.ForeColor = System.Drawing.Color.Coral;
+            this.panel10.Location = new System.Drawing.Point(16, 504);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(38, 41);
+            this.panel10.TabIndex = 35;
             // 
             // Empleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(226)))), ((int)(((byte)(144)))));
-            this.ClientSize = new System.Drawing.Size(516, 607);
+            this.ClientSize = new System.Drawing.Size(387, 747);
+            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.pnlCodigoEmpleado);
+            this.Controls.Add(this.txtCodigoEmpleado);
+            this.Controls.Add(this.pnlConfirmar);
+            this.Controls.Add(this.txtConfirmContra);
+            this.Controls.Add(this.pnlContrasena);
+            this.Controls.Add(this.txtContra);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.txtNombreUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -355,6 +588,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Empleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleados";
@@ -382,5 +616,15 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DragControl dgcEmpleados;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel8;
+        private Guna.UI2.WinForms.Guna2TextBox txtNombreUser;
+        private System.Windows.Forms.Panel pnlContrasena;
+        private Guna.UI2.WinForms.Guna2TextBox txtContra;
+        private System.Windows.Forms.Panel pnlConfirmar;
+        private Guna.UI2.WinForms.Guna2TextBox txtConfirmContra;
+        private System.Windows.Forms.Panel pnlCodigoEmpleado;
+        private Guna.UI2.WinForms.Guna2TextBox txtCodigoEmpleado;
+        private Guna.UI2.WinForms.Guna2ComboBox cbEstado;
+        private System.Windows.Forms.Panel panel10;
     }
 }
