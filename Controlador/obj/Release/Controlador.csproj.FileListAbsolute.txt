@@ -17,3 +17,12 @@ C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\S
 C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\obj\Release\Controlador.csprojResolveAssemblyReference.cache
 C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\obj\Release\Controlador.dll
 C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\obj\Release\Controlador.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Release\Controlador.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Release\Controlador.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Release\Modelo.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Release\Modelo.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.csproj.AssemblyReference.cache
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.csproj.CoreCompileInputs.cache
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.csproj.CopyComplete
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.pdb
