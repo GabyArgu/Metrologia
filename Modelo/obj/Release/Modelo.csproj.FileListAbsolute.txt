@@ -15,3 +15,10 @@ C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\S
 C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Modelo\obj\Release\Modelo.csprojResolveAssemblyReference.cache
 C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Modelo\obj\Release\Modelo.dll
 C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Modelo\obj\Release\Modelo.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Release\Modelo.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Release\Modelo.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Release\Modelo.csproj.AssemblyReference.cache
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Release\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Release\Modelo.csproj.CopyComplete
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Release\Modelo.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Release\Modelo.pdb
