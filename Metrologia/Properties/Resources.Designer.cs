@@ -173,6 +173,16 @@ namespace Metrologia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap encargado {
+            get {
+                object obj = ResourceManager.GetObject("encargado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondo {
             get {
                 object obj = ResourceManager.GetObject("fondo", resourceCulture);
@@ -296,6 +306,26 @@ namespace Metrologia.Properties {
         internal static System.Drawing.Bitmap tipo {
             get {
                 object obj = ResourceManager.GetObject("tipo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ubicacion {
+            get {
+                object obj = ResourceManager.GetObject("ubicacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ubicacion1 {
+            get {
+                object obj = ResourceManager.GetObject("ubicacion1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

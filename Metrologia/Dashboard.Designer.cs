@@ -56,6 +56,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnEncargado = new System.Windows.Forms.PictureBox();
             this.btnBuscarEm = new System.Windows.Forms.Panel();
             this.txtBuscarEm = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnEditarEm = new System.Windows.Forms.PictureBox();
@@ -64,6 +65,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btnUbicacion = new System.Windows.Forms.PictureBox();
             this.btnBuscarEq = new System.Windows.Forms.Panel();
             this.txtBuscarEq = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnEditarEq = new System.Windows.Forms.PictureBox();
@@ -72,6 +74,29 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.btnBuscarSe = new System.Windows.Forms.Panel();
+            this.txtBuscarRe = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnEditarSe = new System.Windows.Forms.PictureBox();
+            this.btnEliminarSe = new System.Windows.Forms.PictureBox();
+            this.btnAgregarSe = new System.Windows.Forms.PictureBox();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.btnBusacrEn = new System.Windows.Forms.Panel();
+            this.txtBuscarEn = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnEditarEn = new System.Windows.Forms.PictureBox();
+            this.btnEliminarEn = new System.Windows.Forms.PictureBox();
+            this.btnAgregarEn = new System.Windows.Forms.PictureBox();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.btnBuscarUb = new System.Windows.Forms.Panel();
+            this.txtBuscarUb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnEditarUb = new System.Windows.Forms.PictureBox();
+            this.btnEliminarUb = new System.Windows.Forms.PictureBox();
+            this.btnAgregarUb = new System.Windows.Forms.PictureBox();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUsuario = new System.Windows.Forms.PictureBox();
@@ -84,13 +109,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnExtras = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnBuscarSe = new System.Windows.Forms.Panel();
-            this.txtBuscarRe = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnEditarSe = new System.Windows.Forms.PictureBox();
-            this.btnEliminarSe = new System.Windows.Forms.PictureBox();
-            this.btnAgregarSe = new System.Windows.Forms.PictureBox();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
@@ -111,16 +129,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEncargado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarEm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUbicacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarEq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditarSe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarSe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarSe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditarEn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarEn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditarUb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarUb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarUb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -131,10 +165,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExtras)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditarSe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarSe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarSe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -210,6 +240,8 @@
             this.tbcCruds.Controls.Add(this.tabPage4);
             this.tbcCruds.Controls.Add(this.tabPage5);
             this.tbcCruds.Controls.Add(this.tabPage6);
+            this.tbcCruds.Controls.Add(this.tabPage7);
+            this.tbcCruds.Controls.Add(this.tabPage8);
             this.tbcCruds.Location = new System.Drawing.Point(190, 157);
             this.tbcCruds.Name = "tbcCruds";
             this.tbcCruds.SelectedIndex = 0;
@@ -490,6 +522,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btnEncargado);
             this.tabPage4.Controls.Add(this.btnBuscarEm);
             this.tabPage4.Controls.Add(this.txtBuscarEm);
             this.tabPage4.Controls.Add(this.btnEditarEm);
@@ -503,6 +536,19 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // btnEncargado
+            // 
+            this.btnEncargado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEncargado.BackgroundImage = global::Metrologia.Properties.Resources.encargado;
+            this.btnEncargado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEncargado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEncargado.Location = new System.Drawing.Point(761, 394);
+            this.btnEncargado.Name = "btnEncargado";
+            this.btnEncargado.Size = new System.Drawing.Size(144, 47);
+            this.btnEncargado.TabIndex = 37;
+            this.btnEncargado.TabStop = false;
+            this.btnEncargado.Click += new System.EventHandler(this.btnEncargado_Click);
             // 
             // btnBuscarEm
             // 
@@ -552,7 +598,7 @@
             this.btnEditarEm.BackgroundImage = global::Metrologia.Properties.Resources.editar;
             this.btnEditarEm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEditarEm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarEm.Location = new System.Drawing.Point(422, 394);
+            this.btnEditarEm.Location = new System.Drawing.Point(315, 394);
             this.btnEditarEm.Name = "btnEditarEm";
             this.btnEditarEm.Size = new System.Drawing.Size(144, 47);
             this.btnEditarEm.TabIndex = 34;
@@ -564,7 +610,7 @@
             this.btnEliminarEm.BackgroundImage = global::Metrologia.Properties.Resources.eliminar;
             this.btnEliminarEm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEliminarEm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarEm.Location = new System.Drawing.Point(686, 394);
+            this.btnEliminarEm.Location = new System.Drawing.Point(538, 394);
             this.btnEliminarEm.Name = "btnEliminarEm";
             this.btnEliminarEm.Size = new System.Drawing.Size(144, 47);
             this.btnEliminarEm.TabIndex = 33;
@@ -576,7 +622,7 @@
             this.btnAgregarEm.BackgroundImage = global::Metrologia.Properties.Resources.agregarb;
             this.btnAgregarEm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAgregarEm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarEm.Location = new System.Drawing.Point(137, 394);
+            this.btnAgregarEm.Location = new System.Drawing.Point(92, 394);
             this.btnAgregarEm.Name = "btnAgregarEm";
             this.btnAgregarEm.Size = new System.Drawing.Size(144, 47);
             this.btnAgregarEm.TabIndex = 30;
@@ -607,6 +653,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.btnUbicacion);
             this.tabPage5.Controls.Add(this.btnBuscarEq);
             this.tabPage5.Controls.Add(this.txtBuscarEq);
             this.tabPage5.Controls.Add(this.btnEditarEq);
@@ -620,6 +667,19 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // btnUbicacion
+            // 
+            this.btnUbicacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUbicacion.BackgroundImage = global::Metrologia.Properties.Resources.ubicacion1;
+            this.btnUbicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUbicacion.Location = new System.Drawing.Point(778, 394);
+            this.btnUbicacion.Name = "btnUbicacion";
+            this.btnUbicacion.Size = new System.Drawing.Size(144, 47);
+            this.btnUbicacion.TabIndex = 44;
+            this.btnUbicacion.TabStop = false;
+            this.btnUbicacion.Click += new System.EventHandler(this.btnUbicacion_Click);
             // 
             // btnBuscarEq
             // 
@@ -669,7 +729,7 @@
             this.btnEditarEq.BackgroundImage = global::Metrologia.Properties.Resources.editar;
             this.btnEditarEq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEditarEq.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarEq.Location = new System.Drawing.Point(422, 394);
+            this.btnEditarEq.Location = new System.Drawing.Point(326, 394);
             this.btnEditarEq.Name = "btnEditarEq";
             this.btnEditarEq.Size = new System.Drawing.Size(144, 47);
             this.btnEditarEq.TabIndex = 41;
@@ -681,7 +741,7 @@
             this.btnEliminarEq.BackgroundImage = global::Metrologia.Properties.Resources.eliminar;
             this.btnEliminarEq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEliminarEq.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarEq.Location = new System.Drawing.Point(686, 394);
+            this.btnEliminarEq.Location = new System.Drawing.Point(552, 394);
             this.btnEliminarEq.Name = "btnEliminarEq";
             this.btnEliminarEq.Size = new System.Drawing.Size(144, 47);
             this.btnEliminarEq.TabIndex = 40;
@@ -693,7 +753,7 @@
             this.btnAgregarEq.BackgroundImage = global::Metrologia.Properties.Resources.agregarb;
             this.btnAgregarEq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAgregarEq.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarEq.Location = new System.Drawing.Point(137, 394);
+            this.btnAgregarEq.Location = new System.Drawing.Point(100, 394);
             this.btnAgregarEq.Name = "btnAgregarEq";
             this.btnAgregarEq.Size = new System.Drawing.Size(144, 47);
             this.btnAgregarEq.TabIndex = 37;
@@ -737,6 +797,341 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarSe
+            // 
+            this.btnBuscarSe.BackColor = System.Drawing.Color.White;
+            this.btnBuscarSe.BackgroundImage = global::Metrologia.Properties.Resources.buscar;
+            this.btnBuscarSe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscarSe.ForeColor = System.Drawing.Color.Coral;
+            this.btnBuscarSe.Location = new System.Drawing.Point(903, 53);
+            this.btnBuscarSe.Name = "btnBuscarSe";
+            this.btnBuscarSe.Size = new System.Drawing.Size(47, 47);
+            this.btnBuscarSe.TabIndex = 42;
+            // 
+            // txtBuscarRe
+            // 
+            this.txtBuscarRe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarRe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtBuscarRe.BorderRadius = 12;
+            this.txtBuscarRe.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarRe.CustomizableEdges.BottomRight = false;
+            this.txtBuscarRe.CustomizableEdges.TopRight = false;
+            this.txtBuscarRe.DefaultText = "";
+            this.txtBuscarRe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscarRe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscarRe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscarRe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscarRe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtBuscarRe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscarRe.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscarRe.Font = new System.Drawing.Font("Mohave Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarRe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscarRe.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(206)))), ((int)(((byte)(97)))));
+            this.txtBuscarRe.Location = new System.Drawing.Point(573, 55);
+            this.txtBuscarRe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBuscarRe.MaximumSize = new System.Drawing.Size(475, 57);
+            this.txtBuscarRe.Name = "txtBuscarRe";
+            this.txtBuscarRe.PasswordChar = '\0';
+            this.txtBuscarRe.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtBuscarRe.PlaceholderText = "  Buscar Reviciones";
+            this.txtBuscarRe.SelectedText = "";
+            this.txtBuscarRe.Size = new System.Drawing.Size(330, 44);
+            this.txtBuscarRe.TabIndex = 43;
+            // 
+            // btnEditarSe
+            // 
+            this.btnEditarSe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditarSe.BackgroundImage = global::Metrologia.Properties.Resources.editar;
+            this.btnEditarSe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditarSe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarSe.Location = new System.Drawing.Point(422, 394);
+            this.btnEditarSe.Name = "btnEditarSe";
+            this.btnEditarSe.Size = new System.Drawing.Size(144, 47);
+            this.btnEditarSe.TabIndex = 41;
+            this.btnEditarSe.TabStop = false;
+            // 
+            // btnEliminarSe
+            // 
+            this.btnEliminarSe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarSe.BackgroundImage = global::Metrologia.Properties.Resources.eliminar;
+            this.btnEliminarSe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarSe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarSe.Location = new System.Drawing.Point(686, 394);
+            this.btnEliminarSe.Name = "btnEliminarSe";
+            this.btnEliminarSe.Size = new System.Drawing.Size(144, 47);
+            this.btnEliminarSe.TabIndex = 40;
+            this.btnEliminarSe.TabStop = false;
+            // 
+            // btnAgregarSe
+            // 
+            this.btnAgregarSe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarSe.BackgroundImage = global::Metrologia.Properties.Resources.agregarb;
+            this.btnAgregarSe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarSe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarSe.Location = new System.Drawing.Point(137, 394);
+            this.btnAgregarSe.Name = "btnAgregarSe";
+            this.btnAgregarSe.Size = new System.Drawing.Size(144, 47);
+            this.btnAgregarSe.TabIndex = 37;
+            this.btnAgregarSe.TabStop = false;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
+            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(39, 110);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 24;
+            this.dataGridView4.Size = new System.Drawing.Size(911, 265);
+            this.dataGridView4.TabIndex = 39;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Mohave SemiBold", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
+            this.label6.Location = new System.Drawing.Point(31, 36);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(172, 52);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Reviciones";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.btnBusacrEn);
+            this.tabPage7.Controls.Add(this.txtBuscarEn);
+            this.tabPage7.Controls.Add(this.btnEditarEn);
+            this.tabPage7.Controls.Add(this.btnEliminarEn);
+            this.tabPage7.Controls.Add(this.btnAgregarEn);
+            this.tabPage7.Controls.Add(this.dataGridView5);
+            this.tabPage7.Controls.Add(this.label7);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(981, 476);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // btnBusacrEn
+            // 
+            this.btnBusacrEn.BackColor = System.Drawing.Color.White;
+            this.btnBusacrEn.BackgroundImage = global::Metrologia.Properties.Resources.buscar;
+            this.btnBusacrEn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBusacrEn.ForeColor = System.Drawing.Color.Coral;
+            this.btnBusacrEn.Location = new System.Drawing.Point(903, 53);
+            this.btnBusacrEn.Name = "btnBusacrEn";
+            this.btnBusacrEn.Size = new System.Drawing.Size(47, 47);
+            this.btnBusacrEn.TabIndex = 49;
+            // 
+            // txtBuscarEn
+            // 
+            this.txtBuscarEn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarEn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtBuscarEn.BorderRadius = 12;
+            this.txtBuscarEn.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarEn.CustomizableEdges.BottomRight = false;
+            this.txtBuscarEn.CustomizableEdges.TopRight = false;
+            this.txtBuscarEn.DefaultText = "";
+            this.txtBuscarEn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscarEn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscarEn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscarEn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscarEn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtBuscarEn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscarEn.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscarEn.Font = new System.Drawing.Font("Mohave Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarEn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscarEn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(206)))), ((int)(((byte)(97)))));
+            this.txtBuscarEn.Location = new System.Drawing.Point(573, 55);
+            this.txtBuscarEn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBuscarEn.MaximumSize = new System.Drawing.Size(475, 57);
+            this.txtBuscarEn.Name = "txtBuscarEn";
+            this.txtBuscarEn.PasswordChar = '\0';
+            this.txtBuscarEn.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtBuscarEn.PlaceholderText = "  Buscar Encargados";
+            this.txtBuscarEn.SelectedText = "";
+            this.txtBuscarEn.Size = new System.Drawing.Size(330, 44);
+            this.txtBuscarEn.TabIndex = 50;
+            // 
+            // btnEditarEn
+            // 
+            this.btnEditarEn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditarEn.BackgroundImage = global::Metrologia.Properties.Resources.editar;
+            this.btnEditarEn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditarEn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarEn.Location = new System.Drawing.Point(422, 394);
+            this.btnEditarEn.Name = "btnEditarEn";
+            this.btnEditarEn.Size = new System.Drawing.Size(144, 47);
+            this.btnEditarEn.TabIndex = 48;
+            this.btnEditarEn.TabStop = false;
+            // 
+            // btnEliminarEn
+            // 
+            this.btnEliminarEn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarEn.BackgroundImage = global::Metrologia.Properties.Resources.eliminar;
+            this.btnEliminarEn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarEn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarEn.Location = new System.Drawing.Point(686, 394);
+            this.btnEliminarEn.Name = "btnEliminarEn";
+            this.btnEliminarEn.Size = new System.Drawing.Size(144, 47);
+            this.btnEliminarEn.TabIndex = 47;
+            this.btnEliminarEn.TabStop = false;
+            // 
+            // btnAgregarEn
+            // 
+            this.btnAgregarEn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarEn.BackgroundImage = global::Metrologia.Properties.Resources.agregarb;
+            this.btnAgregarEn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarEn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarEn.Location = new System.Drawing.Point(137, 394);
+            this.btnAgregarEn.Name = "btnAgregarEn";
+            this.btnAgregarEn.Size = new System.Drawing.Size(144, 47);
+            this.btnAgregarEn.TabIndex = 44;
+            this.btnAgregarEn.TabStop = false;
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
+            this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(39, 110);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 24;
+            this.dataGridView5.Size = new System.Drawing.Size(911, 265);
+            this.dataGridView5.TabIndex = 46;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Mohave SemiBold", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
+            this.label7.Location = new System.Drawing.Point(31, 36);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(180, 52);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Encargados";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.btnBuscarUb);
+            this.tabPage8.Controls.Add(this.txtBuscarUb);
+            this.tabPage8.Controls.Add(this.btnEditarUb);
+            this.tabPage8.Controls.Add(this.btnEliminarUb);
+            this.tabPage8.Controls.Add(this.btnAgregarUb);
+            this.tabPage8.Controls.Add(this.dataGridView6);
+            this.tabPage8.Controls.Add(this.label8);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(981, 476);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "tabPage8";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarUb
+            // 
+            this.btnBuscarUb.BackColor = System.Drawing.Color.White;
+            this.btnBuscarUb.BackgroundImage = global::Metrologia.Properties.Resources.buscar;
+            this.btnBuscarUb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscarUb.ForeColor = System.Drawing.Color.Coral;
+            this.btnBuscarUb.Location = new System.Drawing.Point(903, 53);
+            this.btnBuscarUb.Name = "btnBuscarUb";
+            this.btnBuscarUb.Size = new System.Drawing.Size(47, 47);
+            this.btnBuscarUb.TabIndex = 49;
+            // 
+            // txtBuscarUb
+            // 
+            this.txtBuscarUb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarUb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtBuscarUb.BorderRadius = 12;
+            this.txtBuscarUb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarUb.CustomizableEdges.BottomRight = false;
+            this.txtBuscarUb.CustomizableEdges.TopRight = false;
+            this.txtBuscarUb.DefaultText = "";
+            this.txtBuscarUb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscarUb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscarUb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscarUb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscarUb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtBuscarUb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscarUb.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscarUb.Font = new System.Drawing.Font("Mohave Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarUb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtBuscarUb.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(206)))), ((int)(((byte)(97)))));
+            this.txtBuscarUb.Location = new System.Drawing.Point(573, 55);
+            this.txtBuscarUb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBuscarUb.MaximumSize = new System.Drawing.Size(475, 57);
+            this.txtBuscarUb.Name = "txtBuscarUb";
+            this.txtBuscarUb.PasswordChar = '\0';
+            this.txtBuscarUb.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtBuscarUb.PlaceholderText = "  Buscar Ubicación";
+            this.txtBuscarUb.SelectedText = "";
+            this.txtBuscarUb.Size = new System.Drawing.Size(330, 44);
+            this.txtBuscarUb.TabIndex = 50;
+            // 
+            // btnEditarUb
+            // 
+            this.btnEditarUb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditarUb.BackgroundImage = global::Metrologia.Properties.Resources.editar;
+            this.btnEditarUb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditarUb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarUb.Location = new System.Drawing.Point(422, 394);
+            this.btnEditarUb.Name = "btnEditarUb";
+            this.btnEditarUb.Size = new System.Drawing.Size(144, 47);
+            this.btnEditarUb.TabIndex = 48;
+            this.btnEditarUb.TabStop = false;
+            // 
+            // btnEliminarUb
+            // 
+            this.btnEliminarUb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarUb.BackgroundImage = global::Metrologia.Properties.Resources.eliminar;
+            this.btnEliminarUb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminarUb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarUb.Location = new System.Drawing.Point(686, 394);
+            this.btnEliminarUb.Name = "btnEliminarUb";
+            this.btnEliminarUb.Size = new System.Drawing.Size(144, 47);
+            this.btnEliminarUb.TabIndex = 47;
+            this.btnEliminarUb.TabStop = false;
+            // 
+            // btnAgregarUb
+            // 
+            this.btnAgregarUb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarUb.BackgroundImage = global::Metrologia.Properties.Resources.agregarb;
+            this.btnAgregarUb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarUb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarUb.Location = new System.Drawing.Point(137, 394);
+            this.btnAgregarUb.Name = "btnAgregarUb";
+            this.btnAgregarUb.Size = new System.Drawing.Size(144, 47);
+            this.btnAgregarUb.TabIndex = 44;
+            this.btnAgregarUb.TabStop = false;
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
+            this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(39, 110);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowHeadersWidth = 51;
+            this.dataGridView6.RowTemplate.Height = 24;
+            this.dataGridView6.Size = new System.Drawing.Size(911, 265);
+            this.dataGridView6.TabIndex = 46;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Mohave SemiBold", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
+            this.label8.Location = new System.Drawing.Point(31, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(274, 52);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "Ubicación Equipos";
             // 
             // label1
             // 
@@ -890,107 +1285,6 @@
             this.panel3.Size = new System.Drawing.Size(1102, 88);
             this.panel3.TabIndex = 12;
             // 
-            // btnBuscarSe
-            // 
-            this.btnBuscarSe.BackColor = System.Drawing.Color.White;
-            this.btnBuscarSe.BackgroundImage = global::Metrologia.Properties.Resources.buscar;
-            this.btnBuscarSe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBuscarSe.ForeColor = System.Drawing.Color.Coral;
-            this.btnBuscarSe.Location = new System.Drawing.Point(903, 53);
-            this.btnBuscarSe.Name = "btnBuscarSe";
-            this.btnBuscarSe.Size = new System.Drawing.Size(47, 47);
-            this.btnBuscarSe.TabIndex = 42;
-            // 
-            // txtBuscarRe
-            // 
-            this.txtBuscarRe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarRe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.txtBuscarRe.BorderRadius = 12;
-            this.txtBuscarRe.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarRe.CustomizableEdges.BottomRight = false;
-            this.txtBuscarRe.CustomizableEdges.TopRight = false;
-            this.txtBuscarRe.DefaultText = "";
-            this.txtBuscarRe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBuscarRe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBuscarRe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscarRe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscarRe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.txtBuscarRe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtBuscarRe.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtBuscarRe.Font = new System.Drawing.Font("Mohave Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarRe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtBuscarRe.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(206)))), ((int)(((byte)(97)))));
-            this.txtBuscarRe.Location = new System.Drawing.Point(573, 55);
-            this.txtBuscarRe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBuscarRe.MaximumSize = new System.Drawing.Size(475, 57);
-            this.txtBuscarRe.Name = "txtBuscarRe";
-            this.txtBuscarRe.PasswordChar = '\0';
-            this.txtBuscarRe.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtBuscarRe.PlaceholderText = "  Buscar Reviciones";
-            this.txtBuscarRe.SelectedText = "";
-            this.txtBuscarRe.Size = new System.Drawing.Size(330, 44);
-            this.txtBuscarRe.TabIndex = 43;
-            // 
-            // btnEditarSe
-            // 
-            this.btnEditarSe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditarSe.BackgroundImage = global::Metrologia.Properties.Resources.editar;
-            this.btnEditarSe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditarSe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarSe.Location = new System.Drawing.Point(422, 394);
-            this.btnEditarSe.Name = "btnEditarSe";
-            this.btnEditarSe.Size = new System.Drawing.Size(144, 47);
-            this.btnEditarSe.TabIndex = 41;
-            this.btnEditarSe.TabStop = false;
-            // 
-            // btnEliminarSe
-            // 
-            this.btnEliminarSe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminarSe.BackgroundImage = global::Metrologia.Properties.Resources.eliminar;
-            this.btnEliminarSe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminarSe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarSe.Location = new System.Drawing.Point(686, 394);
-            this.btnEliminarSe.Name = "btnEliminarSe";
-            this.btnEliminarSe.Size = new System.Drawing.Size(144, 47);
-            this.btnEliminarSe.TabIndex = 40;
-            this.btnEliminarSe.TabStop = false;
-            // 
-            // btnAgregarSe
-            // 
-            this.btnAgregarSe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarSe.BackgroundImage = global::Metrologia.Properties.Resources.agregarb;
-            this.btnAgregarSe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregarSe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarSe.Location = new System.Drawing.Point(137, 394);
-            this.btnAgregarSe.Name = "btnAgregarSe";
-            this.btnAgregarSe.Size = new System.Drawing.Size(144, 47);
-            this.btnAgregarSe.TabIndex = 37;
-            this.btnAgregarSe.TabStop = false;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(39, 110);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(911, 265);
-            this.dataGridView4.TabIndex = 39;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Mohave SemiBold", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
-            this.label6.Location = new System.Drawing.Point(31, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 52);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Reviciones";
-            // 
             // Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -1033,18 +1327,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEncargado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarEm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUbicacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarEq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditarSe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarSe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarSe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditarEn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarEn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditarUb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarUb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarUb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
@@ -1056,10 +1368,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnExtras)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditarSe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminarSe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarSe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1127,5 +1435,23 @@
         private System.Windows.Forms.PictureBox btnAgregarSe;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox btnEncargado;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Panel btnBusacrEn;
+        private Guna.UI2.WinForms.Guna2TextBox txtBuscarEn;
+        private System.Windows.Forms.PictureBox btnEditarEn;
+        private System.Windows.Forms.PictureBox btnEliminarEn;
+        private System.Windows.Forms.PictureBox btnAgregarEn;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Panel btnBuscarUb;
+        private Guna.UI2.WinForms.Guna2TextBox txtBuscarUb;
+        private System.Windows.Forms.PictureBox btnEditarUb;
+        private System.Windows.Forms.PictureBox btnEliminarUb;
+        private System.Windows.Forms.PictureBox btnAgregarUb;
+        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox btnUbicacion;
     }
 }
