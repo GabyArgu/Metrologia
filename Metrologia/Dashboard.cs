@@ -81,5 +81,19 @@ namespace Metrologia
             // Mostrar el formulario
             formE.Show();
         }
+
+        //Botones extra dentro de cruds en especificos
+
+        private void btnEncargado_Click(object sender, EventArgs e)
+        {
+            // Se muestra el panel 7 de tabControl
+            tbcCruds.SelectedIndex = 6;
+        }
+
+        private void btnUbicacion_Click(object sender, EventArgs e)
+        {
+            // Se muestra el panel 8 de tabControl
+            tbcCruds.SelectedIndex = 7;
+        }
     }
 }
