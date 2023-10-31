@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,6 +48,7 @@ namespace Metrologia
         {
             // Se muestra el panel 2 de tabControl
             tbcCruds.SelectedIndex = 1;
+            CargarDatosUsuario();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
@@ -79,9 +81,56 @@ namespace Metrologia
             Empleados formE = new Empleados();
 
             // Mostrar el formulario
-            formE.Show();
+            formE.ocultarCodigo();
+            formE.Show();     
         }
 
+        public void CargarDatosUsuario()
+        {
+            try
+            {
+                tbcCruds.SelectedIndex = 1;
+                dgvEmpleados.DataSource = null;
+                dgvEmpleados.DataSource = UsuarioController.CargarUsuarios_Controller();
+                dgvEmpleados.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvEmpleados_DoubleClick(object sender, EventArgs e)
+        {
+            int posicion;
+            string codigoEmpleado, nombreUser, nombre, apellido, correo, telefono, cargo, estado;
+            posicion = dgvEmpleados.CurrentRow.Index;
+
+            codigoEmpleado = dgvEmpleados[0, posicion].Value.ToString();
+            nombreUser = dgvEmpleados[1, posicion].Value.ToString();
+            nombre = dgvEmpleados[2, posicion].Value.ToString();
+            apellido = dgvEmpleados[3, posicion].Value.ToString();
+            correo = dgvEmpleados[4, posicion].Value.ToString();
+            telefono = dgvEmpleados[5, posicion].Value.ToString();
+
+            cargo = dgvEmpleados[6, posicion].Value.ToString();
+
+            estado = dgvEmpleados[7, posicion].Value.ToString();
+
+            Empleados formE = new Empleados();
+
+            // Mostrar el formulario
+            formE.mostrarCodigo();
+            formE.llenarModal(codigoEmpleado, nombreUser, nombre, apellido, correo, telefono, cargo, estado);
+            formE.Show();
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int posicion = dgvEmpleados.CurrentRow.Index;
+            string codigoEmpleado = dgvEmpleados[0, posicion].Value.ToString();
+            Empleados formE = new Empleados();
+            formE.eliminarUsuario(codigoEmpleado);
+        }
         //Botones extra dentro de cruds en especificos
 
         private void btnEncargado_Click(object sender, EventArgs e)
