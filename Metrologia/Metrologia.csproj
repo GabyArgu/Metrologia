@@ -188,7 +188,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsBase" />    
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dashboard.cs">
@@ -323,11 +323,24 @@
     <None Include="Resources\tipo.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controlador\Controlador.csproj">
+    <None Include="Resources\servicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\encargado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubicacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubicacion1.png" />
+  </ItemGroup>
+  <ProjectReference Include="..\Controlador\Controlador.csproj">
       <Project>{adca3f2a-d2b7-4d07-96d3-ca3679745244}</Project>
       <Name>Controlador</Name>
     </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

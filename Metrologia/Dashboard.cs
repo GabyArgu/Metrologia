@@ -124,13 +124,25 @@ namespace Metrologia
             formE.llenarModal(codigoEmpleado, nombreUser, nombre, apellido, correo, telefono, cargo, estado);
             formE.Show();
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int posicion = dgvEmpleados.CurrentRow.Index;
             string codigoEmpleado = dgvEmpleados[0, posicion].Value.ToString();
             Empleados formE = new Empleados();
             formE.eliminarUsuario(codigoEmpleado);
+        }
+        //Botones extra dentro de cruds en especificos
+
+        private void btnEncargado_Click(object sender, EventArgs e)
+        {
+            // Se muestra el panel 7 de tabControl
+            tbcCruds.SelectedIndex = 6;
+        }
+
+        private void btnUbicacion_Click(object sender, EventArgs e)
+        {
+            // Se muestra el panel 8 de tabControl
+            tbcCruds.SelectedIndex = 7;
         }
     }
 }
