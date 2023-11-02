@@ -130,6 +130,7 @@ namespace Metrologia
             string codigoEmpleado = dgvEmpleados[0, posicion].Value.ToString();
             Empleados formE = new Empleados();
             formE.eliminarUsuario(codigoEmpleado);
+            CargarDatosUsuario();
         }
         //Botones extra dentro de cruds en especificos
 

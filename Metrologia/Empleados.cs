@@ -119,6 +119,7 @@ namespace Metrologia
 
             if (usercontrol.ActualizarUsuario() == true)
             {
+
                 MessageBox.Show("Empleado actualizado con exito");
                 this.Hide();
                 dash.CargarDatosUsuario();
@@ -160,7 +161,7 @@ namespace Metrologia
             UsuarioController usercontrol = new UsuarioController();
 
             usercontrol.codigoEmpleado = codigoEmpleado;
-            usercontrol.EstadoE = 3;
+            usercontrol.EstadoE = 2;
             
             if (usercontrol.EliminarUsuario() == true)
             {
