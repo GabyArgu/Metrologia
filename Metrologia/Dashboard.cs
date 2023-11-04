@@ -1,4 +1,5 @@
 ﻿using Controlador;
+using Metrologia.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,7 @@ namespace Metrologia
         {
             // Se muestra el panel 1 de tabControl
             tbcCruds.SelectedIndex = 0;
+
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
@@ -74,6 +76,22 @@ namespace Metrologia
             // Se muestra el panel 6 de tabControl
             tbcCruds.SelectedIndex = 5;
         }
+
+        //Botones extra dentro de cruds en especificos
+
+        private void btnEncargado_Click(object sender, EventArgs e)
+        {
+            // Se muestra el panel 7 de tabControl
+            tbcCruds.SelectedIndex = 6;
+        }
+
+        private void btnUbicacion_Click(object sender, EventArgs e)
+        {
+            // Se muestra el panel 8 de tabControl
+            tbcCruds.SelectedIndex = 7;
+        }
+
+        //Botones para el CRUD
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -132,18 +150,74 @@ namespace Metrologia
             formE.eliminarUsuario(codigoEmpleado);
             CargarDatosUsuario();
         }
-        //Botones extra dentro de cruds en especificos
 
-        private void btnEncargado_Click(object sender, EventArgs e)
+
+        //Hover de botones del menu
+        private void btnHome_MouseHover(object sender, EventArgs e)
         {
-            // Se muestra el panel 7 de tabControl
-            tbcCruds.SelectedIndex = 6;
+            //Hover cambiar imagen
+            btnHome.BackgroundImage = global::Metrologia.Properties.Resources.hogar__1_;
+
         }
 
-        private void btnUbicacion_Click(object sender, EventArgs e)
+        private void btnHome_MouseLeave(object sender, EventArgs e)
         {
-            // Se muestra el panel 8 de tabControl
-            tbcCruds.SelectedIndex = 7;
+            //Hover regresar imagen
+            btnHome.BackgroundImage = global::Metrologia.Properties.Resources.hogar;
+        }
+
+        private void btnEmpleados_MouseHover(object sender, EventArgs e)
+        {
+            //Hover cambiar imagen
+            btnEmpleados.BackgroundImage = global::Metrologia.Properties.Resources.usuario_de_archivo__1_;
+        }
+
+        private void btnEmpleados_MouseLeave(object sender, EventArgs e)
+        {
+            //Hover regresar imagen
+            btnEmpleados.BackgroundImage = global::Metrologia.Properties.Resources.usuario_de_archivo;
+        }
+
+        private void btnCitas_MouseHover(object sender, EventArgs e)
+        {
+            //Hover cambiar imagen
+            btnCitas.BackgroundImage = global::Metrologia.Properties.Resources.calendario_reloj__1_;
+        }
+
+        private void btnCitas_MouseLeave(object sender, EventArgs e)
+        {
+            //Hover regresar imagen
+            btnCitas.BackgroundImage = global::Metrologia.Properties.Resources.calendario_reloj;
+        }
+
+        private void btnEmpresas_MouseHover(object sender, EventArgs e)
+        {
+            btnEmpresas.BackgroundImage = global::Metrologia.Properties.Resources.edificio__1_;
+        }
+
+        private void btnEmpresas_MouseLeave(object sender, EventArgs e)
+        {
+            btnEmpresas.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
+        }
+
+        private void btnEquipos_MouseHover(object sender, EventArgs e)
+        {
+            btnEquipos.BackgroundImage = global::Metrologia.Properties.Resources.herramientas__1_;
+        }
+
+        private void btnEquipos_MouseLeave(object sender, EventArgs e)
+        {
+            btnEquipos.BackgroundImage = global::Metrologia.Properties.Resources.herramientas;
+        }
+
+        private void btnExtras_MouseHover(object sender, EventArgs e)
+        {
+            btnExtras.BackgroundImage = global::Metrologia.Properties.Resources.ojo__2_;
+        }
+
+        private void btnExtras_MouseLeave(object sender, EventArgs e)
+        {
+            btnExtras.BackgroundImage = global::Metrologia.Properties.Resources.ojo__1_;
         }
     }
 }

@@ -240,6 +240,9 @@
             // 
             // tbcCruds
             // 
+            this.tbcCruds.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbcCruds.Controls.Add(this.tabPage1);
             this.tbcCruds.Controls.Add(this.tabPage2);
             this.tbcCruds.Controls.Add(this.tabPage3);
@@ -267,7 +270,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackgroundImage = global::Metrologia.Properties.Resources.logo;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -300,6 +305,8 @@
             this.dgvEmpleados.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvEmpleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(184)))), ((int)(((byte)(26)))));
@@ -368,6 +375,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.BackColor = System.Drawing.Color.White;
             this.btnBuscar.BackgroundImage = global::Metrologia.Properties.Resources.buscar;
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -379,8 +387,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtBuscar.BorderRadius = 12;
             this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -410,7 +417,8 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditar.BackgroundImage = global::Metrologia.Properties.Resources.editar;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -436,7 +444,8 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.BackgroundImage = global::Metrologia.Properties.Resources.agregarb;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1214,7 +1223,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Metrologia.Properties.Resources.icono;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
@@ -1240,7 +1248,7 @@
             // 
             this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHome.BackColor = System.Drawing.Color.Transparent;
-            this.btnHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHome.BackgroundImage")));
+            this.btnHome.BackgroundImage = global::Metrologia.Properties.Resources.hogar;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.Location = new System.Drawing.Point(37, 50);
@@ -1249,6 +1257,8 @@
             this.btnHome.TabIndex = 9;
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
+            this.btnHome.MouseHover += new System.EventHandler(this.btnHome_MouseHover);
             // 
             // btnEmpleados
             // 
@@ -1263,6 +1273,8 @@
             this.btnEmpleados.TabIndex = 10;
             this.btnEmpleados.TabStop = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            this.btnEmpleados.MouseLeave += new System.EventHandler(this.btnEmpleados_MouseLeave);
+            this.btnEmpleados.MouseHover += new System.EventHandler(this.btnEmpleados_MouseHover);
             // 
             // btnCitas
             // 
@@ -1277,6 +1289,8 @@
             this.btnCitas.TabIndex = 11;
             this.btnCitas.TabStop = false;
             this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
+            this.btnCitas.MouseLeave += new System.EventHandler(this.btnCitas_MouseLeave);
+            this.btnCitas.MouseHover += new System.EventHandler(this.btnCitas_MouseHover);
             // 
             // btnEmpresas
             // 
@@ -1291,6 +1305,8 @@
             this.btnEmpresas.TabIndex = 12;
             this.btnEmpresas.TabStop = false;
             this.btnEmpresas.Click += new System.EventHandler(this.btnEmpresas_Click);
+            this.btnEmpresas.MouseLeave += new System.EventHandler(this.btnEmpresas_MouseLeave);
+            this.btnEmpresas.MouseHover += new System.EventHandler(this.btnEmpresas_MouseHover);
             // 
             // btnEquipos
             // 
@@ -1305,6 +1321,8 @@
             this.btnEquipos.TabIndex = 13;
             this.btnEquipos.TabStop = false;
             this.btnEquipos.Click += new System.EventHandler(this.btnEquipos_Click);
+            this.btnEquipos.MouseLeave += new System.EventHandler(this.btnEquipos_MouseLeave);
+            this.btnEquipos.MouseHover += new System.EventHandler(this.btnEquipos_MouseHover);
             // 
             // controlDash
             // 
@@ -1314,8 +1332,11 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.btnExtras);
             this.panel2.Controls.Add(this.btnEquipos);
             this.panel2.Controls.Add(this.btnCitas);
@@ -1340,11 +1361,16 @@
             this.btnExtras.TabIndex = 14;
             this.btnExtras.TabStop = false;
             this.btnExtras.Click += new System.EventHandler(this.btnExtras_Click);
+            this.btnExtras.MouseLeave += new System.EventHandler(this.btnExtras_MouseLeave);
+            this.btnExtras.MouseHover += new System.EventHandler(this.btnExtras_MouseHover);
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnUsuario);
             this.panel3.Controls.Add(this.pictureBox1);

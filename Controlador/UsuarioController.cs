@@ -63,5 +63,7 @@ namespace Controlador
         {
             return ModelUsuario.EliminarUsuario(codigoEmpleado,EstadoE);
         }
+
+
     }
 }
