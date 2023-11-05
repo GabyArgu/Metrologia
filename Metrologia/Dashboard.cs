@@ -144,5 +144,11 @@ namespace Metrologia
             // Se muestra el panel 8 de tabControl
             tbcCruds.SelectedIndex = 7;
         }
+
+        private void btnAgregarEm_Click(object sender, EventArgs e)
+        {
+            Empresas formEmpresa = new Empresas();
+            formEmpresa.Show();
+        }
     }
 }

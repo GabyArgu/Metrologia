@@ -157,7 +157,7 @@ namespace Modelo
                 cmdinsert.Parameters.Add(new SqlParameter("nombre", Nombre));
                 cmdinsert.Parameters.Add(new SqlParameter("apellido", Apellido));
                 cmdinsert.Parameters.Add(new SqlParameter("correo", Correo));
-                cmdinsert.Parameters.Add(new SqlParameter("telefono", Telefono));
+                cmdinsert.Parameters.Add(new SqlParameter("telefono", Telefono));  
                 cmdinsert.Parameters.Add(new SqlParameter("username", Username));
                 cmdinsert.Parameters.Add(new SqlParameter("cargo", CargoE));
                 cmdinsert.Parameters.Add(new SqlParameter("estado", EstadoE));

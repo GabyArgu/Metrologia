@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="LoginController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EmpresasController.cs" />
     <Compile Include="UsuarioController.cs" />
     <Compile Include="Validaciones.cs" />
   </ItemGroup>
