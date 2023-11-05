@@ -22,10 +22,3 @@ C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Release\Modelo.c
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Release\Modelo.csproj.CopyComplete
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Release\Modelo.dll
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Release\Modelo.pdb
-C:\xampp\htdocs\Metrologia\Modelo\bin\Release\Modelo.dll
-C:\xampp\htdocs\Metrologia\Modelo\bin\Release\Modelo.pdb
-C:\xampp\htdocs\Metrologia\Modelo\obj\Release\Modelo.csproj.AssemblyReference.cache
-C:\xampp\htdocs\Metrologia\Modelo\obj\Release\Modelo.csproj.CoreCompileInputs.cache
-C:\xampp\htdocs\Metrologia\Modelo\obj\Release\Modelo.csproj.CopyComplete
-C:\xampp\htdocs\Metrologia\Modelo\obj\Release\Modelo.dll
-C:\xampp\htdocs\Metrologia\Modelo\obj\Release\Modelo.pdb

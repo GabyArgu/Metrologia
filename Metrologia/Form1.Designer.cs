@@ -181,14 +181,14 @@
             this.txtContra.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtContra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtContra.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtContra.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtContra.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(51)))));
             this.txtContra.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtContra.Location = new System.Drawing.Point(213, 414);
             this.txtContra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContra.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtContra.Name = "txtContra";
-            this.txtContra.PasswordChar = '*';
+            this.txtContra.PasswordChar = '\0';
             this.txtContra.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtContra.PlaceholderText = "  Digite su contraseña";
             this.txtContra.SelectedText = "";

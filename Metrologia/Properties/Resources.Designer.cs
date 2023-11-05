@@ -103,16 +103,6 @@ namespace Metrologia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap calendario_reloj__1_ {
-            get {
-                object obj = ResourceManager.GetObject("calendario-reloj (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap candado {
             get {
                 object obj = ResourceManager.GetObject("candado", resourceCulture);
@@ -156,16 +146,6 @@ namespace Metrologia.Properties {
         internal static System.Drawing.Bitmap edificio {
             get {
                 object obj = ResourceManager.GetObject("edificio", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap edificio__1_ {
-            get {
-                object obj = ResourceManager.GetObject("edificio (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,36 +213,6 @@ namespace Metrologia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap herramientas__1_ {
-            get {
-                object obj = ResourceManager.GetObject("herramientas (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hogar {
-            get {
-                object obj = ResourceManager.GetObject("hogar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hogar__1_ {
-            get {
-                object obj = ResourceManager.GetObject("hogar (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icono {
             get {
                 object obj = ResourceManager.GetObject("icono", resourceCulture);
@@ -306,16 +256,6 @@ namespace Metrologia.Properties {
         internal static System.Drawing.Bitmap ojo__1_ {
             get {
                 object obj = ResourceManager.GetObject("ojo (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ojo__2_ {
-            get {
-                object obj = ResourceManager.GetObject("ojo (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -406,16 +346,6 @@ namespace Metrologia.Properties {
         internal static System.Drawing.Bitmap usuario_de_archivo {
             get {
                 object obj = ResourceManager.GetObject("usuario-de-archivo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap usuario_de_archivo__1_ {
-            get {
-                object obj = ResourceManager.GetObject("usuario-de-archivo (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

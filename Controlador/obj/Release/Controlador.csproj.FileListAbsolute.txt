@@ -26,12 +26,3 @@ C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Con
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.csproj.CopyComplete
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.dll
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.pdb
-C:\xampp\htdocs\Metrologia\Controlador\bin\Release\Controlador.dll
-C:\xampp\htdocs\Metrologia\Controlador\bin\Release\Controlador.pdb
-C:\xampp\htdocs\Metrologia\Controlador\bin\Release\Modelo.dll
-C:\xampp\htdocs\Metrologia\Controlador\bin\Release\Modelo.pdb
-C:\xampp\htdocs\Metrologia\Controlador\obj\Release\Controlador.csproj.AssemblyReference.cache
-C:\xampp\htdocs\Metrologia\Controlador\obj\Release\Controlador.csproj.CoreCompileInputs.cache
-C:\xampp\htdocs\Metrologia\Controlador\obj\Release\Controlador.csproj.CopyComplete
-C:\xampp\htdocs\Metrologia\Controlador\obj\Release\Controlador.dll
-C:\xampp\htdocs\Metrologia\Controlador\obj\Release\Controlador.pdb

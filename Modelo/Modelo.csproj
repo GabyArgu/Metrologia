@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="ModelServicio.cs" />
     <Compile Include="ModelLogin.cs" />
+    <Compile Include="ModelCitas.cs" />
     <Compile Include="ModelUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
