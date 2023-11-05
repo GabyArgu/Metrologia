@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 
 namespace Metrologia
 {
@@ -55,6 +56,7 @@ namespace Metrologia
         {
             // Se muestra el panel 3 de tabControl
             tbcCruds.SelectedIndex = 2;
+            CargarDatosCitas();
         }
 
         private void btnEmpresas_Click(object sender, EventArgs e)
@@ -93,6 +95,21 @@ namespace Metrologia
                 dgvEmpleados.DataSource = null;
                 dgvEmpleados.DataSource = UsuarioController.CargarUsuarios_Controller();
                 dgvEmpleados.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void CargarDatosCitas()
+        {
+            try
+            {
+                tbcCruds.SelectedIndex = 2;
+                dgvCitas.DataSource = null;
+                dgvCitas.DataSource = CitasController.CargarCitas_Controller();
+                dgvCitas.Refresh();
             }
             catch (Exception ex)
             {
@@ -143,6 +160,71 @@ namespace Metrologia
         {
             // Se muestra el panel 8 de tabControl
             tbcCruds.SelectedIndex = 7;
+        }
+
+        private void btnAgregarC_Click(object sender, EventArgs e)
+        {
+            Citas formC = new Citas();
+
+            // Mostrar el formulario
+            formC.ocultarCodigo();
+            formC.Show();
+        }
+
+        private void btnEliminarC_Click(object sender, EventArgs e)
+        {
+            int posicion = dgvCitas.CurrentRow.Index;
+            string codigoCitas = dgvCitas[0, posicion].Value.ToString();
+            Citas formC = new Citas();
+            formC.eliminarCitas(codigoCitas);
+        }
+
+        private void dgvCitas_DoubleClick(object sender, EventArgs e)
+        {
+            int posicion;
+            string codigoCitas, Encargado, Empresa, EstadoCi, Fecha, Comentarios, Hora;
+            posicion = dgvCitas.CurrentRow.Index;
+
+            codigoCitas = dgvCitas[0, posicion].Value.ToString();
+            Encargado = dgvCitas[1, posicion].Value.ToString();
+            Empresa = dgvCitas[2, posicion].Value.ToString();
+            EstadoCi = dgvCitas[3, posicion].Value.ToString();
+            Fecha = dgvCitas[5, posicion].Value.ToString();
+            Comentarios = dgvCitas[6, posicion].Value.ToString();
+            Hora = dgvCitas[7, posicion].Value.ToString();
+
+            Citas formC = new Citas();
+
+            // Mostrar el formulario
+            formC.mostrarCodigo();
+            formC.llenarModal(codigoCitas, Comentarios, Fecha, Hora, Encargado, Empresa, EstadoCi);
+            formC.Show();
+        }
+
+        private void btnServicio_Click(object sender, EventArgs e)
+        {
+            int posicion;
+            string codigoCita,servicio;
+            posicion = dgvCitas.CurrentRow.Index;
+
+            codigoCita = dgvCitas[0, posicion].Value.ToString();
+            servicio = dgvCitas[4, posicion].Value.ToString();
+
+            Servicios formS = new Servicios();
+
+            if (servicio.Equals(""))
+            {
+                formS.ocultarCodigo();
+                formS.cargarCodigoCita(codigoCita);
+                formS.Show();
+            }
+            else if (servicio != null)
+            {
+                formS.mostrarCodigo();
+                formS.cargarCodigoCita(codigoCita);
+                formS.llenarModal(servicio);
+                formS.Show();
+            }
         }
     }
 }

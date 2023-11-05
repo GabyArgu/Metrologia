@@ -99,3 +99,5 @@ C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrol
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.CopyComplete
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.exe
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Citas.resources
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Servicios.resources

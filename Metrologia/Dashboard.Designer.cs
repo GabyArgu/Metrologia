@@ -53,7 +53,7 @@
             this.btnEditarC = new System.Windows.Forms.PictureBox();
             this.btnEliminarC = new System.Windows.Forms.PictureBox();
             this.btnAgregarC = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCitas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnEncargado = new System.Windows.Forms.PictureBox();
@@ -127,7 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncargado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEm)).BeginInit();
@@ -400,9 +400,9 @@
             this.tabPage3.Controls.Add(this.btnEditarC);
             this.tabPage3.Controls.Add(this.btnEliminarC);
             this.tabPage3.Controls.Add(this.btnAgregarC);
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.dgvCitas);
             this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(981, 479);
             this.tabPage3.TabIndex = 2;
@@ -420,6 +420,7 @@
             this.btnServicio.Size = new System.Drawing.Size(144, 47);
             this.btnServicio.TabIndex = 30;
             this.btnServicio.TabStop = false;
+            this.btnServicio.Click += new System.EventHandler(this.btnServicio_Click);
             // 
             // btnBuscarC
             // 
@@ -486,6 +487,7 @@
             this.btnEliminarC.Size = new System.Drawing.Size(144, 47);
             this.btnEliminarC.TabIndex = 26;
             this.btnEliminarC.TabStop = false;
+            this.btnEliminarC.Click += new System.EventHandler(this.btnEliminarC_Click);
             // 
             // btnAgregarC
             // 
@@ -498,18 +500,20 @@
             this.btnAgregarC.Size = new System.Drawing.Size(144, 47);
             this.btnAgregarC.TabIndex = 23;
             this.btnAgregarC.TabStop = false;
+            this.btnAgregarC.Click += new System.EventHandler(this.btnAgregarC_Click);
             // 
-            // dataGridView1
+            // dgvCitas
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 110);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(911, 265);
-            this.dataGridView1.TabIndex = 25;
+            this.dgvCitas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
+            this.dgvCitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCitas.Location = new System.Drawing.Point(39, 110);
+            this.dgvCitas.Name = "dgvCitas";
+            this.dgvCitas.RowHeadersWidth = 51;
+            this.dgvCitas.RowTemplate.Height = 24;
+            this.dgvCitas.Size = new System.Drawing.Size(911, 265);
+            this.dgvCitas.TabIndex = 25;
+            this.dgvCitas.DoubleClick += new System.EventHandler(this.dgvCitas_DoubleClick);
             // 
             // label3
             // 
@@ -518,7 +522,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
             this.label3.Location = new System.Drawing.Point(31, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 52);
+            this.label3.Size = new System.Drawing.Size(75, 42);
             this.label3.TabIndex = 24;
             this.label3.Text = "Citas";
             // 
@@ -532,7 +536,7 @@
             this.tabPage4.Controls.Add(this.btnAgregarEm);
             this.tabPage4.Controls.Add(this.dataGridView2);
             this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(981, 479);
             this.tabPage4.TabIndex = 3;
@@ -649,7 +653,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
             this.label4.Location = new System.Drawing.Point(31, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 52);
+            this.label4.Size = new System.Drawing.Size(127, 42);
             this.label4.TabIndex = 31;
             this.label4.Text = "Empresas";
             // 
@@ -663,7 +667,7 @@
             this.tabPage5.Controls.Add(this.btnAgregarEq);
             this.tabPage5.Controls.Add(this.dataGridView3);
             this.tabPage5.Controls.Add(this.label5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(981, 479);
             this.tabPage5.TabIndex = 4;
@@ -780,7 +784,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
             this.label5.Location = new System.Drawing.Point(31, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 52);
+            this.label5.Size = new System.Drawing.Size(106, 42);
             this.label5.TabIndex = 38;
             this.label5.Text = "Equipos";
             // 
@@ -793,7 +797,7 @@
             this.tabPage6.Controls.Add(this.btnAgregarSe);
             this.tabPage6.Controls.Add(this.dataGridView4);
             this.tabPage6.Controls.Add(this.label6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(981, 479);
             this.tabPage6.TabIndex = 5;
@@ -897,7 +901,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
             this.label6.Location = new System.Drawing.Point(31, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 52);
+            this.label6.Size = new System.Drawing.Size(139, 42);
             this.label6.TabIndex = 38;
             this.label6.Text = "Reviciones";
             // 
@@ -910,9 +914,9 @@
             this.tabPage7.Controls.Add(this.btnAgregarEn);
             this.tabPage7.Controls.Add(this.dataGridView5);
             this.tabPage7.Controls.Add(this.label7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(981, 476);
+            this.tabPage7.Size = new System.Drawing.Size(981, 479);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1014,7 +1018,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
             this.label7.Location = new System.Drawing.Point(31, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(180, 52);
+            this.label7.Size = new System.Drawing.Size(147, 42);
             this.label7.TabIndex = 45;
             this.label7.Text = "Encargados";
             // 
@@ -1027,9 +1031,9 @@
             this.tabPage8.Controls.Add(this.btnAgregarUb);
             this.tabPage8.Controls.Add(this.dataGridView6);
             this.tabPage8.Controls.Add(this.label8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(981, 476);
+            this.tabPage8.Size = new System.Drawing.Size(981, 479);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1131,7 +1135,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
             this.label8.Location = new System.Drawing.Point(31, 36);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(274, 52);
+            this.label8.Size = new System.Drawing.Size(222, 42);
             this.label8.TabIndex = 45;
             this.label8.Text = "Ubicación Equipos";
             // 
@@ -1326,7 +1330,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncargado)).EndInit();
@@ -1412,7 +1416,7 @@
         private System.Windows.Forms.PictureBox btnEditarC;
         private System.Windows.Forms.PictureBox btnEliminarC;
         private System.Windows.Forms.PictureBox btnAgregarC;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCitas;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel btnBuscarEm;
         private Guna.UI2.WinForms.Guna2TextBox txtBuscarEm;
