@@ -66,3 +66,10 @@ C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Debug\Modelo.csp
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Debug\Modelo.csproj.CopyComplete
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Debug\Modelo.dll
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Debug\Modelo.pdb
+C:\xampp\htdocs\Metrologia\Modelo\bin\Debug\Modelo.dll
+C:\xampp\htdocs\Metrologia\Modelo\bin\Debug\Modelo.pdb
+C:\xampp\htdocs\Metrologia\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Metrologia\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Metrologia\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\xampp\htdocs\Metrologia\Modelo\obj\Debug\Modelo.dll
+C:\xampp\htdocs\Metrologia\Modelo\obj\Debug\Modelo.pdb
