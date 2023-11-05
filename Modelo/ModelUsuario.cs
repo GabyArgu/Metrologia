@@ -59,7 +59,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT CE.CodigoCargo, CE.Nombre FROM CargoEmpleado CE , Empleado E WHERE CE.CodigoCargo=E.CodigoCargo AND E.CodigoEmpleado = @codigoe";
+                string query = "SELECT CE.CodigoCargo FROM CargoEmpleado CE , Empleado E WHERE CE.CodigoCargo=E.CodigoCargo AND E.CodigoEmpleado = @codigoe";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdselect.Parameters.Add(new SqlParameter("codigoe", codigoEmpleado));
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
@@ -81,7 +81,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT EE.CodigoEstadoEm, EE.Nombre FROM EstadoEmpleado EE , Empleado E WHERE EE.CodigoEstadoEm=E.CodigoEstadoEm AND E.CodigoEmpleado = @codigoe";
+                string query = "SELECT EE.CodigoEstadoEm FROM EstadoEmpleado EE , Empleado E WHERE EE.CodigoEstadoEm=E.CodigoEstadoEm AND E.CodigoEmpleado = @codigoe";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdselect.Parameters.Add(new SqlParameter("codigoe", codigoEmpleado));
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
