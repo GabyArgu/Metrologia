@@ -42,7 +42,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlCodigoEmpresa = new System.Windows.Forms.Panel();
+            this.pnl9 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnAceptar = new Guna.UI2.WinForms.Guna2Button();
@@ -50,7 +50,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtNombreEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCodigoEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.pnlCodigoEmpresa = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
@@ -321,17 +321,17 @@
             this.panel2.Size = new System.Drawing.Size(38, 41);
             this.panel2.TabIndex = 36;
             // 
-            // pnlCodigoEmpresa
+            // pnl9
             // 
-            this.pnlCodigoEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCodigoEmpresa.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
-            this.pnlCodigoEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlCodigoEmpresa.ForeColor = System.Drawing.Color.Coral;
-            this.pnlCodigoEmpresa.Location = new System.Drawing.Point(11, 148);
-            this.pnlCodigoEmpresa.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlCodigoEmpresa.Name = "pnlCodigoEmpresa";
-            this.pnlCodigoEmpresa.Size = new System.Drawing.Size(38, 41);
-            this.pnlCodigoEmpresa.TabIndex = 34;
+            this.pnl9.BackColor = System.Drawing.Color.Transparent;
+            this.pnl9.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
+            this.pnl9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnl9.ForeColor = System.Drawing.Color.Coral;
+            this.pnl9.Location = new System.Drawing.Point(11, 148);
+            this.pnl9.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl9.Name = "pnl9";
+            this.pnl9.Size = new System.Drawing.Size(38, 41);
+            this.pnl9.TabIndex = 34;
             // 
             // btnSalir
             // 
@@ -490,17 +490,17 @@
             this.txtCodigoEmpresa.Size = new System.Drawing.Size(334, 38);
             this.txtCodigoEmpresa.TabIndex = 53;
             // 
-            // panel9
+            // pnlCodigoEmpresa
             // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
-            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel9.ForeColor = System.Drawing.Color.Coral;
-            this.panel9.Location = new System.Drawing.Point(11, 89);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(38, 41);
-            this.panel9.TabIndex = 35;
+            this.pnlCodigoEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCodigoEmpresa.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
+            this.pnlCodigoEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlCodigoEmpresa.ForeColor = System.Drawing.Color.Coral;
+            this.pnlCodigoEmpresa.Location = new System.Drawing.Point(11, 89);
+            this.pnlCodigoEmpresa.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlCodigoEmpresa.Name = "pnlCodigoEmpresa";
+            this.pnlCodigoEmpresa.Size = new System.Drawing.Size(38, 41);
+            this.pnlCodigoEmpresa.TabIndex = 35;
             // 
             // Empresas
             // 
@@ -508,7 +508,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(226)))), ((int)(((byte)(144)))));
             this.ClientSize = new System.Drawing.Size(400, 683);
-            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.pnlCodigoEmpresa);
             this.Controls.Add(this.txtCodigoEmpresa);
             this.Controls.Add(this.txtNombreEmpresa);
             this.Controls.Add(this.cbCategoria);
@@ -527,7 +527,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtInformacion);
-            this.Controls.Add(this.pnlCodigoEmpresa);
+            this.Controls.Add(this.pnl9);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -546,7 +546,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel pnlCodigoEmpresa;
+        private System.Windows.Forms.Panel pnl9;
         private System.Windows.Forms.Panel panel8;
         private Guna.UI2.WinForms.Guna2TextBox txtRazonSocial;
         private Guna.UI2.WinForms.Guna2ComboBox cbEncargado;
@@ -565,6 +565,6 @@
         private System.Windows.Forms.Panel panel7;
         private Guna.UI2.WinForms.Guna2TextBox txtNombreEmpresa;
         private Guna.UI2.WinForms.Guna2TextBox txtCodigoEmpresa;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel pnlCodigoEmpresa;
     }
 }

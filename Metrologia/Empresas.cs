@@ -109,9 +109,9 @@ namespace Metrologia
             txtNombreEmpresa.Text = nombre;
             txtRazonSocial.Text = razonsocial;
             txtInformacion.Text = informacion;
-            txtCorreo.Text = correo;
-            txtTelefono.Text = telefono;
             txtDireccion.Text = direccion;
+            txtTelefono.Text = telefono;
+            txtCorreo.Text = correo;                       
 
             cbEncargado.DataSource = objselect.CargarEncargadoEmpresa_Controller(codigoEmpresa);
             cbEncargado.DisplayMember = "Nombre";

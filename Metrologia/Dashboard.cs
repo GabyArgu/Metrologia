@@ -174,18 +174,17 @@ namespace Metrologia
             string codigoEmpresa, nombre, razonsocial, informacion, direccion, telefono, correo, encargado, categoria;
             posicion = dgvEmpresas.CurrentRow.Index;
 
-            codigoEmpresa = dgvEmpleados[0, posicion].Value.ToString();
-            nombre = dgvEmpleados[1, posicion].Value.ToString();
-            razonsocial = dgvEmpleados[2, posicion].Value.ToString();
-            informacion = dgvEmpleados[3, posicion].Value.ToString();
-            direccion = dgvEmpleados[4, posicion].Value.ToString();
-            telefono = dgvEmpleados[5, posicion].Value.ToString();
-            correo = dgvEmpleados[6, posicion].Value.ToString();
-            
+            codigoEmpresa = dgvEmpresas[0, posicion].Value.ToString();
+            nombre = dgvEmpresas[1, posicion].Value.ToString();
+            razonsocial = dgvEmpresas[2, posicion].Value.ToString();
+            informacion = dgvEmpresas[3, posicion].Value.ToString();
+            direccion = dgvEmpresas[4, posicion].Value.ToString();
+            telefono = dgvEmpresas[5, posicion].Value.ToString();
+            correo = dgvEmpresas[6, posicion].Value.ToString();            
 
-            encargado = dgvEmpleados[7, posicion].Value.ToString();
+            encargado = dgvEmpresas[7, posicion].Value.ToString();
 
-            categoria = dgvEmpleados[8, posicion].Value.ToString();
+            categoria = dgvEmpresas[8, posicion].Value.ToString();
 
             Empresas formEmpresa = new Empresas();
 
@@ -198,7 +197,7 @@ namespace Metrologia
         private void btnEliminarEm_Click(object sender, EventArgs e)
         {
             int posicion = dgvEmpresas.CurrentRow.Index;
-            string codigoEmpresa = dgvEmpleados[0, posicion].Value.ToString();
+            string codigoEmpresa = dgvEmpresas[0, posicion].Value.ToString();
             Empresas formEmpresa = new Empresas();
             formEmpresa.eliminarEmpresa(codigoEmpresa);
         }
