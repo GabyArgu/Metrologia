@@ -102,7 +102,7 @@ namespace Modelo
         public static DataTable CargarUsuarios()
         {
             DataTable retorno;
-            string query = "SELECT E.CodigoEmpleado AS Codigo,E.Usuario,E.Nombre,E.Apellido,E.Correo,E.Telefono,CE.Nombre AS Cargo, EE.Nombre AS Estado FROM Empleado E, EstadoEmpleado EE, CargoEmpleado CE WHERE E.CodigoEstadoEm=EE.CodigoEstadoEm AND E.CodigoCargo=CE.CodigoCargo";
+            string query = "SELECT E.CodigoEmpleado,E.Usuario,E.Nombre,E.Apellido,E.Correo,E.Telefono,CE.Nombre AS Cargo, EE.Nombre AS Estado FROM Empleado E, EstadoEmpleado EE, CargoEmpleado CE WHERE E.CodigoEstadoEm=EE.CodigoEstadoEm AND E.CodigoCargo=CE.CodigoCargo";
             try
             {
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());

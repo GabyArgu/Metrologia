@@ -343,27 +343,6 @@
       <Name>Controlador</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hogar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hogar %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\usuario-de-archivo %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calendario-reloj %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edificio %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\herramientas %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ojo %282%29.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
