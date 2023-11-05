@@ -61,6 +61,7 @@ namespace Metrologia
         {
             // Se muestra el panel 4 de tabControl
             tbcCruds.SelectedIndex = 3;
+            CargarDatosEmpresa();
         }
 
         private void btnEquipos_Click(object sender, EventArgs e)
@@ -93,6 +94,21 @@ namespace Metrologia
                 dgvEmpleados.DataSource = null;
                 dgvEmpleados.DataSource = UsuarioController.CargarUsuarios_Controller();
                 dgvEmpleados.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void CargarDatosEmpresa()
+        {
+            try
+            {
+                tbcCruds.SelectedIndex = 3;
+                dgvEmpresas.DataSource = null;
+                dgvEmpresas.DataSource = EmpresasController.CargarEmpresas_Controller();
+                dgvEmpresas.Refresh();
             }
             catch (Exception ex)
             {
@@ -148,7 +164,43 @@ namespace Metrologia
         private void btnAgregarEm_Click(object sender, EventArgs e)
         {
             Empresas formEmpresa = new Empresas();
+            formEmpresa.ocultarCodigo();
             formEmpresa.Show();
+        }
+
+        private void dgvEmpresas_DoubleClick(object sender, EventArgs e)
+        {
+            int posicion;
+            string codigoEmpresa, nombre, razonsocial, informacion, direccion, telefono, correo, encargado, categoria;
+            posicion = dgvEmpresas.CurrentRow.Index;
+
+            codigoEmpresa = dgvEmpleados[0, posicion].Value.ToString();
+            nombre = dgvEmpleados[1, posicion].Value.ToString();
+            razonsocial = dgvEmpleados[2, posicion].Value.ToString();
+            informacion = dgvEmpleados[3, posicion].Value.ToString();
+            direccion = dgvEmpleados[4, posicion].Value.ToString();
+            telefono = dgvEmpleados[5, posicion].Value.ToString();
+            correo = dgvEmpleados[6, posicion].Value.ToString();
+            
+
+            encargado = dgvEmpleados[7, posicion].Value.ToString();
+
+            categoria = dgvEmpleados[8, posicion].Value.ToString();
+
+            Empresas formEmpresa = new Empresas();
+
+            // Mostrar el formulario
+            formEmpresa.mostrarCodigo();
+            formEmpresa.llenarModal(codigoEmpresa, nombre, razonsocial, informacion, direccion, telefono, correo, encargado, categoria);
+            formEmpresa.Show();
+        }
+
+        private void btnEliminarEm_Click(object sender, EventArgs e)
+        {
+            int posicion = dgvEmpresas.CurrentRow.Index;
+            string codigoEmpresa = dgvEmpleados[0, posicion].Value.ToString();
+            Empresas formEmpresa = new Empresas();
+            formEmpresa.eliminarEmpresa(codigoEmpresa);
         }
     }
 }

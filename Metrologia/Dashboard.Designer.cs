@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMaximi = new System.Windows.Forms.PictureBox();
@@ -62,7 +64,7 @@
             this.btnEditarEm = new System.Windows.Forms.PictureBox();
             this.btnEliminarEm = new System.Windows.Forms.PictureBox();
             this.btnAgregarEm = new System.Windows.Forms.PictureBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvEmpresas = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnUbicacion = new System.Windows.Forms.PictureBox();
@@ -133,7 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarEm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUbicacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEq)).BeginInit();
@@ -530,7 +532,7 @@
             this.tabPage4.Controls.Add(this.btnEditarEm);
             this.tabPage4.Controls.Add(this.btnEliminarEm);
             this.tabPage4.Controls.Add(this.btnAgregarEm);
-            this.tabPage4.Controls.Add(this.dataGridView2);
+            this.tabPage4.Controls.Add(this.dgvEmpresas);
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -617,6 +619,7 @@
             this.btnEliminarEm.Size = new System.Drawing.Size(144, 47);
             this.btnEliminarEm.TabIndex = 33;
             this.btnEliminarEm.TabStop = false;
+            this.btnEliminarEm.Click += new System.EventHandler(this.btnEliminarEm_Click);
             // 
             // btnAgregarEm
             // 
@@ -631,17 +634,34 @@
             this.btnAgregarEm.TabStop = false;
             this.btnAgregarEm.Click += new System.EventHandler(this.btnAgregarEm_Click);
             // 
-            // dataGridView2
+            // dgvEmpresas
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(39, 110);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(911, 265);
-            this.dataGridView2.TabIndex = 32;
+            this.dgvEmpresas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
+            this.dgvEmpresas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpresas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmpresas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEmpresas.Location = new System.Drawing.Point(39, 110);
+            this.dgvEmpresas.Name = "dgvEmpresas";
+            this.dgvEmpresas.RowHeadersWidth = 51;
+            this.dgvEmpresas.RowTemplate.Height = 24;
+            this.dgvEmpresas.Size = new System.Drawing.Size(911, 265);
+            this.dgvEmpresas.TabIndex = 32;
+            this.dgvEmpresas.DoubleClick += new System.EventHandler(this.dgvEmpresas_DoubleClick);
             // 
             // label4
             // 
@@ -1334,7 +1354,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarEm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUbicacion)).EndInit();
@@ -1420,7 +1440,7 @@
         private System.Windows.Forms.PictureBox btnEditarEm;
         private System.Windows.Forms.PictureBox btnEliminarEm;
         private System.Windows.Forms.PictureBox btnAgregarEm;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvEmpresas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel btnBuscarEq;
         private Guna.UI2.WinForms.Guna2TextBox txtBuscarEq;

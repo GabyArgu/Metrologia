@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNombreEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtRazonSocial = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbEncargado = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtCorreo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,6 +48,9 @@
             this.btnAceptar = new Guna.UI2.WinForms.Guna2Button();
             this.cbCategoria = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.txtNombreEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCodigoEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
@@ -77,37 +79,6 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Empresas";
             // 
-            // txtNombreEmpresa
-            // 
-            this.txtNombreEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.txtNombreEmpresa.BorderRadius = 12;
-            this.txtNombreEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombreEmpresa.CustomizableEdges.BottomLeft = false;
-            this.txtNombreEmpresa.CustomizableEdges.TopLeft = false;
-            this.txtNombreEmpresa.DefaultText = "";
-            this.txtNombreEmpresa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombreEmpresa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombreEmpresa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreEmpresa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreEmpresa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.txtNombreEmpresa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtNombreEmpresa.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtNombreEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtNombreEmpresa.Location = new System.Drawing.Point(55, 90);
-            this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtNombreEmpresa.MaximumSize = new System.Drawing.Size(356, 46);
-            this.txtNombreEmpresa.Name = "txtNombreEmpresa";
-            this.txtNombreEmpresa.PasswordChar = '\0';
-            this.txtNombreEmpresa.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtNombreEmpresa.PlaceholderText = "  Digite el nombre de la empresa";
-            this.txtNombreEmpresa.ReadOnly = true;
-            this.txtNombreEmpresa.SelectedText = "";
-            this.txtNombreEmpresa.Size = new System.Drawing.Size(334, 40);
-            this.txtNombreEmpresa.TabIndex = 35;
-            // 
             // txtRazonSocial
             // 
             this.txtRazonSocial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -127,7 +98,7 @@
             this.txtRazonSocial.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRazonSocial.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtRazonSocial.Location = new System.Drawing.Point(55, 150);
+            this.txtRazonSocial.Location = new System.Drawing.Point(49, 208);
             this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRazonSocial.MaximumSize = new System.Drawing.Size(356, 46);
             this.txtRazonSocial.Name = "txtRazonSocial";
@@ -152,7 +123,7 @@
             this.cbEncargado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEncargado.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEncargado.ItemHeight = 30;
-            this.cbEncargado.Location = new System.Drawing.Point(55, 454);
+            this.cbEncargado.Location = new System.Drawing.Point(53, 511);
             this.cbEncargado.Margin = new System.Windows.Forms.Padding(2);
             this.cbEncargado.Name = "cbEncargado";
             this.cbEncargado.Size = new System.Drawing.Size(312, 36);
@@ -177,7 +148,7 @@
             this.txtCorreo.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtCorreo.Location = new System.Drawing.Point(55, 392);
+            this.txtCorreo.Location = new System.Drawing.Point(53, 449);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCorreo.MaximumSize = new System.Drawing.Size(356, 46);
             this.txtCorreo.Name = "txtCorreo";
@@ -185,7 +156,7 @@
             this.txtCorreo.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtCorreo.PlaceholderText = "  Digite el correo";
             this.txtCorreo.SelectedText = "";
-            this.txtCorreo.Size = new System.Drawing.Size(334, 38);
+            this.txtCorreo.Size = new System.Drawing.Size(330, 38);
             this.txtCorreo.TabIndex = 43;
             // 
             // txtTelefono
@@ -207,7 +178,7 @@
             this.txtTelefono.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtTelefono.Location = new System.Drawing.Point(55, 331);
+            this.txtTelefono.Location = new System.Drawing.Point(53, 388);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtTelefono.MaximumSize = new System.Drawing.Size(356, 46);
             this.txtTelefono.Name = "txtTelefono";
@@ -215,7 +186,7 @@
             this.txtTelefono.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtTelefono.PlaceholderText = "  Digite el teléfono";
             this.txtTelefono.SelectedText = "";
-            this.txtTelefono.Size = new System.Drawing.Size(334, 38);
+            this.txtTelefono.Size = new System.Drawing.Size(330, 38);
             this.txtTelefono.TabIndex = 42;
             // 
             // txtDireccion
@@ -237,7 +208,7 @@
             this.txtDireccion.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtDireccion.Location = new System.Drawing.Point(55, 271);
+            this.txtDireccion.Location = new System.Drawing.Point(53, 328);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDireccion.MaximumSize = new System.Drawing.Size(356, 46);
             this.txtDireccion.Name = "txtDireccion";
@@ -245,7 +216,7 @@
             this.txtDireccion.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtDireccion.PlaceholderText = "  Digite la dirección";
             this.txtDireccion.SelectedText = "";
-            this.txtDireccion.Size = new System.Drawing.Size(334, 38);
+            this.txtDireccion.Size = new System.Drawing.Size(330, 38);
             this.txtDireccion.TabIndex = 40;
             // 
             // txtInformacion
@@ -267,7 +238,7 @@
             this.txtInformacion.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.txtInformacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtInformacion.Location = new System.Drawing.Point(55, 208);
+            this.txtInformacion.Location = new System.Drawing.Point(53, 265);
             this.txtInformacion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtInformacion.MaximumSize = new System.Drawing.Size(356, 46);
             this.txtInformacion.Name = "txtInformacion";
@@ -275,7 +246,7 @@
             this.txtInformacion.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtInformacion.PlaceholderText = "  Digite la información";
             this.txtInformacion.SelectedText = "";
-            this.txtInformacion.Size = new System.Drawing.Size(334, 38);
+            this.txtInformacion.Size = new System.Drawing.Size(330, 38);
             this.txtInformacion.TabIndex = 39;
             // 
             // panel8
@@ -284,7 +255,7 @@
             this.panel8.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel8.ForeColor = System.Drawing.Color.Coral;
-            this.panel8.Location = new System.Drawing.Point(17, 149);
+            this.panel8.Location = new System.Drawing.Point(11, 207);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(38, 41);
@@ -296,7 +267,7 @@
             this.panel6.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel6.ForeColor = System.Drawing.Color.Coral;
-            this.panel6.Location = new System.Drawing.Point(17, 452);
+            this.panel6.Location = new System.Drawing.Point(15, 509);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(38, 41);
@@ -308,7 +279,7 @@
             this.panel5.BackgroundImage = global::Metrologia.Properties.Resources.correo;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.ForeColor = System.Drawing.Color.Coral;
-            this.panel5.Location = new System.Drawing.Point(17, 391);
+            this.panel5.Location = new System.Drawing.Point(15, 448);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(38, 41);
@@ -320,7 +291,7 @@
             this.panel4.BackgroundImage = global::Metrologia.Properties.Resources.telefono;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel4.ForeColor = System.Drawing.Color.Coral;
-            this.panel4.Location = new System.Drawing.Point(17, 329);
+            this.panel4.Location = new System.Drawing.Point(15, 386);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(38, 41);
@@ -332,7 +303,7 @@
             this.panel3.BackgroundImage = global::Metrologia.Properties.Resources.ubicacion2;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.ForeColor = System.Drawing.Color.Coral;
-            this.panel3.Location = new System.Drawing.Point(17, 269);
+            this.panel3.Location = new System.Drawing.Point(15, 326);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(38, 41);
@@ -344,7 +315,7 @@
             this.panel2.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.ForeColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(17, 207);
+            this.panel2.Location = new System.Drawing.Point(15, 264);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(38, 41);
@@ -356,7 +327,7 @@
             this.pnlCodigoEmpresa.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
             this.pnlCodigoEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlCodigoEmpresa.ForeColor = System.Drawing.Color.Coral;
-            this.pnlCodigoEmpresa.Location = new System.Drawing.Point(17, 90);
+            this.pnlCodigoEmpresa.Location = new System.Drawing.Point(11, 148);
             this.pnlCodigoEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCodigoEmpresa.Name = "pnlCodigoEmpresa";
             this.pnlCodigoEmpresa.Size = new System.Drawing.Size(38, 41);
@@ -393,7 +364,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnCancelar.Location = new System.Drawing.Point(117, 578);
+            this.btnCancelar.Location = new System.Drawing.Point(115, 630);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.MaximumSize = new System.Drawing.Size(394, 52);
             this.btnCancelar.Name = "btnCancelar";
@@ -418,13 +389,14 @@
             this.btnAceptar.ForeColor = System.Drawing.Color.Black;
             this.btnAceptar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnAceptar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnAceptar.Location = new System.Drawing.Point(285, 578);
+            this.btnAceptar.Location = new System.Drawing.Point(283, 630);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.MaximumSize = new System.Drawing.Size(394, 52);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(104, 38);
             this.btnAceptar.TabIndex = 49;
             this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // cbCategoria
             // 
@@ -440,7 +412,7 @@
             this.cbCategoria.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbCategoria.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbCategoria.ItemHeight = 30;
-            this.cbCategoria.Location = new System.Drawing.Point(55, 516);
+            this.cbCategoria.Location = new System.Drawing.Point(53, 568);
             this.cbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(312, 36);
@@ -452,18 +424,93 @@
             this.panel7.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel7.ForeColor = System.Drawing.Color.Coral;
-            this.panel7.Location = new System.Drawing.Point(17, 514);
+            this.panel7.Location = new System.Drawing.Point(15, 566);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(38, 41);
             this.panel7.TabIndex = 51;
+            // 
+            // txtNombreEmpresa
+            // 
+            this.txtNombreEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.txtNombreEmpresa.BorderRadius = 12;
+            this.txtNombreEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreEmpresa.CustomizableEdges.BottomLeft = false;
+            this.txtNombreEmpresa.CustomizableEdges.TopLeft = false;
+            this.txtNombreEmpresa.DefaultText = "";
+            this.txtNombreEmpresa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNombreEmpresa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNombreEmpresa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreEmpresa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreEmpresa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtNombreEmpresa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtNombreEmpresa.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtNombreEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtNombreEmpresa.Location = new System.Drawing.Point(49, 151);
+            this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNombreEmpresa.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtNombreEmpresa.Name = "txtNombreEmpresa";
+            this.txtNombreEmpresa.PasswordChar = '\0';
+            this.txtNombreEmpresa.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtNombreEmpresa.PlaceholderText = "  Digite el nombre de la empresa";
+            this.txtNombreEmpresa.SelectedText = "";
+            this.txtNombreEmpresa.Size = new System.Drawing.Size(334, 38);
+            this.txtNombreEmpresa.TabIndex = 52;
+            // 
+            // txtCodigoEmpresa
+            // 
+            this.txtCodigoEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodigoEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.txtCodigoEmpresa.BorderRadius = 12;
+            this.txtCodigoEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigoEmpresa.CustomizableEdges.BottomLeft = false;
+            this.txtCodigoEmpresa.CustomizableEdges.TopLeft = false;
+            this.txtCodigoEmpresa.DefaultText = "";
+            this.txtCodigoEmpresa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCodigoEmpresa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCodigoEmpresa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigoEmpresa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigoEmpresa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtCodigoEmpresa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtCodigoEmpresa.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtCodigoEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtCodigoEmpresa.Location = new System.Drawing.Point(49, 92);
+            this.txtCodigoEmpresa.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCodigoEmpresa.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtCodigoEmpresa.Name = "txtCodigoEmpresa";
+            this.txtCodigoEmpresa.PasswordChar = '\0';
+            this.txtCodigoEmpresa.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtCodigoEmpresa.PlaceholderText = "Codigo de Empresa";
+            this.txtCodigoEmpresa.SelectedText = "";
+            this.txtCodigoEmpresa.Size = new System.Drawing.Size(334, 38);
+            this.txtCodigoEmpresa.TabIndex = 53;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel9.ForeColor = System.Drawing.Color.Coral;
+            this.panel9.Location = new System.Drawing.Point(11, 89);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(38, 41);
+            this.panel9.TabIndex = 35;
             // 
             // Empresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(226)))), ((int)(((byte)(144)))));
-            this.ClientSize = new System.Drawing.Size(400, 637);
+            this.ClientSize = new System.Drawing.Size(400, 683);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.txtCodigoEmpresa);
+            this.Controls.Add(this.txtNombreEmpresa);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnAceptar);
@@ -480,7 +527,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtInformacion);
-            this.Controls.Add(this.txtNombreEmpresa);
             this.Controls.Add(this.pnlCodigoEmpresa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -501,7 +547,6 @@
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlCodigoEmpresa;
-        private Guna.UI2.WinForms.Guna2TextBox txtNombreEmpresa;
         private System.Windows.Forms.Panel panel8;
         private Guna.UI2.WinForms.Guna2TextBox txtRazonSocial;
         private Guna.UI2.WinForms.Guna2ComboBox cbEncargado;
@@ -518,5 +563,8 @@
         private Guna.UI2.WinForms.Guna2Button btnAceptar;
         private Guna.UI2.WinForms.Guna2ComboBox cbCategoria;
         private System.Windows.Forms.Panel panel7;
+        private Guna.UI2.WinForms.Guna2TextBox txtNombreEmpresa;
+        private Guna.UI2.WinForms.Guna2TextBox txtCodigoEmpresa;
+        private System.Windows.Forms.Panel panel9;
     }
 }
