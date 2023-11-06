@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="ModelUbicacion.cs" />
     <Compile Include="ModelServicio.cs" />
     <Compile Include="ModelLogin.cs" />
     <Compile Include="ModelCitas.cs" />

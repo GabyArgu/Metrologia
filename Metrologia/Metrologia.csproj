@@ -223,6 +223,12 @@
     <Compile Include="Servicios.Designer.cs">
       <DependentUpon>Servicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ubicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ubicacion.Designer.cs">
+      <DependentUpon>Ubicacion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Citas.resx">
       <DependentUpon>Citas.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +253,9 @@
     </Compile>
     <EmbeddedResource Include="Servicios.resx">
       <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubicacion.resx">
+      <DependentUpon>Ubicacion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

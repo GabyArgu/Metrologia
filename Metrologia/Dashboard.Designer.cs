@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMaximi = new System.Windows.Forms.PictureBox();
@@ -76,7 +76,7 @@
             this.btnEditarEq = new System.Windows.Forms.PictureBox();
             this.btnEliminarEq = new System.Windows.Forms.PictureBox();
             this.btnAgregarEq = new System.Windows.Forms.PictureBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvEquipos = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.btnBuscarSe = new System.Windows.Forms.Panel();
@@ -100,7 +100,7 @@
             this.btnEditarUb = new System.Windows.Forms.PictureBox();
             this.btnEliminarUb = new System.Windows.Forms.PictureBox();
             this.btnAgregarUb = new System.Windows.Forms.PictureBox();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dgvUbicacion = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -145,7 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarEq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEq)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquipos)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarSe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarSe)).BeginInit();
@@ -160,7 +160,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarUb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarUb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarUb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUbicacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -303,30 +303,30 @@
             // 
             this.dgvEmpleados.AllowUserToAddRows = false;
             this.dgvEmpleados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.dgvEmpleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.dgvEmpleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEmpleados.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(184)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Mohave Medium", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(206)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(184)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Mohave Medium", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(206)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvEmpleados.ColumnHeadersHeight = 35;
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(180)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Mohave Medium", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(180)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Mohave Medium", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(206)))), ((int)(((byte)(97)))));
             this.dgvEmpleados.Location = new System.Drawing.Point(39, 121);
             this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -334,17 +334,17 @@
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvEmpleados.RowHeadersVisible = false;
             this.dgvEmpleados.RowHeadersWidth = 51;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(199)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Mohave Medium", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(20)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(180)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Mohave Medium", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(20)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(180)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dgvEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvEmpleados.RowTemplate.Height = 45;
             this.dgvEmpleados.RowTemplate.ReadOnly = true;
             this.dgvEmpleados.ShowCellToolTips = false;
@@ -740,7 +740,7 @@
             this.tabPage5.Controls.Add(this.btnEditarEq);
             this.tabPage5.Controls.Add(this.btnEliminarEq);
             this.tabPage5.Controls.Add(this.btnAgregarEq);
-            this.tabPage5.Controls.Add(this.dataGridView3);
+            this.tabPage5.Controls.Add(this.dgvEquipos);
             this.tabPage5.Controls.Add(this.label5);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
@@ -840,17 +840,17 @@
             this.btnAgregarEq.TabIndex = 37;
             this.btnAgregarEq.TabStop = false;
             // 
-            // dataGridView3
+            // dgvEquipos
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(39, 110);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(911, 265);
-            this.dataGridView3.TabIndex = 39;
+            this.dgvEquipos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
+            this.dgvEquipos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEquipos.Location = new System.Drawing.Point(39, 110);
+            this.dgvEquipos.Name = "dgvEquipos";
+            this.dgvEquipos.RowHeadersWidth = 51;
+            this.dgvEquipos.RowTemplate.Height = 24;
+            this.dgvEquipos.Size = new System.Drawing.Size(911, 265);
+            this.dgvEquipos.TabIndex = 39;
             // 
             // label5
             // 
@@ -1104,7 +1104,7 @@
             this.tabPage8.Controls.Add(this.btnEditarUb);
             this.tabPage8.Controls.Add(this.btnEliminarUb);
             this.tabPage8.Controls.Add(this.btnAgregarUb);
-            this.tabPage8.Controls.Add(this.dataGridView6);
+            this.tabPage8.Controls.Add(this.dgvUbicacion);
             this.tabPage8.Controls.Add(this.label8);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
@@ -1178,6 +1178,7 @@
             this.btnEliminarUb.Size = new System.Drawing.Size(144, 47);
             this.btnEliminarUb.TabIndex = 47;
             this.btnEliminarUb.TabStop = false;
+            this.btnEliminarUb.Click += new System.EventHandler(this.btnEliminarUb_Click);
             // 
             // btnAgregarUb
             // 
@@ -1190,18 +1191,20 @@
             this.btnAgregarUb.Size = new System.Drawing.Size(144, 47);
             this.btnAgregarUb.TabIndex = 44;
             this.btnAgregarUb.TabStop = false;
+            this.btnAgregarUb.Click += new System.EventHandler(this.btnAgregarUb_Click);
             // 
-            // dataGridView6
+            // dgvUbicacion
             // 
-            this.dataGridView6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(39, 110);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.RowHeadersWidth = 51;
-            this.dataGridView6.RowTemplate.Height = 24;
-            this.dataGridView6.Size = new System.Drawing.Size(911, 265);
-            this.dataGridView6.TabIndex = 46;
+            this.dgvUbicacion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
+            this.dgvUbicacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvUbicacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUbicacion.Location = new System.Drawing.Point(39, 110);
+            this.dgvUbicacion.Name = "dgvUbicacion";
+            this.dgvUbicacion.RowHeadersWidth = 51;
+            this.dgvUbicacion.RowTemplate.Height = 24;
+            this.dgvUbicacion.Size = new System.Drawing.Size(911, 265);
+            this.dgvUbicacion.TabIndex = 46;
+            this.dgvUbicacion.DoubleClick += new System.EventHandler(this.dgvUbicacion_DoubleClick);
             // 
             // label8
             // 
@@ -1441,7 +1444,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarEq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarEq)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquipos)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarSe)).EndInit();
@@ -1459,7 +1462,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarUb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarUb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarUb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUbicacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
@@ -1526,7 +1529,7 @@
         private System.Windows.Forms.PictureBox btnEditarEq;
         private System.Windows.Forms.PictureBox btnEliminarEq;
         private System.Windows.Forms.PictureBox btnAgregarEq;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvEquipos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox btnExtras;
         private System.Windows.Forms.PictureBox btnServicio;
@@ -1552,7 +1555,7 @@
         private System.Windows.Forms.PictureBox btnEditarUb;
         private System.Windows.Forms.PictureBox btnEliminarUb;
         private System.Windows.Forms.PictureBox btnAgregarUb;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView dgvUbicacion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox btnUbicacion;
         private Guna.UI2.WinForms.Guna2Elipse E1;

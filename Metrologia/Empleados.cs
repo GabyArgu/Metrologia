@@ -162,7 +162,7 @@ namespace Metrologia
             UsuarioController usercontrol = new UsuarioController();
 
             usercontrol.codigoEmpleado = codigoEmpleado;
-            usercontrol.EstadoE = 3;
+            usercontrol.EstadoE = 2;
             
             if (usercontrol.EliminarUsuario() == true)
             {

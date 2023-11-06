@@ -117,6 +117,21 @@ namespace Metrologia
             }
         }
 
+        public void CargarDatosUbicacion()
+        {
+            try
+            {
+                tbcCruds.SelectedIndex = 7;
+                dgvUbicacion.DataSource = null;
+                dgvUbicacion.DataSource = UbicacionController.CargarUbicacion_Controller();
+                dgvUbicacion.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void dgvEmpleados_DoubleClick(object sender, EventArgs e)
         {
             int posicion;
@@ -160,6 +175,7 @@ namespace Metrologia
         {
             // Se muestra el panel 8 de tabControl
             tbcCruds.SelectedIndex = 7;
+            CargarDatosUbicacion();
         }
 
         private void btnAgregarC_Click(object sender, EventArgs e)
@@ -293,6 +309,41 @@ namespace Metrologia
         private void btnExtras_MouseLeave(object sender, EventArgs e)
         {
             btnExtras.BackgroundImage = global::Metrologia.Properties.Resources.ojo__1_;
+        }
+
+        private void btnAgregarUb_Click(object sender, EventArgs e)
+        {
+            Ubicacion formU = new Ubicacion();
+
+            // Mostrar el formulario
+            formU.ocultarCodigo();
+            formU.Show();
+        }
+
+        private void dgvUbicacion_DoubleClick(object sender, EventArgs e)
+        {
+            int posicion;
+            string codigoUbicacion, laboratorio, ubiLab;
+            posicion = dgvUbicacion.CurrentRow.Index;
+
+            codigoUbicacion = dgvUbicacion[0, posicion].Value.ToString();
+            laboratorio = dgvUbicacion[1, posicion].Value.ToString();
+            ubiLab = dgvUbicacion[2, posicion].Value.ToString();            
+
+            Ubicacion formU = new Ubicacion();
+
+            // Mostrar el formulario
+            formU.mostrarCodigo();
+            formU.llenarModal(codigoUbicacion, laboratorio, ubiLab);
+            formU.Show();
+        }
+
+        private void btnEliminarUb_Click(object sender, EventArgs e)
+        {
+            int posicion = dgvUbicacion.CurrentRow.Index;
+            string codigoUbicacion = dgvUbicacion[0, posicion].Value.ToString();
+            Ubicacion formU = new Ubicacion();
+            formU.eliminarUbicacion(codigoUbicacion);
         }
     }
 }

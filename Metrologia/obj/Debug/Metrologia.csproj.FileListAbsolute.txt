@@ -177,3 +177,4 @@ C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\pt-BR\Microsoft.Data.SqlClient.r
 C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Ubicacion.resources
