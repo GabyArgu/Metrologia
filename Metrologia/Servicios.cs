@@ -24,7 +24,7 @@ namespace Metrologia
             cargarTipoSer();
             cargarEstadoSer();
         }
-        void cargarArea() 
+        void cargarArea()
         {
             cbArea.DataSource = ServicioController.CargarArea_Controller();
             cbArea.DisplayMember = "Nombre";
@@ -59,7 +59,7 @@ namespace Metrologia
             pnlCodigoServicio.Visible = true;
             txtCodigoServicio.Visible = true;
         }
-        public void cargarCodigoCita(string codigoCita) 
+        public void cargarCodigoCita(string codigoCita)
         {
             txtcodigoCita.Text = codigoCita;
             txtcodigoCita.Visible = false;
@@ -160,11 +160,11 @@ namespace Metrologia
             dtpFechaEntrega.Value = DateTime.ParseExact(Fecha, formatos, CultureInfo.InvariantCulture, DateTimeStyles.None);
             dtpHoraEntrega.Value = DateTime.ParseExact(Hora, "HH:mm:ss", CultureInfo.InvariantCulture);
 
-            cargarArea();            
+            cargarArea();
             object valorA = servicioModal.Rows[0]["CodigoArea"];
             cbArea.SelectedIndex = int.Parse(valorA.ToString()) - 1;
 
-            cargarEmpleado();      
+            cargarEmpleado();
             object valorEm = servicioModal.Rows[0]["CodigoEmpleado"];
             cbEmpleado.SelectedIndex = int.Parse(valorEm.ToString()) - 1;
 
@@ -175,6 +175,45 @@ namespace Metrologia
             cargarEstadoSer();
             object valorEstadoS = servicioModal.Rows[0]["CodigoEstadoSe"];
             cbEstadoSer.SelectedIndex = int.Parse(valorEstadoS.ToString()) - 1;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            // Eliminar cualquier formato existente
+            string textoSinFormato = txtPrecio.Text.Replace("$", "").Replace(",", "");
+
+            if (decimal.TryParse(textoSinFormato, out decimal valor))
+            {
+                // Formatear el valor como dinero con comas y el símbolo "$"
+                txtPrecio.Text = valor.ToString("C");
+            }
+            else
+            {
+                // Si la entrada no es válida, mostrar un mensaje de error o restaurar el valor anterior
+                MessageBox.Show("Ingrese un valor válido.");
+                txtPrecio.Text = string.Empty; // Puedes usar el valor anterior si lo tienes almacenado
+            }
+
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Asegurarse de que el carácter ingresado sea un dígito o una coma
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+
+            // Solo permitir una coma decimal
+            if (e.KeyChar == ',' && (sender as TextBox).Text.Contains(","))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
