@@ -38,6 +38,7 @@
             this.btnAceptar = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.dgcEmpleados = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreUser = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,7 +56,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.PictureBox();
+            this.elipEmp = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
@@ -79,7 +80,7 @@
             this.txtNombre.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtNombre.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtNombre.Location = new System.Drawing.Point(72, 242);
+            this.txtNombre.Location = new System.Drawing.Point(72, 247);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombre.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtNombre.Name = "txtNombre";
@@ -109,7 +110,7 @@
             this.txtApellido.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtApellido.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtApellido.Location = new System.Drawing.Point(72, 320);
+            this.txtApellido.Location = new System.Drawing.Point(72, 315);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtApellido.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtApellido.Name = "txtApellido";
@@ -139,7 +140,7 @@
             this.txtCorreo.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtCorreo.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtCorreo.Location = new System.Drawing.Point(72, 394);
+            this.txtCorreo.Location = new System.Drawing.Point(72, 383);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCorreo.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtCorreo.Name = "txtCorreo";
@@ -169,7 +170,7 @@
             this.txtTelefono.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtTelefono.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtTelefono.Location = new System.Drawing.Point(72, 469);
+            this.txtTelefono.Location = new System.Drawing.Point(72, 451);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTelefono.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtTelefono.Name = "txtTelefono";
@@ -183,6 +184,7 @@
             // cbCargo
             // 
             this.cbCargo.BackColor = System.Drawing.Color.Transparent;
+            this.cbCargo.BorderRadius = 12;
             this.cbCargo.CustomizableEdges.BottomLeft = false;
             this.cbCargo.CustomizableEdges.TopLeft = false;
             this.cbCargo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -194,7 +196,7 @@
             this.cbCargo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbCargo.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbCargo.ItemHeight = 30;
-            this.cbCargo.Location = new System.Drawing.Point(72, 545);
+            this.cbCargo.Location = new System.Drawing.Point(72, 521);
             this.cbCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(415, 36);
@@ -216,7 +218,7 @@
             this.btnAceptar.ForeColor = System.Drawing.Color.Black;
             this.btnAceptar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnAceptar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnAceptar.Location = new System.Drawing.Point(347, 859);
+            this.btnAceptar.Location = new System.Drawing.Point(342, 808);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptar.MaximumSize = new System.Drawing.Size(525, 64);
             this.btnAceptar.Name = "btnAceptar";
@@ -242,7 +244,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnCancelar.Location = new System.Drawing.Point(177, 859);
+            this.btnCancelar.Location = new System.Drawing.Point(172, 808);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.MaximumSize = new System.Drawing.Size(525, 64);
             this.btnCancelar.Name = "btnCancelar";
@@ -260,6 +262,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(521, 32);
             this.panel1.TabIndex = 1;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Location = new System.Drawing.Point(480, 6);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // dgcEmpleados
             // 
@@ -299,7 +315,7 @@
             this.txtNombreUser.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtNombreUser.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtNombreUser.Location = new System.Drawing.Point(72, 171);
+            this.txtNombreUser.Location = new System.Drawing.Point(72, 179);
             this.txtNombreUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombreUser.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtNombreUser.Name = "txtNombreUser";
@@ -329,7 +345,7 @@
             this.txtContra.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtContra.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtContra.Location = new System.Drawing.Point(72, 697);
+            this.txtContra.Location = new System.Drawing.Point(72, 655);
             this.txtContra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContra.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtContra.Name = "txtContra";
@@ -359,7 +375,7 @@
             this.txtConfirmContra.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtConfirmContra.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmContra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtConfirmContra.Location = new System.Drawing.Point(72, 774);
+            this.txtConfirmContra.Location = new System.Drawing.Point(72, 724);
             this.txtConfirmContra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfirmContra.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtConfirmContra.Name = "txtConfirmContra";
@@ -389,7 +405,7 @@
             this.txtCodigoEmpleado.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtCodigoEmpleado.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoEmpleado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtCodigoEmpleado.Location = new System.Drawing.Point(72, 102);
+            this.txtCodigoEmpleado.Location = new System.Drawing.Point(72, 111);
             this.txtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigoEmpleado.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
@@ -404,6 +420,7 @@
             // cbEstado
             // 
             this.cbEstado.BackColor = System.Drawing.Color.Transparent;
+            this.cbEstado.BorderRadius = 12;
             this.cbEstado.CustomizableEdges.BottomLeft = false;
             this.cbEstado.CustomizableEdges.TopLeft = false;
             this.cbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -415,7 +432,7 @@
             this.cbEstado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEstado.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEstado.ItemHeight = 30;
-            this.cbEstado.Location = new System.Drawing.Point(72, 623);
+            this.cbEstado.Location = new System.Drawing.Point(72, 588);
             this.cbEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(415, 36);
@@ -427,7 +444,7 @@
             this.panel10.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel10.ForeColor = System.Drawing.Color.Coral;
-            this.panel10.Location = new System.Drawing.Point(21, 620);
+            this.panel10.Location = new System.Drawing.Point(21, 586);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(51, 50);
@@ -439,7 +456,7 @@
             this.pnlCodigoEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCodigoEmpleado.BackgroundImage")));
             this.pnlCodigoEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlCodigoEmpleado.ForeColor = System.Drawing.Color.Coral;
-            this.pnlCodigoEmpleado.Location = new System.Drawing.Point(21, 101);
+            this.pnlCodigoEmpleado.Location = new System.Drawing.Point(21, 110);
             this.pnlCodigoEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCodigoEmpleado.Name = "pnlCodigoEmpleado";
             this.pnlCodigoEmpleado.Size = new System.Drawing.Size(51, 50);
@@ -451,7 +468,7 @@
             this.pnlConfirmar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlConfirmar.BackgroundImage")));
             this.pnlConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlConfirmar.ForeColor = System.Drawing.Color.Coral;
-            this.pnlConfirmar.Location = new System.Drawing.Point(21, 773);
+            this.pnlConfirmar.Location = new System.Drawing.Point(21, 722);
             this.pnlConfirmar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlConfirmar.Name = "pnlConfirmar";
             this.pnlConfirmar.Size = new System.Drawing.Size(51, 50);
@@ -463,7 +480,7 @@
             this.pnlContrasena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlContrasena.BackgroundImage")));
             this.pnlContrasena.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlContrasena.ForeColor = System.Drawing.Color.Coral;
-            this.pnlContrasena.Location = new System.Drawing.Point(21, 695);
+            this.pnlContrasena.Location = new System.Drawing.Point(21, 654);
             this.pnlContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContrasena.Name = "pnlContrasena";
             this.pnlContrasena.Size = new System.Drawing.Size(51, 50);
@@ -475,7 +492,7 @@
             this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel8.ForeColor = System.Drawing.Color.Coral;
-            this.panel8.Location = new System.Drawing.Point(21, 170);
+            this.panel8.Location = new System.Drawing.Point(21, 178);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(51, 50);
@@ -487,7 +504,7 @@
             this.panel6.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel6.ForeColor = System.Drawing.Color.Coral;
-            this.panel6.Location = new System.Drawing.Point(21, 543);
+            this.panel6.Location = new System.Drawing.Point(21, 518);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(51, 50);
@@ -499,7 +516,7 @@
             this.panel5.BackgroundImage = global::Metrologia.Properties.Resources.telefono;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.ForeColor = System.Drawing.Color.Coral;
-            this.panel5.Location = new System.Drawing.Point(21, 468);
+            this.panel5.Location = new System.Drawing.Point(21, 450);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(51, 50);
@@ -511,7 +528,7 @@
             this.panel4.BackgroundImage = global::Metrologia.Properties.Resources.correo;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel4.ForeColor = System.Drawing.Color.Coral;
-            this.panel4.Location = new System.Drawing.Point(21, 391);
+            this.panel4.Location = new System.Drawing.Point(21, 382);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(51, 50);
@@ -523,7 +540,7 @@
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.ForeColor = System.Drawing.Color.Coral;
-            this.panel3.Location = new System.Drawing.Point(21, 318);
+            this.panel3.Location = new System.Drawing.Point(21, 314);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(51, 50);
@@ -535,32 +552,23 @@
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.ForeColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(21, 241);
+            this.panel2.Location = new System.Drawing.Point(21, 246);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(51, 50);
             this.panel2.TabIndex = 11;
             // 
-            // btnSalir
+            // elipEmp
             // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Location = new System.Drawing.Point(480, 6);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(20, 20);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.elipEmp.BorderRadius = 12;
+            this.elipEmp.TargetControl = this;
             // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(226)))), ((int)(((byte)(144)))));
-            this.ClientSize = new System.Drawing.Size(516, 919);
+            this.ClientSize = new System.Drawing.Size(516, 879);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.pnlCodigoEmpleado);
@@ -625,5 +633,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCodigoEmpleado;
         private Guna.UI2.WinForms.Guna2ComboBox cbEstado;
         private System.Windows.Forms.Panel panel10;
+        private Guna.UI2.WinForms.Guna2Elipse elipEmp;
     }
 }
