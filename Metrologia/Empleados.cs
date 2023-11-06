@@ -45,9 +45,7 @@ namespace Metrologia
         public void mostrarCodigo()
         {
             pnlCodigoEmpleado.Visible = true;
-            pnlCodigoEmpleado.Size = new System.Drawing.Size(46, 45);
             txtCodigoEmpleado.Visible = true;
-            txtCodigoEmpleado.Size = new System.Drawing.Size(416, 43);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -121,7 +119,6 @@ namespace Metrologia
 
             if (usercontrol.ActualizarUsuario() == true)
             {
-
                 MessageBox.Show("Empleado actualizado con exito");
                 this.Hide();
                 dash.CargarDatosUsuario();
@@ -165,7 +162,7 @@ namespace Metrologia
             UsuarioController usercontrol = new UsuarioController();
 
             usercontrol.codigoEmpleado = codigoEmpleado;
-            usercontrol.EstadoE = 2;
+            usercontrol.EstadoE = 3;
             
             if (usercontrol.EliminarUsuario() == true)
             {
@@ -178,6 +175,5 @@ namespace Metrologia
                 MessageBox.Show("Error al eliminar empleado");
             }
         }
-
     }
 }
