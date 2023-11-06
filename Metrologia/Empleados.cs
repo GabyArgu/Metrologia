@@ -141,13 +141,15 @@ namespace Metrologia
             txtCorreo.Text = correo;
             txtTelefono.Text = telefono;
 
-            cbCargo.DataSource = objselect.CargarCargoEmpleado_Controller(codigoEmpleado);
-            cbCargo.DisplayMember = "Nombre";
-            cbCargo.ValueMember = "CodigoCargo";
+            cargarCargo();
+            DataTable codigoCargo = objselect.CargarCargoEmpleado_Controller(codigoEmpleado);
+            object valorCar = codigoCargo.Rows[0]["CodigoCargo"];
+            cbCargo.SelectedIndex = int.Parse(valorCar.ToString()) - 1;
 
-            cbEstado.DataSource = objselect.CargarEstadoEmpleado_Controller(codigoEmpleado);
-            cbEstado.DisplayMember = "Nombre";
-            cbEstado.ValueMember = "CodigoEstadoEm";
+            cargarEstado();
+            DataTable codigoEstado = objselect.CargarEstadoEmpleado_Controller(codigoEmpleado);
+            object valorEstado = codigoEstado.Rows[0]["CodigoEstadoEm"];
+            cbEstado.SelectedIndex = int.Parse(valorEstado.ToString()) - 1;
 
             pnlContrasena.Visible = false;
             txtContra.Visible = false;

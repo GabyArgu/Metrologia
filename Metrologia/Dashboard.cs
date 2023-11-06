@@ -226,5 +226,73 @@ namespace Metrologia
                 formS.Show();
             }
         }
+
+        //Hover de botones del menu
+        private void btnHome_MouseHover(object sender, EventArgs e)
+        {
+            //Hover cambiar imagen
+            btnHome.BackgroundImage = global::Metrologia.Properties.Resources.hogar__1_;
+
+        }
+
+        private void btnHome_MouseLeave(object sender, EventArgs e)
+        {
+            //Hover regresar imagen
+            btnHome.BackgroundImage = global::Metrologia.Properties.Resources.hogar;
+        }
+
+        private void btnEmpleados_MouseHover(object sender, EventArgs e)
+        {
+            //Hover cambiar imagen
+            btnEmpleados.BackgroundImage = global::Metrologia.Properties.Resources.usuario_de_archivo__1_;
+        }
+
+        private void btnEmpleados_MouseLeave(object sender, EventArgs e)
+        {
+            //Hover regresar imagen
+            btnEmpleados.BackgroundImage = global::Metrologia.Properties.Resources.usuario_de_archivo;
+        }
+
+        private void btnCitas_MouseHover(object sender, EventArgs e)
+        {
+            //Hover cambiar imagen
+            btnCitas.BackgroundImage = global::Metrologia.Properties.Resources.calendario_reloj__1_;
+        }
+
+        private void btnCitas_MouseLeave(object sender, EventArgs e)
+        {
+            //Hover regresar imagen
+            btnCitas.BackgroundImage = global::Metrologia.Properties.Resources.calendario_reloj;
+        }
+
+        private void btnEmpresas_MouseHover(object sender, EventArgs e)
+        {
+            btnEmpresas.BackgroundImage = global::Metrologia.Properties.Resources.edificio__1_;
+        }
+
+        private void btnEmpresas_MouseLeave(object sender, EventArgs e)
+        {
+            btnEmpresas.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
+        }
+
+        private void btnEquipos_MouseHover(object sender, EventArgs e)
+        {
+            btnEquipos.BackgroundImage = global::Metrologia.Properties.Resources.herramientas__1_;
+        }
+
+        private void btnEquipos_MouseLeave(object sender, EventArgs e)
+        {
+            btnEquipos.BackgroundImage = global::Metrologia.Properties.Resources.herramientas;
+        }
+
+        private void btnExtras_MouseHover(object sender, EventArgs e)
+        {
+            btnExtras.BackgroundImage = global::Metrologia.Properties.Resources.ojo__2_;
+        }
+
+        private void btnExtras_MouseLeave(object sender, EventArgs e)
+        {
+            btnExtras.BackgroundImage = global::Metrologia.Properties.Resources.ojo__1_;
+        }
     }
 }
