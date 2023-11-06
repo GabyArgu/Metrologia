@@ -144,7 +144,7 @@ namespace Modelo
         public static DataTable CargarCitas()
         {
             DataTable retorno;
-            string query = "SELECT Ci.CodigoCita, En.Nombre AS NombreEncargado, Empr.Nombre AS NombreEmpresa, Esci.Nombre AS Estado, Se.Comentarios AS Servicio, Ci.FechaCita, Ci.Comentarios, Ci.HoraCita FROM Cita Ci"
+            string query = "SELECT Ci.CodigoCita AS Código, En.Nombre AS Encargado, Empr.Nombre AS Empresa, Esci.Nombre AS Estado, Se.Comentarios AS Servicio, Ci.FechaCita AS Fecha, Ci.Comentarios, Ci.HoraCita AS Hora FROM Cita Ci"
                             +" INNER JOIN Encargado En ON Ci.CodigoEncargado = En.CodigoEncargado"
                             +" LEFT JOIN Servicio Se ON Ci.CodigoServicio = Se.CodigoServicio"
                             +" INNER JOIN Empresas Empr ON Ci.CodigoEmpresa = Empr.CodigoEmpresa"
