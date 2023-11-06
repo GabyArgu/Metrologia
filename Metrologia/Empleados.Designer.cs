@@ -90,6 +90,7 @@
             this.txtNombre.SelectedText = "";
             this.txtNombre.Size = new System.Drawing.Size(413, 47);
             this.txtNombre.TabIndex = 13;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoloLetras);
             // 
             // txtApellido
             // 
@@ -120,6 +121,7 @@
             this.txtApellido.SelectedText = "";
             this.txtApellido.Size = new System.Drawing.Size(413, 47);
             this.txtApellido.TabIndex = 14;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoloLetras);
             // 
             // txtCorreo
             // 
@@ -150,6 +152,7 @@
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.Size = new System.Drawing.Size(413, 47);
             this.txtCorreo.TabIndex = 15;
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
             // txtTelefono
             // 
@@ -173,6 +176,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(72, 451);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTelefono.MaximumSize = new System.Drawing.Size(475, 57);
+            this.txtTelefono.MaxLength = 9;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -180,6 +184,8 @@
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.Size = new System.Drawing.Size(413, 47);
             this.txtTelefono.TabIndex = 16;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // cbCargo
             // 
