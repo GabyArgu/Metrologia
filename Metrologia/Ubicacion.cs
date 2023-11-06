@@ -113,5 +113,10 @@ namespace Metrologia
             txtLaboratorio.Text = Laboratorio;
             txtUbiLab.Text = UbiLab;
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

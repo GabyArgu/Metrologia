@@ -342,15 +342,15 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(521, 32);
+            this.panel4.Size = new System.Drawing.Size(510, 32);
             this.panel4.TabIndex = 68;
             // 
             // btnSalir
             // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Location = new System.Drawing.Point(477, 6);
+            this.btnSalir.Location = new System.Drawing.Point(472, 6);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(20, 20);
@@ -363,6 +363,7 @@
             this.dtpFecha.BackColor = System.Drawing.Color.Transparent;
             this.dtpFecha.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.dtpFecha.BorderRadius = 12;
+            this.dtpFecha.Checked = true;
             this.dtpFecha.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.dtpFecha.CustomFormat = "MM/dd/yyyy";
             this.dtpFecha.CustomizableEdges.BottomLeft = false;
@@ -388,6 +389,7 @@
             this.dtpHora.BackColor = System.Drawing.Color.Transparent;
             this.dtpHora.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.dtpHora.BorderRadius = 12;
+            this.dtpHora.Checked = true;
             this.dtpHora.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.dtpHora.CustomFormat = "hh:mm";
             this.dtpHora.CustomizableEdges.BottomLeft = false;
@@ -446,11 +448,11 @@
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.dtpHora);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Citas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Citas";
-            this.Load += new System.EventHandler(this.Citas_Load);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);

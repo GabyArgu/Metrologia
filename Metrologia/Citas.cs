@@ -169,16 +169,6 @@ namespace Metrologia
             }
         }
 
-        private void Citas_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Hide();

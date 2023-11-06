@@ -345,5 +345,10 @@ namespace Metrologia
             Ubicacion formU = new Ubicacion();
             formU.eliminarUbicacion(codigoUbicacion);
         }
+
+        private void dgvCitas_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
     }
 }
