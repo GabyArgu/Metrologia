@@ -45,9 +45,7 @@ namespace Metrologia
         public void mostrarCodigo()
         {
             pnlCodigoEmpleado.Visible = true;
-            pnlCodigoEmpleado.Size = new System.Drawing.Size(46, 45);
             txtCodigoEmpleado.Visible = true;
-            txtCodigoEmpleado.Size = new System.Drawing.Size(416, 43);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
