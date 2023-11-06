@@ -58,7 +58,7 @@
             this.btnEditarC = new System.Windows.Forms.PictureBox();
             this.btnEliminarC = new System.Windows.Forms.PictureBox();
             this.btnAgregarC = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCitas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnEncargado = new System.Windows.Forms.PictureBox();
@@ -133,7 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncargado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarEm)).BeginInit();
@@ -475,7 +475,7 @@
             this.tabPage3.Controls.Add(this.btnEditarC);
             this.tabPage3.Controls.Add(this.btnEliminarC);
             this.tabPage3.Controls.Add(this.btnAgregarC);
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.dgvCitas);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
@@ -574,17 +574,17 @@
             this.btnAgregarC.TabIndex = 23;
             this.btnAgregarC.TabStop = false;
             // 
-            // dataGridView1
+            // dgvCitas
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 110);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(911, 265);
-            this.dataGridView1.TabIndex = 25;
+            this.dgvCitas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
+            this.dgvCitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCitas.Location = new System.Drawing.Point(39, 110);
+            this.dgvCitas.Name = "dgvCitas";
+            this.dgvCitas.RowHeadersWidth = 51;
+            this.dgvCitas.RowTemplate.Height = 24;
+            this.dgvCitas.Size = new System.Drawing.Size(911, 265);
+            this.dgvCitas.TabIndex = 25;
             // 
             // label3
             // 
@@ -1423,7 +1423,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEditarC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncargado)).EndInit();
@@ -1508,7 +1508,7 @@
         private System.Windows.Forms.PictureBox btnEditarC;
         private System.Windows.Forms.PictureBox btnEliminarC;
         private System.Windows.Forms.PictureBox btnAgregarC;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCitas;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel btnBuscarEm;
         private Guna.UI2.WinForms.Guna2TextBox txtBuscarEm;
