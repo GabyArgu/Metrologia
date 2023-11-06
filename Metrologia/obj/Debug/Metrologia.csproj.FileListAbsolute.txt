@@ -179,4 +179,3 @@ C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\zh-Hans\Microsoft.Data.SqlClient
 C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Ubicacion.resources
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Ubicacion.resources
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Equipos.resources

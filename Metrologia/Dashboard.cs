@@ -69,7 +69,6 @@ namespace Metrologia
         {
             // Se muestra el panel 5 de tabControl
             tbcCruds.SelectedIndex = 4;
-            CargarDatosEquipos();
         }
 
         private void btnExtras_Click(object sender, EventArgs e)
@@ -126,20 +125,6 @@ namespace Metrologia
                 dgvUbicacion.DataSource = null;
                 dgvUbicacion.DataSource = UbicacionController.CargarUbicacion_Controller();
                 dgvUbicacion.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        public void CargarDatosEquipos()
-        {
-            try
-            {
-                tbcCruds.SelectedIndex = 4;
-                dgvEquipos.DataSource = null;
-                dgvEquipos.DataSource = EquiposController.CargarEquipos_Controller();
-                dgvEquipos.Refresh();
             }
             catch (Exception ex)
             {
@@ -363,43 +348,6 @@ namespace Metrologia
 
         private void dgvCitas_Scroll(object sender, ScrollEventArgs e)
         {
-            
-        }
-
-        private void btnAgregarEq_Click(object sender, EventArgs e)
-        {
-            Equipos formE = new Equipos();
-
-            // Mostrar el formulario
-            formE.ocultarCodigo();
-            formE.Show();
-        }
-
-        private void dgvEquipos_DoubleClick(object sender, EventArgs e)
-        {
-            int posicion;
-            string codigoEquipo, nombre ,laboratorio, ubiLab;
-            posicion = dgvEquipos.CurrentRow.Index;
-
-            codigoEquipo = dgvEquipos[0, posicion].Value.ToString();
-            nombre = dgvEquipos[1, posicion].Value.ToString();
-            laboratorio = dgvEquipos[2, posicion].Value.ToString();
-            ubiLab = dgvEquipos[3, posicion].Value.ToString();
-
-            Equipos formE = new Equipos();
-
-            // Mostrar el formulario
-            formE.mostrarCodigo();
-            formE.llenarModal(codigoEquipo, nombre, laboratorio, ubiLab);
-            formE.Show();
-        }
-
-        private void btnEliminarEq_Click(object sender, EventArgs e)
-        {
-            int posicion = dgvEquipos.CurrentRow.Index;
-            string codigoEquipo = dgvEquipos[0, posicion].Value.ToString();
-            Equipos formE = new Equipos();
-            formE.eliminarEquipo(codigoEquipo);
 
         }
     }
