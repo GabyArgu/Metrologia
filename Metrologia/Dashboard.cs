@@ -63,6 +63,7 @@ namespace Metrologia
         {
             // Se muestra el panel 4 de tabControl
             tbcCruds.SelectedIndex = 3;
+            CargarDatosEmpresa();
         }
 
         private void btnEquipos_Click(object sender, EventArgs e)
@@ -184,6 +185,7 @@ namespace Metrologia
         {
             // Se muestra el panel 7 de tabControl
             tbcCruds.SelectedIndex = 6;
+            CargarDatosEncargado();
         }
 
         private void btnUbicacion_Click(object sender, EventArgs e)
@@ -396,6 +398,117 @@ namespace Metrologia
             Equipos formE = new Equipos();
             formE.eliminarEquipo(codigoEquipo);
 
+        }
+
+
+        //Codigo de Milton-------------------------------Empresas
+        private void btnAgregarEm_Click(object sender, EventArgs e)
+        {
+            Empresas formEmpresa = new Empresas();
+            formEmpresa.ocultarCodigo();
+            formEmpresa.Show();
+        }
+
+        private void dgvEmpresas_DoubleClick(object sender, EventArgs e)
+        {
+            int posicion;
+            string codigoEmpresa, nombre, razonsocial, informacion, direccion, telefono, correo, encargado, categoria;
+            posicion = dgvEmpresas.CurrentRow.Index;
+
+            codigoEmpresa = dgvEmpresas[0, posicion].Value.ToString();
+            nombre = dgvEmpresas[1, posicion].Value.ToString();
+            razonsocial = dgvEmpresas[2, posicion].Value.ToString();
+            informacion = dgvEmpresas[3, posicion].Value.ToString();
+            direccion = dgvEmpresas[4, posicion].Value.ToString();
+            telefono = dgvEmpresas[5, posicion].Value.ToString();
+            correo = dgvEmpresas[6, posicion].Value.ToString();
+
+            encargado = dgvEmpresas[7, posicion].Value.ToString();
+
+            categoria = dgvEmpresas[8, posicion].Value.ToString();
+
+            Empresas formEmpresa = new Empresas();
+
+            // Mostrar el formulario
+            formEmpresa.mostrarCodigo();
+            formEmpresa.llenarModal(codigoEmpresa, nombre, razonsocial, informacion, direccion, telefono, correo, encargado, categoria);
+            formEmpresa.Show();
+        }
+
+        private void btnEliminarEm_Click(object sender, EventArgs e)
+        {
+            int posicion = dgvEmpresas.CurrentRow.Index;
+            string codigoEmpresa = dgvEmpresas[0, posicion].Value.ToString();
+            Empresas formEmpresa = new Empresas();
+            formEmpresa.eliminarEmpresa(codigoEmpresa);
+        }
+
+        public void CargarDatosEmpresa()
+        {
+            try
+            {
+                tbcCruds.SelectedIndex = 3;
+                dgvEmpresas.DataSource = null;
+                dgvEmpresas.DataSource = EmpresasController.CargarEmpresas_Controller();
+                dgvEmpresas.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        //Codigo Milton encargados----------------------------
+
+        private void btnAgregarEn_Click(object sender, EventArgs e)
+        {
+            Encargados formEncargados = new Encargados();
+            formEncargados.ocultarCodigo();
+            formEncargados.Show();
+        }
+
+        private void dgvEncargados_DoubleClick(object sender, EventArgs e)
+        {
+            int posicion;
+            string codigoEncargado, nombre, codemp, codcar, codesten;
+
+            posicion = dgvEncargados.CurrentRow.Index;
+
+            codigoEncargado = dgvEncargados[0, posicion].Value.ToString();
+            nombre = dgvEncargados[1, posicion].Value.ToString();
+            DateTime fecha = (DateTime)dgvEncargados[2, posicion].Value;
+
+            codemp = dgvEncargados[3, posicion].Value.ToString();
+
+            codcar = dgvEncargados[4, posicion].Value.ToString();
+
+            codesten = dgvEncargados[5, posicion].Value.ToString();
+
+
+
+            Encargados formEncargados = new Encargados();
+
+            // Mostrar el formulario
+            formEncargados.mostrarCodigo();
+            formEncargados.llenarModal(codigoEncargado, nombre, fecha, codemp, codcar, codesten);
+            formEncargados.Show();
+        }
+
+        public void CargarDatosEncargado()
+        {
+            try
+            {
+                tbcCruds.SelectedIndex = 6;
+                dgvEncargados.DataSource = null;
+                dgvEncargados.DataSource = EncargadosController.CargarEncargados_Controller();
+                dgvEncargados.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

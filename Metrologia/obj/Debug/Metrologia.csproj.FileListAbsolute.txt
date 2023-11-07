@@ -181,3 +181,5 @@ C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrol
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Ubicacion.resources
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Equipos.resources
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Equipos.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Empresas.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Encargados.resources
