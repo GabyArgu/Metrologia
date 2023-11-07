@@ -209,6 +209,18 @@
     <Compile Include="Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empresas.Designer.cs">
+      <DependentUpon>Empresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encargados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Encargados.designer.cs">
+      <DependentUpon>Encargados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Equipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +255,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresas.resx">
+      <DependentUpon>Empresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Encargados.resx">
+      <DependentUpon>Encargados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Equipos.resx">
       <DependentUpon>Equipos.cs</DependentUpon>
