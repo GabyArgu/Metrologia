@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.txtRazonSocial = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbEncargado = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtCorreo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -43,7 +44,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnl9 = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnAceptar = new Guna.UI2.WinForms.Guna2Button();
             this.cbCategoria = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -51,6 +51,9 @@
             this.txtNombreEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCodigoEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlCodigoEmpresa = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.elipseEmpre = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.dgcEmpre = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
@@ -60,29 +63,27 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(401, 26);
+            this.panel1.Size = new System.Drawing.Size(535, 32);
             this.panel1.TabIndex = 2;
             // 
-            // label2
+            // btnSalir
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
-            this.label2.Location = new System.Drawing.Point(11, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 36);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Empresas";
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Location = new System.Drawing.Point(480, 6);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // txtRazonSocial
             // 
-            this.txtRazonSocial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRazonSocial.BackColor = System.Drawing.Color.Transparent;
             this.txtRazonSocial.BorderRadius = 12;
             this.txtRazonSocial.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -96,43 +97,43 @@
             this.txtRazonSocial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtRazonSocial.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtRazonSocial.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazonSocial.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.txtRazonSocial.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtRazonSocial.Location = new System.Drawing.Point(49, 208);
-            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtRazonSocial.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtRazonSocial.Location = new System.Drawing.Point(72, 251);
+            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRazonSocial.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.PasswordChar = '\0';
             this.txtRazonSocial.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtRazonSocial.PlaceholderText = "  Digite la razón social";
             this.txtRazonSocial.SelectedText = "";
-            this.txtRazonSocial.Size = new System.Drawing.Size(334, 38);
+            this.txtRazonSocial.Size = new System.Drawing.Size(413, 47);
             this.txtRazonSocial.TabIndex = 37;
             // 
             // cbEncargado
             // 
             this.cbEncargado.BackColor = System.Drawing.Color.Transparent;
+            this.cbEncargado.BorderRadius = 12;
             this.cbEncargado.CustomizableEdges.BottomLeft = false;
             this.cbEncargado.CustomizableEdges.TopLeft = false;
             this.cbEncargado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbEncargado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEncargado.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbEncargado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEncargado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.cbEncargado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.cbEncargado.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.cbEncargado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbEncargado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEncargado.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEncargado.ItemHeight = 30;
-            this.cbEncargado.Location = new System.Drawing.Point(53, 511);
-            this.cbEncargado.Margin = new System.Windows.Forms.Padding(2);
+            this.cbEncargado.Location = new System.Drawing.Point(72, 603);
+            this.cbEncargado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEncargado.Name = "cbEncargado";
-            this.cbEncargado.Size = new System.Drawing.Size(312, 36);
+            this.cbEncargado.Size = new System.Drawing.Size(414, 36);
             this.cbEncargado.TabIndex = 44;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCorreo.BackColor = System.Drawing.Color.Transparent;
             this.txtCorreo.BorderRadius = 12;
             this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -146,23 +147,21 @@
             this.txtCorreo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtCorreo.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtCorreo.Location = new System.Drawing.Point(53, 449);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtCorreo.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtCorreo.Location = new System.Drawing.Point(71, 531);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCorreo.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtCorreo.PlaceholderText = "  Digite el correo";
             this.txtCorreo.SelectedText = "";
-            this.txtCorreo.Size = new System.Drawing.Size(330, 38);
+            this.txtCorreo.Size = new System.Drawing.Size(414, 47);
             this.txtCorreo.TabIndex = 43;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefono.BackColor = System.Drawing.Color.Transparent;
             this.txtTelefono.BorderRadius = 12;
             this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -176,23 +175,21 @@
             this.txtTelefono.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtTelefono.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtTelefono.Location = new System.Drawing.Point(53, 388);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtTelefono.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtTelefono.Location = new System.Drawing.Point(71, 461);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTelefono.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtTelefono.PlaceholderText = "  Digite el teléfono";
             this.txtTelefono.SelectedText = "";
-            this.txtTelefono.Size = new System.Drawing.Size(330, 38);
+            this.txtTelefono.Size = new System.Drawing.Size(414, 47);
             this.txtTelefono.TabIndex = 42;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccion.BackColor = System.Drawing.Color.Transparent;
             this.txtDireccion.BorderRadius = 12;
             this.txtDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -206,23 +203,21 @@
             this.txtDireccion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtDireccion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtDireccion.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.txtDireccion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtDireccion.Location = new System.Drawing.Point(53, 328);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtDireccion.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtDireccion.Location = new System.Drawing.Point(71, 391);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDireccion.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.PasswordChar = '\0';
             this.txtDireccion.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtDireccion.PlaceholderText = "  Digite la dirección";
             this.txtDireccion.SelectedText = "";
-            this.txtDireccion.Size = new System.Drawing.Size(330, 38);
+            this.txtDireccion.Size = new System.Drawing.Size(414, 47);
             this.txtDireccion.TabIndex = 40;
             // 
             // txtInformacion
             // 
-            this.txtInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInformacion.BackColor = System.Drawing.Color.Transparent;
             this.txtInformacion.BorderRadius = 12;
             this.txtInformacion.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -236,41 +231,41 @@
             this.txtInformacion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtInformacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtInformacion.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.txtInformacion.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.txtInformacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtInformacion.Location = new System.Drawing.Point(53, 265);
-            this.txtInformacion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtInformacion.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtInformacion.Location = new System.Drawing.Point(71, 321);
+            this.txtInformacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtInformacion.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtInformacion.Name = "txtInformacion";
             this.txtInformacion.PasswordChar = '\0';
             this.txtInformacion.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtInformacion.PlaceholderText = "  Digite la información";
             this.txtInformacion.SelectedText = "";
-            this.txtInformacion.Size = new System.Drawing.Size(330, 38);
+            this.txtInformacion.Size = new System.Drawing.Size(414, 47);
             this.txtInformacion.TabIndex = 39;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
+            this.panel8.BackgroundImage = global::Metrologia.Properties.Resources.servi;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel8.ForeColor = System.Drawing.Color.Coral;
-            this.panel8.Location = new System.Drawing.Point(11, 207);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Location = new System.Drawing.Point(21, 250);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(38, 41);
+            this.panel8.Size = new System.Drawing.Size(51, 50);
             this.panel8.TabIndex = 47;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
+            this.panel6.BackgroundImage = global::Metrologia.Properties.Resources.usuario1;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel6.ForeColor = System.Drawing.Color.Coral;
-            this.panel6.Location = new System.Drawing.Point(15, 509);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Location = new System.Drawing.Point(21, 600);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(38, 41);
+            this.panel6.Size = new System.Drawing.Size(51, 50);
             this.panel6.TabIndex = 46;
             // 
             // panel5
@@ -279,10 +274,10 @@
             this.panel5.BackgroundImage = global::Metrologia.Properties.Resources.correo;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.ForeColor = System.Drawing.Color.Coral;
-            this.panel5.Location = new System.Drawing.Point(15, 448);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Location = new System.Drawing.Point(21, 530);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(38, 41);
+            this.panel5.Size = new System.Drawing.Size(51, 50);
             this.panel5.TabIndex = 45;
             // 
             // panel4
@@ -291,66 +286,50 @@
             this.panel4.BackgroundImage = global::Metrologia.Properties.Resources.telefono;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel4.ForeColor = System.Drawing.Color.Coral;
-            this.panel4.Location = new System.Drawing.Point(15, 386);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Location = new System.Drawing.Point(21, 460);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(38, 41);
+            this.panel4.Size = new System.Drawing.Size(51, 50);
             this.panel4.TabIndex = 41;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = global::Metrologia.Properties.Resources.codigo;
+            this.panel3.BackgroundImage = global::Metrologia.Properties.Resources.ubi;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.ForeColor = System.Drawing.Color.Coral;
-            this.panel3.Location = new System.Drawing.Point(15, 326);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(21, 390);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(38, 41);
+            this.panel3.Size = new System.Drawing.Size(51, 50);
             this.panel3.TabIndex = 38;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
+            this.panel2.BackgroundImage = global::Metrologia.Properties.Resources.comen;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.ForeColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(15, 264);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(21, 320);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(38, 41);
+            this.panel2.Size = new System.Drawing.Size(51, 50);
             this.panel2.TabIndex = 36;
             // 
             // pnl9
             // 
             this.pnl9.BackColor = System.Drawing.Color.Transparent;
-            this.pnl9.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
+            this.pnl9.BackgroundImage = global::Metrologia.Properties.Resources.letras;
             this.pnl9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnl9.ForeColor = System.Drawing.Color.Coral;
-            this.pnl9.Location = new System.Drawing.Point(11, 148);
-            this.pnl9.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl9.Location = new System.Drawing.Point(21, 180);
+            this.pnl9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl9.Name = "pnl9";
-            this.pnl9.Size = new System.Drawing.Size(38, 41);
+            this.pnl9.Size = new System.Drawing.Size(51, 50);
             this.pnl9.TabIndex = 34;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Location = new System.Drawing.Point(370, 5);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(15, 16);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.Animated = true;
             this.btnCancelar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(130)))));
             this.btnCancelar.BorderRadius = 8;
@@ -360,23 +339,21 @@
             this.btnCancelar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCancelar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCancelar.FillColor = System.Drawing.Color.White;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Font = new System.Drawing.Font("Mohave SemiBold", 16F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnCancelar.Location = new System.Drawing.Point(115, 630);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelar.MaximumSize = new System.Drawing.Size(394, 52);
+            this.btnCancelar.Location = new System.Drawing.Point(139, 745);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelar.MaximumSize = new System.Drawing.Size(525, 64);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(110, 38);
+            this.btnCancelar.Size = new System.Drawing.Size(147, 47);
             this.btnCancelar.TabIndex = 48;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(130)))));
             this.btnAceptar.BorderRadius = 8;
             this.btnAceptar.BorderThickness = 1;
@@ -385,15 +362,15 @@
             this.btnAceptar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAceptar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAceptar.FillColor = System.Drawing.Color.White;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.btnAceptar.Font = new System.Drawing.Font("Mohave SemiBold", 16F, System.Drawing.FontStyle.Bold);
             this.btnAceptar.ForeColor = System.Drawing.Color.Black;
             this.btnAceptar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnAceptar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnAceptar.Location = new System.Drawing.Point(283, 630);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAceptar.MaximumSize = new System.Drawing.Size(394, 52);
+            this.btnAceptar.Location = new System.Drawing.Point(346, 745);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAceptar.MaximumSize = new System.Drawing.Size(525, 64);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(104, 38);
+            this.btnAceptar.Size = new System.Drawing.Size(139, 47);
             this.btnAceptar.TabIndex = 49;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -401,39 +378,39 @@
             // cbCategoria
             // 
             this.cbCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.cbCategoria.BorderRadius = 12;
             this.cbCategoria.CustomizableEdges.BottomLeft = false;
             this.cbCategoria.CustomizableEdges.TopLeft = false;
             this.cbCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoria.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbCategoria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbCategoria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.cbCategoria.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.cbCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbCategoria.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbCategoria.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbCategoria.ItemHeight = 30;
-            this.cbCategoria.Location = new System.Drawing.Point(53, 568);
-            this.cbCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCategoria.Location = new System.Drawing.Point(72, 673);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(312, 36);
+            this.cbCategoria.Size = new System.Drawing.Size(414, 36);
             this.cbCategoria.TabIndex = 50;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
+            this.panel7.BackgroundImage = global::Metrologia.Properties.Resources.lista;
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel7.ForeColor = System.Drawing.Color.Coral;
-            this.panel7.Location = new System.Drawing.Point(15, 566);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Location = new System.Drawing.Point(21, 670);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(38, 41);
+            this.panel7.Size = new System.Drawing.Size(51, 50);
             this.panel7.TabIndex = 51;
             // 
             // txtNombreEmpresa
             // 
-            this.txtNombreEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreEmpresa.BackColor = System.Drawing.Color.Transparent;
             this.txtNombreEmpresa.BorderRadius = 12;
             this.txtNombreEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -447,23 +424,21 @@
             this.txtNombreEmpresa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtNombreEmpresa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtNombreEmpresa.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtNombreEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreEmpresa.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.txtNombreEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtNombreEmpresa.Location = new System.Drawing.Point(49, 151);
-            this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtNombreEmpresa.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtNombreEmpresa.Location = new System.Drawing.Point(72, 181);
+            this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombreEmpresa.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
             this.txtNombreEmpresa.PasswordChar = '\0';
             this.txtNombreEmpresa.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtNombreEmpresa.PlaceholderText = "  Digite el nombre de la empresa";
             this.txtNombreEmpresa.SelectedText = "";
-            this.txtNombreEmpresa.Size = new System.Drawing.Size(334, 38);
+            this.txtNombreEmpresa.Size = new System.Drawing.Size(413, 47);
             this.txtNombreEmpresa.TabIndex = 52;
             // 
             // txtCodigoEmpresa
             // 
-            this.txtCodigoEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodigoEmpresa.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigoEmpresa.BorderRadius = 12;
             this.txtCodigoEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -477,37 +452,62 @@
             this.txtCodigoEmpresa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtCodigoEmpresa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtCodigoEmpresa.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtCodigoEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoEmpresa.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.txtCodigoEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtCodigoEmpresa.Location = new System.Drawing.Point(49, 92);
-            this.txtCodigoEmpresa.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtCodigoEmpresa.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtCodigoEmpresa.Location = new System.Drawing.Point(72, 111);
+            this.txtCodigoEmpresa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodigoEmpresa.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtCodigoEmpresa.Name = "txtCodigoEmpresa";
             this.txtCodigoEmpresa.PasswordChar = '\0';
             this.txtCodigoEmpresa.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtCodigoEmpresa.PlaceholderText = "Codigo de Empresa";
             this.txtCodigoEmpresa.SelectedText = "";
-            this.txtCodigoEmpresa.Size = new System.Drawing.Size(334, 38);
+            this.txtCodigoEmpresa.Size = new System.Drawing.Size(413, 47);
             this.txtCodigoEmpresa.TabIndex = 53;
             // 
             // pnlCodigoEmpresa
             // 
             this.pnlCodigoEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCodigoEmpresa.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
+            this.pnlCodigoEmpresa.BackgroundImage = global::Metrologia.Properties.Resources.codigo;
             this.pnlCodigoEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlCodigoEmpresa.ForeColor = System.Drawing.Color.Coral;
-            this.pnlCodigoEmpresa.Location = new System.Drawing.Point(11, 89);
-            this.pnlCodigoEmpresa.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlCodigoEmpresa.Location = new System.Drawing.Point(21, 110);
+            this.pnlCodigoEmpresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCodigoEmpresa.Name = "pnlCodigoEmpresa";
-            this.pnlCodigoEmpresa.Size = new System.Drawing.Size(38, 41);
+            this.pnlCodigoEmpresa.Size = new System.Drawing.Size(51, 50);
             this.pnlCodigoEmpresa.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mohave SemiBold", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
+            this.label1.Location = new System.Drawing.Point(15, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 52);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Empresas";
+            // 
+            // elipseEmpre
+            // 
+            this.elipseEmpre.BorderRadius = 10;
+            this.elipseEmpre.TargetControl = this;
+            // 
+            // dgcEmpre
+            // 
+            this.dgcEmpre.DockIndicatorTransparencyValue = 0.6D;
+            this.dgcEmpre.TargetControl = this.panel1;
+            this.dgcEmpre.UseTransparentDrag = true;
             // 
             // Empresas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(226)))), ((int)(((byte)(144)))));
-            this.ClientSize = new System.Drawing.Size(400, 683);
+            this.ClientSize = new System.Drawing.Size(516, 815);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlCodigoEmpresa);
             this.Controls.Add(this.txtCodigoEmpresa);
             this.Controls.Add(this.txtNombreEmpresa);
@@ -528,9 +528,9 @@
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtInformacion);
             this.Controls.Add(this.pnl9);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Empresas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empresas";
@@ -545,7 +545,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnSalir;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnl9;
         private System.Windows.Forms.Panel panel8;
         private Guna.UI2.WinForms.Guna2TextBox txtRazonSocial;
@@ -566,5 +565,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNombreEmpresa;
         private Guna.UI2.WinForms.Guna2TextBox txtCodigoEmpresa;
         private System.Windows.Forms.Panel pnlCodigoEmpresa;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Elipse elipseEmpre;
+        private Guna.UI2.WinForms.Guna2DragControl dgcEmpre;
     }
 }
