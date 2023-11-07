@@ -14,7 +14,7 @@ namespace Modelo
         public static DataTable CargarUbicacion()
         {
             DataTable retorno;
-            string query = "SELECT CodigoUbicacion, Laboratorio, Ubicacion FROM UbicacionEquipos";
+            string query = "SELECT CodigoUbicacion AS Código, Laboratorio, Ubicacion FROM UbicacionEquipos";
             try
             {
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());

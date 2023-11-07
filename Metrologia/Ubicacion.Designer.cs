@@ -154,7 +154,7 @@
             // pnlCodigoUbicacion
             // 
             this.pnlCodigoUbicacion.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCodigoUbicacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCodigoUbicacion.BackgroundImage")));
+            this.pnlCodigoUbicacion.BackgroundImage = global::Metrologia.Properties.Resources.codigo;
             this.pnlCodigoUbicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlCodigoUbicacion.ForeColor = System.Drawing.Color.Coral;
             this.pnlCodigoUbicacion.Location = new System.Drawing.Point(34, 113);
@@ -166,7 +166,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
+            this.panel8.BackgroundImage = global::Metrologia.Properties.Resources.labo;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel8.ForeColor = System.Drawing.Color.Coral;
             this.panel8.Location = new System.Drawing.Point(34, 183);
@@ -178,7 +178,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImage = global::Metrologia.Properties.Resources.ubi;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.ForeColor = System.Drawing.Color.Coral;
             this.panel2.Location = new System.Drawing.Point(34, 253);
@@ -286,7 +286,7 @@
             this.Controls.Add(this.txtUbiLab);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ubicacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ubicacion";

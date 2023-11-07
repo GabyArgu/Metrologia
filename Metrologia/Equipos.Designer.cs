@@ -28,16 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Equipos));
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnAceptar = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlCodigoEquipo = new System.Windows.Forms.Panel();
             this.txtCodigoEquipo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbUbicacion = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.EEquipo = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.dgcEquipo = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.pnlCodigoEquipo = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -55,11 +62,11 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnCancelar.Location = new System.Drawing.Point(99, 239);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelar.MaximumSize = new System.Drawing.Size(394, 52);
+            this.btnCancelar.Location = new System.Drawing.Point(140, 329);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelar.MaximumSize = new System.Drawing.Size(525, 64);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(116, 38);
+            this.btnCancelar.Size = new System.Drawing.Size(155, 47);
             this.btnCancelar.TabIndex = 51;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -78,31 +85,17 @@
             this.btnAceptar.ForeColor = System.Drawing.Color.Black;
             this.btnAceptar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnAceptar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnAceptar.Location = new System.Drawing.Point(236, 239);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAceptar.MaximumSize = new System.Drawing.Size(394, 52);
+            this.btnAceptar.Location = new System.Drawing.Point(323, 329);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAceptar.MaximumSize = new System.Drawing.Size(525, 64);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(110, 38);
+            this.btnAceptar.Size = new System.Drawing.Size(147, 47);
             this.btnAceptar.TabIndex = 50;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // pnlCodigoEquipo
-            // 
-            this.pnlCodigoEquipo.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCodigoEquipo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCodigoEquipo.BackgroundImage")));
-            this.pnlCodigoEquipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlCodigoEquipo.ForeColor = System.Drawing.Color.Coral;
-            this.pnlCodigoEquipo.Location = new System.Drawing.Point(18, 60);
-            this.pnlCodigoEquipo.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlCodigoEquipo.Name = "pnlCodigoEquipo";
-            this.pnlCodigoEquipo.Size = new System.Drawing.Size(38, 41);
-            this.pnlCodigoEquipo.TabIndex = 49;
-            // 
             // txtCodigoEquipo
             // 
-            this.txtCodigoEquipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodigoEquipo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigoEquipo.BorderRadius = 12;
             this.txtCodigoEquipo.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -118,29 +111,17 @@
             this.txtCodigoEquipo.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtCodigoEquipo.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoEquipo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtCodigoEquipo.Location = new System.Drawing.Point(56, 61);
-            this.txtCodigoEquipo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtCodigoEquipo.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtCodigoEquipo.Location = new System.Drawing.Point(85, 114);
+            this.txtCodigoEquipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodigoEquipo.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtCodigoEquipo.Name = "txtCodigoEquipo";
             this.txtCodigoEquipo.PasswordChar = '\0';
             this.txtCodigoEquipo.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtCodigoEquipo.PlaceholderText = "  CodigoEquipo";
             this.txtCodigoEquipo.ReadOnly = true;
             this.txtCodigoEquipo.SelectedText = "";
-            this.txtCodigoEquipo.Size = new System.Drawing.Size(290, 38);
+            this.txtCodigoEquipo.Size = new System.Drawing.Size(387, 47);
             this.txtCodigoEquipo.TabIndex = 48;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.ForeColor = System.Drawing.Color.Coral;
-            this.panel8.Location = new System.Drawing.Point(18, 117);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(38, 41);
-            this.panel8.TabIndex = 47;
             // 
             // txtNombre
             // 
@@ -161,15 +142,15 @@
             this.txtNombre.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtNombre.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtNombre.Location = new System.Drawing.Point(56, 118);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtNombre.MaximumSize = new System.Drawing.Size(356, 46);
+            this.txtNombre.Location = new System.Drawing.Point(85, 184);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombre.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtNombre.PlaceholderText = "  Digite el nombre del equipo";
             this.txtNombre.SelectedText = "";
-            this.txtNombre.Size = new System.Drawing.Size(290, 38);
+            this.txtNombre.Size = new System.Drawing.Size(387, 47);
             this.txtNombre.TabIndex = 44;
             // 
             // label2
@@ -179,10 +160,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mohave SemiBold", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(77)))));
-            this.label2.Location = new System.Drawing.Point(11, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(25, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 42);
+            this.label2.Size = new System.Drawing.Size(114, 52);
             this.label2.TabIndex = 46;
             this.label2.Text = "Equipo";
             // 
@@ -201,29 +181,89 @@
             this.cbUbicacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbUbicacion.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbUbicacion.ItemHeight = 30;
-            this.cbUbicacion.Location = new System.Drawing.Point(55, 180);
-            this.cbUbicacion.Margin = new System.Windows.Forms.Padding(2);
+            this.cbUbicacion.Location = new System.Drawing.Point(85, 255);
+            this.cbUbicacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbUbicacion.Name = "cbUbicacion";
-            this.cbUbicacion.Size = new System.Drawing.Size(291, 36);
+            this.cbUbicacion.Size = new System.Drawing.Size(387, 36);
             this.cbUbicacion.TabIndex = 57;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.btnSalir);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(510, 32);
+            this.panel4.TabIndex = 69;
+            // 
+            // EEquipo
+            // 
+            this.EEquipo.BorderRadius = 10;
+            this.EEquipo.TargetControl = this;
+            // 
+            // dgcEquipo
+            // 
+            this.dgcEquipo.DockIndicatorTransparencyValue = 0.6D;
+            this.dgcEquipo.TargetControl = this.panel4;
+            this.dgcEquipo.UseTransparentDrag = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Location = new System.Drawing.Point(472, 6);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
+            this.panel10.BackgroundImage = global::Metrologia.Properties.Resources.ubi;
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel10.ForeColor = System.Drawing.Color.Coral;
-            this.panel10.Location = new System.Drawing.Point(17, 178);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Location = new System.Drawing.Point(34, 253);
+            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(38, 41);
+            this.panel10.Size = new System.Drawing.Size(51, 50);
             this.panel10.TabIndex = 58;
+            // 
+            // pnlCodigoEquipo
+            // 
+            this.pnlCodigoEquipo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCodigoEquipo.BackgroundImage = global::Metrologia.Properties.Resources.codigo;
+            this.pnlCodigoEquipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlCodigoEquipo.ForeColor = System.Drawing.Color.Coral;
+            this.pnlCodigoEquipo.Location = new System.Drawing.Point(34, 113);
+            this.pnlCodigoEquipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlCodigoEquipo.Name = "pnlCodigoEquipo";
+            this.pnlCodigoEquipo.Size = new System.Drawing.Size(51, 50);
+            this.pnlCodigoEquipo.TabIndex = 49;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
+            this.panel8.BackgroundImage = global::Metrologia.Properties.Resources.pc;
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel8.ForeColor = System.Drawing.Color.Coral;
+            this.panel8.Location = new System.Drawing.Point(34, 183);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(51, 50);
+            this.panel8.TabIndex = 47;
             // 
             // Equipos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 292);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(226)))), ((int)(((byte)(144)))));
+            this.ClientSize = new System.Drawing.Size(505, 408);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.cbUbicacion);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.btnCancelar);
@@ -233,8 +273,14 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Equipos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipos";
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +297,9 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox cbUbicacion;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox btnSalir;
+        private Guna.UI2.WinForms.Guna2Elipse EEquipo;
+        private Guna.UI2.WinForms.Guna2DragControl dgcEquipo;
     }
 }

@@ -30,24 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Servicios));
-            this.pnlCodigoServicio = new System.Windows.Forms.Panel();
             this.txtCodigoServicio = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbTipoSer = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.cbEmpleado = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnAceptar = new Guna.UI2.WinForms.Guna2Button();
             this.cbArea = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pnlCodigoEmpleado = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.txtComentarioServicio = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbEstadoSer = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.txtcodigoCita = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.PictureBox();
@@ -55,21 +46,19 @@
             this.elipServ = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dtpFechaEntrega = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpHoraEntrega = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlCodigoServicio = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pnlCodigoEmpleado = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgcServicio = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlCodigoServicio
-            // 
-            this.pnlCodigoServicio.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCodigoServicio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCodigoServicio.BackgroundImage")));
-            this.pnlCodigoServicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlCodigoServicio.ForeColor = System.Drawing.Color.Coral;
-            this.pnlCodigoServicio.Location = new System.Drawing.Point(34, 113);
-            this.pnlCodigoServicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlCodigoServicio.Name = "pnlCodigoServicio";
-            this.pnlCodigoServicio.Size = new System.Drawing.Size(51, 50);
-            this.pnlCodigoServicio.TabIndex = 84;
             // 
             // txtCodigoServicio
             // 
@@ -123,18 +112,6 @@
             this.cbTipoSer.Size = new System.Drawing.Size(389, 36);
             this.cbTipoSer.TabIndex = 81;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.ForeColor = System.Drawing.Color.Coral;
-            this.panel1.Location = new System.Drawing.Point(34, 610);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(51, 50);
-            this.panel1.TabIndex = 82;
-            // 
             // cbEmpleado
             // 
             this.cbEmpleado.BackColor = System.Drawing.Color.Transparent;
@@ -155,18 +132,6 @@
             this.cbEmpleado.Name = "cbEmpleado";
             this.cbEmpleado.Size = new System.Drawing.Size(389, 36);
             this.cbEmpleado.TabIndex = 79;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.ForeColor = System.Drawing.Color.Coral;
-            this.panel3.Location = new System.Drawing.Point(34, 539);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(51, 50);
-            this.panel3.TabIndex = 80;
             // 
             // label1
             // 
@@ -249,54 +214,6 @@
             this.cbArea.Size = new System.Drawing.Size(389, 36);
             this.cbArea.TabIndex = 72;
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
-            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel10.ForeColor = System.Drawing.Color.Coral;
-            this.panel10.Location = new System.Drawing.Point(34, 468);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(51, 50);
-            this.panel10.TabIndex = 73;
-            // 
-            // pnlCodigoEmpleado
-            // 
-            this.pnlCodigoEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCodigoEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCodigoEmpleado.BackgroundImage")));
-            this.pnlCodigoEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlCodigoEmpleado.ForeColor = System.Drawing.Color.Coral;
-            this.pnlCodigoEmpleado.Location = new System.Drawing.Point(34, 255);
-            this.pnlCodigoEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlCodigoEmpleado.Name = "pnlCodigoEmpleado";
-            this.pnlCodigoEmpleado.Size = new System.Drawing.Size(51, 50);
-            this.pnlCodigoEmpleado.TabIndex = 71;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.ForeColor = System.Drawing.Color.Coral;
-            this.panel8.Location = new System.Drawing.Point(34, 326);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(51, 50);
-            this.panel8.TabIndex = 70;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.ForeColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(34, 397);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(51, 50);
-            this.panel2.TabIndex = 68;
-            // 
             // txtComentarioServicio
             // 
             this.txtComentarioServicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -349,30 +266,6 @@
             this.cbEstadoSer.Name = "cbEstadoSer";
             this.cbEstadoSer.Size = new System.Drawing.Size(389, 36);
             this.cbEstadoSer.TabIndex = 85;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.ForeColor = System.Drawing.Color.Coral;
-            this.panel4.Location = new System.Drawing.Point(34, 681);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(51, 50);
-            this.panel4.TabIndex = 86;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.ForeColor = System.Drawing.Color.Coral;
-            this.panel5.Location = new System.Drawing.Point(34, 184);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(51, 50);
-            this.panel5.TabIndex = 88;
             // 
             // txtcodigoCita
             // 
@@ -518,6 +411,120 @@
             this.dtpHoraEntrega.UseTransparentBackground = true;
             this.dtpHoraEntrega.Value = new System.DateTime(2023, 11, 6, 2, 3, 31, 380);
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = global::Metrologia.Properties.Resources.diner;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.ForeColor = System.Drawing.Color.Coral;
+            this.panel5.Location = new System.Drawing.Point(34, 184);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(51, 50);
+            this.panel5.TabIndex = 88;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.ForeColor = System.Drawing.Color.Coral;
+            this.panel4.Location = new System.Drawing.Point(34, 681);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(51, 50);
+            this.panel4.TabIndex = 86;
+            // 
+            // pnlCodigoServicio
+            // 
+            this.pnlCodigoServicio.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCodigoServicio.BackgroundImage = global::Metrologia.Properties.Resources.codigo;
+            this.pnlCodigoServicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlCodigoServicio.ForeColor = System.Drawing.Color.Coral;
+            this.pnlCodigoServicio.Location = new System.Drawing.Point(34, 113);
+            this.pnlCodigoServicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlCodigoServicio.Name = "pnlCodigoServicio";
+            this.pnlCodigoServicio.Size = new System.Drawing.Size(51, 50);
+            this.pnlCodigoServicio.TabIndex = 84;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::Metrologia.Properties.Resources.servi;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.ForeColor = System.Drawing.Color.Coral;
+            this.panel1.Location = new System.Drawing.Point(34, 610);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(51, 50);
+            this.panel1.TabIndex = 82;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = global::Metrologia.Properties.Resources.usuario1;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.ForeColor = System.Drawing.Color.Coral;
+            this.panel3.Location = new System.Drawing.Point(34, 539);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(51, 50);
+            this.panel3.TabIndex = 80;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.BackgroundImage = global::Metrologia.Properties.Resources.lista;
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel10.ForeColor = System.Drawing.Color.Coral;
+            this.panel10.Location = new System.Drawing.Point(34, 468);
+            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(51, 50);
+            this.panel10.TabIndex = 73;
+            // 
+            // pnlCodigoEmpleado
+            // 
+            this.pnlCodigoEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCodigoEmpleado.BackgroundImage = global::Metrologia.Properties.Resources.fecha;
+            this.pnlCodigoEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlCodigoEmpleado.ForeColor = System.Drawing.Color.Coral;
+            this.pnlCodigoEmpleado.Location = new System.Drawing.Point(34, 255);
+            this.pnlCodigoEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlCodigoEmpleado.Name = "pnlCodigoEmpleado";
+            this.pnlCodigoEmpleado.Size = new System.Drawing.Size(51, 50);
+            this.pnlCodigoEmpleado.TabIndex = 71;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
+            this.panel8.BackgroundImage = global::Metrologia.Properties.Resources.hora;
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel8.ForeColor = System.Drawing.Color.Coral;
+            this.panel8.Location = new System.Drawing.Point(34, 326);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(51, 50);
+            this.panel8.TabIndex = 70;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = global::Metrologia.Properties.Resources.comen;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.ForeColor = System.Drawing.Color.Coral;
+            this.panel2.Location = new System.Drawing.Point(34, 397);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(51, 50);
+            this.panel2.TabIndex = 68;
+            // 
+            // dgcServicio
+            // 
+            this.dgcServicio.DockIndicatorTransparencyValue = 0.6D;
+            this.dgcServicio.TargetControl = this;
+            this.dgcServicio.UseTransparentDrag = true;
+            // 
             // Servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -549,7 +556,7 @@
             this.Controls.Add(this.txtPrecio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Servicios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Servicios";
@@ -587,5 +594,6 @@
         private Guna.UI2.WinForms.Guna2Elipse elipServ;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpFechaEntrega;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpHoraEntrega;
+        private Guna.UI2.WinForms.Guna2DragControl dgcServicio;
     }
 }

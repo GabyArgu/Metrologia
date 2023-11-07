@@ -124,5 +124,10 @@ namespace Metrologia
             object valorUbi = codigoUbi.Rows[0]["CodigoUbicacion"];
             cbUbicacion.SelectedIndex = int.Parse(valorUbi.ToString()) - 1;
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
