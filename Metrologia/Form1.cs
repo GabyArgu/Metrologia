@@ -53,10 +53,10 @@ namespace Metrologia
 
             if (LoginController.Acceso_Controller()==true)
             {
-                Dashboard form2 = new Dashboard();
+                formularios.DashboardFRM = new Dashboard();
 
                 // Mostrar el formulario
-                form2.Show();
+                formularios.DashboardFRM.Show();
 
                 // Cerrar el formulario actual
                 this.Hide();

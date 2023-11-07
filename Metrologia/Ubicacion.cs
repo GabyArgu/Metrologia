@@ -15,7 +15,7 @@ namespace Metrologia
 {
     public partial class Ubicacion : Form
     {
-        Dashboard dash = new Dashboard();
+        Dashboard dash = (Dashboard)formularios.DashboardFRM;
 
         public Ubicacion()
         {

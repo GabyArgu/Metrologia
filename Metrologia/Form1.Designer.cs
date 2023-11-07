@@ -188,7 +188,7 @@
             this.txtContra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContra.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtContra.Name = "txtContra";
-            this.txtContra.PasswordChar = '\0';
+            this.txtContra.PasswordChar = '*';
             this.txtContra.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtContra.PlaceholderText = "  Digite su contraseña";
             this.txtContra.SelectedText = "";

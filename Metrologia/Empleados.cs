@@ -15,7 +15,7 @@ namespace Metrologia
 {
     public partial class Empleados : Form
     {
-        Dashboard dash = new Dashboard();
+        Dashboard dash = (Dashboard)formularios.DashboardFRM;
         public Empleados()
         {
             InitializeComponent();
@@ -64,10 +64,12 @@ namespace Metrologia
             if (txtCodigoEmpleado.Visible == true)
             {
                 modificarUsuario();
+                dash.CargarDatosUsuario();
             }
             else
             {
                 agregarUsuario();
+                dash.CargarDatosUsuario();
             }
         }
 
