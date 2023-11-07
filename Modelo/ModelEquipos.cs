@@ -14,7 +14,7 @@ namespace Modelo
         public static DataTable CargarEquipos()
         {
             DataTable retorno;
-            string query = "SELECT E.CodigoEquipos, E.Nombre, UE.Laboratorio, UE.Ubicacion FROM Equipos E, UbicacionEquipos UE WHERE E.CodigoUbicacion=UE.CodigoUbicacion";
+            string query = "SELECT E.CodigoEquipos AS Código, E.Nombre, UE.Laboratorio, UE.Ubicacion FROM Equipos E, UbicacionEquipos UE WHERE E.CodigoUbicacion=UE.CodigoUbicacion";
             try
             {
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
@@ -60,7 +60,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT CodigoUbicacion,Laboratorio+' '+Ubicacion AS Nombre FROM UbicacionEquipos WHERE Laboratorio = @laboratorio AND Ubicacion = @ubicacion";
+                string query = "SELECT CodigoUbicacion ,Laboratorio+' '+Ubicacion AS Nombre FROM UbicacionEquipos WHERE Laboratorio = @laboratorio AND Ubicacion = @ubicacion";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdselect.Parameters.Add(new SqlParameter("laboratorio", Laboratorio));
                 cmdselect.Parameters.Add(new SqlParameter("ubicacion", Ubicacion));

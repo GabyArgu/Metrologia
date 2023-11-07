@@ -361,11 +361,6 @@ namespace Metrologia
             formU.eliminarUbicacion(codigoUbicacion);
         }
 
-        private void dgvCitas_Scroll(object sender, ScrollEventArgs e)
-        {
-            
-        }
-
         private void btnAgregarEq_Click(object sender, EventArgs e)
         {
             Equipos formE = new Equipos();

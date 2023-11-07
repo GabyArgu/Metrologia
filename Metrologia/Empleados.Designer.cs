@@ -38,7 +38,6 @@
             this.btnAceptar = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.dgcEmpleados = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreUser = new Guna.UI2.WinForms.Guna2TextBox();
@@ -46,6 +45,7 @@
             this.txtConfirmContra = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCodigoEmpleado = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbEstado = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.elipEmp = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel10 = new System.Windows.Forms.Panel();
             this.pnlCodigoEmpleado = new System.Windows.Forms.Panel();
             this.pnlConfirmar = new System.Windows.Forms.Panel();
@@ -56,7 +56,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.elipEmp = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
@@ -269,20 +269,6 @@
             this.panel1.Size = new System.Drawing.Size(521, 32);
             this.panel1.TabIndex = 1;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Location = new System.Drawing.Point(480, 6);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(20, 20);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // dgcEmpleados
             // 
             this.dgcEmpleados.DockIndicatorTransparencyValue = 0.8D;
@@ -444,6 +430,11 @@
             this.cbEstado.Size = new System.Drawing.Size(415, 36);
             this.cbEstado.TabIndex = 34;
             // 
+            // elipEmp
+            // 
+            this.elipEmp.BorderRadius = 12;
+            this.elipEmp.TargetControl = this;
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Transparent;
@@ -459,7 +450,7 @@
             // pnlCodigoEmpleado
             // 
             this.pnlCodigoEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCodigoEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCodigoEmpleado.BackgroundImage")));
+            this.pnlCodigoEmpleado.BackgroundImage = global::Metrologia.Properties.Resources.codigo;
             this.pnlCodigoEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlCodigoEmpleado.ForeColor = System.Drawing.Color.Coral;
             this.pnlCodigoEmpleado.Location = new System.Drawing.Point(21, 110);
@@ -495,7 +486,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
+            this.panel8.BackgroundImage = global::Metrologia.Properties.Resources.usuario1;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel8.ForeColor = System.Drawing.Color.Coral;
             this.panel8.Location = new System.Drawing.Point(21, 178);
@@ -507,7 +498,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
+            this.panel6.BackgroundImage = global::Metrologia.Properties.Resources.casco;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel6.ForeColor = System.Drawing.Color.Coral;
             this.panel6.Location = new System.Drawing.Point(21, 518);
@@ -564,10 +555,19 @@
             this.panel2.Size = new System.Drawing.Size(51, 50);
             this.panel2.TabIndex = 11;
             // 
-            // elipEmp
+            // btnSalir
             // 
-            this.elipEmp.BorderRadius = 12;
-            this.elipEmp.TargetControl = this;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Location = new System.Drawing.Point(480, 6);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Empleados
             // 

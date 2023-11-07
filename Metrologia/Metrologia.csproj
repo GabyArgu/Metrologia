@@ -400,6 +400,45 @@
   <ItemGroup>
     <None Include="Resources\hogar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\codigo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
