@@ -101,7 +101,7 @@ namespace Metrologia
             }
         }
 
-        public void llenarModal(string codigoEmpresa, string nombre, string razonsocial, string informacion, string direccion, string telefono, string correo, string codigoenc, string codigocat)
+        public void llenarModal(string codigoEmpresa, string nombre, string razonsocial, string informacion, string direccion, string telefono, string correo, string encargado, string categoria)
         {
             EmpresasController objselect = new EmpresasController();
 

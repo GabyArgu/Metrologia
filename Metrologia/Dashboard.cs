@@ -116,6 +116,21 @@ namespace Metrologia
             }
         }
 
+        public void CargarDatosEncargado()
+        {
+            try
+            {
+                tbcCruds.SelectedIndex = 6;
+                dgvEncargados.DataSource = null;
+                dgvEncargados.DataSource = EncargadosController.CargarEncargados_Controller();
+                dgvEncargados.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void dgvEmpleados_DoubleClick(object sender, EventArgs e)
         {
             int posicion;
@@ -153,6 +168,7 @@ namespace Metrologia
         {
             // Se muestra el panel 7 de tabControl
             tbcCruds.SelectedIndex = 6;
+            CargarDatosEncargado();
         }
 
         private void btnUbicacion_Click(object sender, EventArgs e)
@@ -200,6 +216,45 @@ namespace Metrologia
             string codigoEmpresa = dgvEmpresas[0, posicion].Value.ToString();
             Empresas formEmpresa = new Empresas();
             formEmpresa.eliminarEmpresa(codigoEmpresa);
+        }
+
+        private void btnAgregarEn_Click(object sender, EventArgs e)
+        {
+            Encargados formEncargados = new Encargados();
+            formEncargados.ocultarCodigo();
+            formEncargados.Show();
+        }
+
+        private void btnEliminarEn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvEncargados_DoubleClick(object sender, EventArgs e)
+        {
+            int posicion;
+            string codigoEncargado, nombre, codemp, codcar, codesten;
+
+            posicion = dgvEncargados.CurrentRow.Index;
+
+            codigoEncargado = dgvEncargados[0, posicion].Value.ToString();
+            nombre = dgvEncargados[1, posicion].Value.ToString();
+            DateTime fecha = (DateTime) dgvEncargados[2, posicion].Value;
+
+            codemp = dgvEncargados[3, posicion].Value.ToString();
+
+            codcar = dgvEncargados[4, posicion].Value.ToString();
+
+            codesten = dgvEncargados[5, posicion].Value.ToString();
+
+
+
+            Encargados formEncargados = new Encargados();
+
+            // Mostrar el formulario
+            formEncargados.mostrarCodigo();
+            formEncargados.llenarModal(codigoEncargado, nombre, fecha, codemp, codcar, codesten);
+            formEncargados.Show();
         }
     }
 }

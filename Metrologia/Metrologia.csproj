@@ -209,6 +209,12 @@
     <Compile Include="Empresas.Designer.cs">
       <DependentUpon>Empresas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Encargados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Encargados.Designer.cs">
+      <DependentUpon>Encargados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empresas.resx">
       <DependentUpon>Empresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Encargados.resx">
+      <DependentUpon>Encargados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -354,6 +363,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ubicacion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\encargado2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

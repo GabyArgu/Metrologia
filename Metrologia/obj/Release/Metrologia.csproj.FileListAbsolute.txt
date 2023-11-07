@@ -254,3 +254,4 @@ C:\Users\milto\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Release\Metr
 C:\Users\milto\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Release\Metrologia.exe
 C:\Users\milto\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Release\Metrologia.pdb
 C:\Users\milto\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Release\Metrologia.Empresas.resources
+C:\Users\milto\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Release\Metrologia.Encargados.resources

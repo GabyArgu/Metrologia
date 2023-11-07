@@ -171,9 +171,10 @@ namespace Modelo
         public static DataTable CargarEmpresas()
         {
             DataTable retorno;
-            string query = "SELECT E.CodigoEmpresa, EC.CodigoEncargado, CE.CodigoCategoria, E.Nombre as Empresa, " +
-                           "E.RazonSocial, E.Informacion, E.Direccion, E.Telefono, E.Correo FROM Empresas E, Encargado EC, " +
-                           "CategoriaEmpresa CE WHERE E.CodigoEncargado = EC.CodigoEncargado AND E.CodigoCategoria = CE.CodigoCategoria ";
+            string query = "SELECT E.CodigoEmpresa AS Codigo, EC.Nombre AS Encargado, CE.Nombre AS Categoria, " +
+                           "E.Nombre as Empresa, E.RazonSocial, E.Informacion, E.Direccion, E.Telefono, E.Correo " +
+                           "FROM Empresas E JOIN Encargado EC ON E.CodigoEncargado = EC.CodigoEncargado " +
+                           "JOIN CategoriaEmpresa CE ON E.CodigoCategoria = CE.CodigoCategoria; ";
             try
             {
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
