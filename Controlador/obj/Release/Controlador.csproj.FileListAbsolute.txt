@@ -1,0 +1,28 @@
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\Controlador.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\Controlador.pdb
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\Modelo.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\MySql.Data.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\Google.Protobuf.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\Zstandard.Net.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\K4os.Compression.LZ4.Streams.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\Ubiety.Dns.Core.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\Renci.SshNet.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\System.Buffers.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\K4os.Compression.LZ4.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\K4os.Hash.xxHash.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\Modelo.pdb
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\bin\Release\MySql.Data.xml
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\obj\Release\Controlador.csprojResolveAssemblyReference.cache
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\obj\Release\Controlador.dll
+C:\Users\h\Desktop\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\obj\Release\Controlador.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Release\Controlador.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Release\Controlador.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Release\Modelo.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Release\Modelo.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.csproj.AssemblyReference.cache
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.csproj.CoreCompileInputs.cache
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.csproj.CopyComplete
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Release\Controlador.pdb
