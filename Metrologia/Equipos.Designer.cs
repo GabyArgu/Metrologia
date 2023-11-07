@@ -37,9 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbUbicacion = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.EEquipo = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgcEquipo = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pnlCodigoEquipo = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -174,6 +174,7 @@
             this.cbUbicacion.CustomizableEdges.TopLeft = false;
             this.cbUbicacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbUbicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUbicacion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbUbicacion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbUbicacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbUbicacion.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
@@ -197,17 +198,6 @@
             this.panel4.Size = new System.Drawing.Size(510, 32);
             this.panel4.TabIndex = 69;
             // 
-            // EEquipo
-            // 
-            this.EEquipo.BorderRadius = 10;
-            this.EEquipo.TargetControl = this;
-            // 
-            // dgcEquipo
-            // 
-            this.dgcEquipo.DockIndicatorTransparencyValue = 0.6D;
-            this.dgcEquipo.TargetControl = this.panel4;
-            this.dgcEquipo.UseTransparentDrag = true;
-            // 
             // btnSalir
             // 
             this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -220,6 +210,17 @@
             this.btnSalir.TabIndex = 2;
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // EEquipo
+            // 
+            this.EEquipo.BorderRadius = 10;
+            this.EEquipo.TargetControl = this;
+            // 
+            // dgcEquipo
+            // 
+            this.dgcEquipo.DockIndicatorTransparencyValue = 0.6D;
+            this.dgcEquipo.TargetControl = this.panel4;
+            this.dgcEquipo.UseTransparentDrag = true;
             // 
             // panel10
             // 
@@ -275,7 +276,7 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Equipos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipos";
