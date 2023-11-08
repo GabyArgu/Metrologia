@@ -22,6 +22,22 @@ namespace Metrologia
             cargarEncargado();
             cargarEmpresa();
             cargarEstadoCi();
+            dtpFecha.Validating += dtpFecha_Validating;
+
+        }
+
+        private void dtpFecha_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            DateTime selectedDate = dtpFecha.Value;
+            DateTime currentDate = DateTime.Now;
+
+            // Verifica si la fecha seleccionada es igual o posterior a la fecha actual
+            if (selectedDate < currentDate)
+            {
+                // Muestra un mensaje de error
+                MessageBox.Show("Selecciona una fecha anterior a la fecha actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Cancel = true; // Cancela la validación
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -84,7 +100,6 @@ namespace Metrologia
             citacontrol.Encargado = Convert.ToInt16(cbEncargado.SelectedValue); ;
             citacontrol.Empresa = Convert.ToInt16(cbEmpresa.SelectedValue);
             citacontrol.EstadoCi = Convert.ToInt16(cbEstadoCi.SelectedValue);
-
             if (citacontrol.AgregarCita() == true)
             {
                 MessageBox.Show("Cita agendada con exito");
@@ -144,6 +159,7 @@ namespace Metrologia
             object valorEm = codigoEm.Rows[0]["CodigoEmpresa"];            
             cbEmpresa.SelectedIndex = int.Parse(valorEm.ToString()) - 1;
 
+            cargarEstadoCi();
             DataTable codigoEstadoC = objselect.CargarEstado_Controller(EstadoCi);
             object valorEstado = codigoEstadoC.Rows[0]["CodigoEstadoCi"];
             cbEstadoCi.SelectedIndex = int.Parse(valorEstado.ToString()) - 1;

@@ -182,11 +182,11 @@ namespace Metrologia
 
         private void txtSoloLetras(object sender, KeyPressEventArgs e)
         {
-            if (!((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || // Letras mayúsculas
+            if (!((e.KeyChar >= 'A' && e.KeyChar <= 'Z') ||  // Letras mayúsculas
                 (e.KeyChar >= 'a' && e.KeyChar <= 'z') || // Letras minúsculas
-                    (e.KeyChar == 'á' || e.KeyChar == 'é' || e.KeyChar == 'í' || e.KeyChar == 'ó' || e.KeyChar == 'ú' || // Letras con tildes
+                (e.KeyChar == 'á' || e.KeyChar == 'é' || e.KeyChar == 'í' || e.KeyChar == 'ó' || e.KeyChar == 'ú' || // Letras con tildes
                     e.KeyChar == 'Á' || e.KeyChar == 'É' || e.KeyChar == 'Í' || e.KeyChar == 'Ó' || e.KeyChar == 'Ú' || // Letras mayúsculas con tildes
-                    e.KeyChar == ' '))) // Espacio en blanco
+                    e.KeyChar == ' ' || e.KeyChar == (char)Keys.Back))) // Espacio en blanco o tecla "Borrar"
             {
                 // Validación de caracteres no permitidos
                 MessageBox.Show("Solo se aceptan letras, letras con tildes y espacios en blanco", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -236,7 +236,10 @@ namespace Metrologia
             // Solo permitir números del 0 al 9, guion y control de edición (por ejemplo, retroceso)
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
             {
+                //Validacion de solo teclas numericas
+                MessageBox.Show("Solo se aceptan valores numericos y positivos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Handled = true;
+                return;
             }
 
             // Permitir un guion en la posición 4

@@ -222,6 +222,7 @@
             this.txtNombreEncargado.SelectedText = "";
             this.txtNombreEncargado.Size = new System.Drawing.Size(413, 47);
             this.txtNombreEncargado.TabIndex = 70;
+            this.txtNombreEncargado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoloLetras);
             // 
             // pnlCodigoEncargado
             // 
@@ -390,7 +391,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Encargados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Encargados";

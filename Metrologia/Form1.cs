@@ -42,9 +42,13 @@ namespace Metrologia
 
         private void btnMin_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            this.WindowState = FormWindowState.Minimized;
         }
 
+        private void btnMaximi_DoubleClick(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+        }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {

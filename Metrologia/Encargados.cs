@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -22,6 +23,8 @@ namespace Metrologia
             cargarEmpresa();
             cargarCargo();
             cargarEstado();
+            // Asocia el evento Validating con el control DateTimePicker
+            dtpFecha.Validating += dtpFecha_Validating;
         }
 
         void cargarEmpresa()
@@ -57,12 +60,27 @@ namespace Metrologia
             txtCodigoEncargado.Visible = true;
         }
 
+        private void dtpFecha_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            DateTime selectedDate = dtpFecha.Value;
+            DateTime currentDate = DateTime.Now;
+
+            // Verifica si la fecha seleccionada es igual o posterior a la fecha actual
+            if (selectedDate >= currentDate)
+            {
+                // Muestra un mensaje de error
+                MessageBox.Show("Selecciona una fecha anterior a la fecha actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Cancel = true; // Cancela la validación
+            }
+        }
+
         void agregarEncargado()
         {
             EncargadosController encargadocontrol = new EncargadosController();
 
             encargadocontrol.Nombre = txtNombreEncargado.Text;
-            encargadocontrol.Fecha = dtpFecha.Value;
+            DateTime fechas = dtpFecha.Value;
+            encargadocontrol.Fecha = fechas.ToString("MM/dd/yyyy");
             encargadocontrol.CodEmp = Convert.ToInt16(cbEmpresa.SelectedValue);
             encargadocontrol.CodCar = Convert.ToInt16(cbCargo.SelectedValue);
             encargadocontrol.CodEstEn = Convert.ToInt16(cbEstado.SelectedValue);
@@ -85,8 +103,10 @@ namespace Metrologia
         {
             EncargadosController encargadocontrol = new EncargadosController();
 
+            encargadocontrol.codigoEncargado = txtCodigoEncargado.Text;
             encargadocontrol.Nombre = txtNombreEncargado.Text;
-            encargadocontrol.Fecha = dtpFecha.Value;
+            DateTime fechas = dtpFecha.Value;
+            encargadocontrol.Fecha = fechas.ToString("MM/dd/yyyy");
             encargadocontrol.CodEmp = Convert.ToInt16(cbEmpresa.SelectedValue);
             encargadocontrol.CodCar = Convert.ToInt16(cbCargo.SelectedValue);
             encargadocontrol.CodEstEn = Convert.ToInt16(cbEstado.SelectedValue);
@@ -104,25 +124,49 @@ namespace Metrologia
             }
         }
 
-        public void llenarModal(string codigoEncargado, string nombre, DateTime fecha, string codemp, string codcar, string codesten)
+        public void EliminarEncargado(string codigoEncargado)
         {
+            EncargadosController encargadocontrol = new EncargadosController();
+
+            encargadocontrol.codigoEncargado = codigoEncargado;
+            encargadocontrol.CodEstEn = 2;
+
+            if (encargadocontrol.EliminarEncargado() == true)
+            {
+                MessageBox.Show("Encargado se eliminó con exito");
+                dash.CargarDatosEncargado();
+                dash.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Error al eliminar Encargado");
+            }
+        }
+
+        public void llenarModal(string codigoEncargado, string nombre, string fecha, string codemp, string codcar, string codesten)
+        {
+            string[] formato = { "d/M/yyyy H:mm:ss", "M/d/yyyy H:mm:ss" };
             EncargadosController objselect = new EncargadosController();
 
             txtCodigoEncargado.Text = codigoEncargado;
             txtNombreEncargado.Text = nombre;
-            dtpFecha.Value = fecha;
 
-            cbEmpresa.DataSource = objselect.CargarEmpresaEncargado_Controller(codigoEncargado);
-            cbEmpresa.DisplayMember = "Nombre";
-            cbEmpresa.ValueMember = "CodigoEmpresa";
+            dtpFecha.Value = DateTime.ParseExact(fecha, formato, CultureInfo.InvariantCulture, DateTimeStyles.None);
 
-            cbCargo.DataSource = objselect.CargarCargoEncargado_Controller(codigoEncargado);
-            cbCargo.DisplayMember = "Nombre";
-            cbCargo.ValueMember = "CodigoCargo";
+            cargarEmpresa();
+            DataTable codigoEmpresa = objselect.CargarEmpresaEncargado_Controller(codigoEncargado);
+            object valorEmpresa = codigoEmpresa.Rows[0]["CodigoEmpresa"];
+            cbEmpresa.SelectedIndex = int.Parse(valorEmpresa.ToString()) - 1;
 
-            cbEstado.DataSource = objselect.CargarEstadoEncargado_Controller(codigoEncargado);
-            cbEstado.DisplayMember = "Nombre";
-            cbEstado.ValueMember = "CodigoEstadoEn";
+            cargarCargo();
+            DataTable codigoCargo = objselect.CargarCargoEncargado_Controller(codigoEncargado);
+            object valorCargo = codigoCargo.Rows[0]["CodigoCargo"];
+            cbCargo.SelectedIndex = int.Parse(valorCargo.ToString()) - 1;
+
+            cargarEstado();
+            DataTable codigoEstado = objselect.CargarEstadoEncargado_Controller(codigoEncargado);
+            object valorEstado = codigoEstado.Rows[0]["CodigoEstadoEn"];
+            cbEstado.SelectedIndex = int.Parse(valorEstado.ToString()) - 1;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -141,5 +185,19 @@ namespace Metrologia
             else agregarEncargado();
         }
 
+        //Validaciones
+        private void txtSoloLetras(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'A' && e.KeyChar <= 'Z') ||  // Letras mayúsculas
+                (e.KeyChar >= 'a' && e.KeyChar <= 'z') || // Letras minúsculas
+                (e.KeyChar == 'á' || e.KeyChar == 'é' || e.KeyChar == 'í' || e.KeyChar == 'ó' || e.KeyChar == 'ú' || // Letras con tildes
+                    e.KeyChar == 'Á' || e.KeyChar == 'É' || e.KeyChar == 'Í' || e.KeyChar == 'Ó' || e.KeyChar == 'Ú' || // Letras mayúsculas con tildes
+                    e.KeyChar == ' ' || e.KeyChar == (char)Keys.Back))) // Espacio en blanco o tecla "Borrar"
+            {
+                // Validación de caracteres no permitidos
+                MessageBox.Show("Solo se aceptan letras, letras con tildes y espacios en blanco", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
+        }
     }
 }

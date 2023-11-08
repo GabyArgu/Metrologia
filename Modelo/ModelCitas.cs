@@ -195,7 +195,8 @@ namespace Modelo
             bool retorno;
             try
             {
-                string query = "UPDATE Cita SET CodigoEncargado = @codigoEn,CodigoEmpresa = @codigoEm,CodigoEstadoCi = @codigoEstadoCi,FechaCita = @fecha,Comentarios = @comentarios,HoraCita = @hora WHERE CodigoCita =@codigoCi";
+                string query = "UPDATE Cita SET CodigoEncargado = @codigoEn,CodigoEmpresa = @codigoEm," +
+                    "CodigoEstadoCi = @codigoEstadoCi,FechaCita = @fecha,Comentarios = @comentarios,HoraCita = @hora WHERE CodigoCita =@codigoCi";
                 SqlCommand cmdinsert = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdinsert.Parameters.Add(new SqlParameter("codigoCi", CodigoCita));
                 cmdinsert.Parameters.Add(new SqlParameter("codigoEn", Encargado));

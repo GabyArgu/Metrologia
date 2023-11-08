@@ -23,7 +23,24 @@ namespace Metrologia
             cargarEmpleado();
             cargarTipoSer();
             cargarEstadoSer();
+            // Asocia el evento Validating con el control DateTimePicker
+            dtpFechaEntrega.Validating += dtpFecha_Validating;
         }
+
+        private void dtpFecha_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            DateTime selectedDate = dtpFechaEntrega.Value;
+            DateTime currentDate = DateTime.Now;
+
+            // Verifica si la fecha seleccionada es igual o posterior a la fecha actual
+            if (selectedDate >= currentDate)
+            {
+                // Muestra un mensaje de error
+                MessageBox.Show("Selecciona una fecha anterior a la fecha actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Cancel = true; // Cancela la validación
+            }
+        }
+
         void cargarArea()
         {
             cbArea.DataSource = ServicioController.CargarArea_Controller();

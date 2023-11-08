@@ -34,9 +34,14 @@ namespace Metrologia
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void btnMin_Click(object sender, EventArgs e)
+        private void btnMaximi_DoubleClick(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -472,19 +477,19 @@ namespace Metrologia
         private void dgvEncargados_DoubleClick(object sender, EventArgs e)
         {
             int posicion;
-            string codigoEncargado, nombre, codemp, codcar, codesten;
+            string codigoEncargado, nombre, fecha, codemp, codcar, codesten;
 
             posicion = dgvEncargados.CurrentRow.Index;
 
             codigoEncargado = dgvEncargados[0, posicion].Value.ToString();
-            nombre = dgvEncargados[1, posicion].Value.ToString();
-            DateTime fecha = (DateTime)dgvEncargados[2, posicion].Value;
+            nombre = dgvEncargados[4, posicion].Value.ToString();
+            fecha = dgvEncargados[5, posicion].Value.ToString();
 
-            codemp = dgvEncargados[3, posicion].Value.ToString();
+            codemp = dgvEncargados[1, posicion].Value.ToString();
 
-            codcar = dgvEncargados[4, posicion].Value.ToString();
+            codcar = dgvEncargados[2, posicion].Value.ToString();
 
-            codesten = dgvEncargados[5, posicion].Value.ToString();
+            codesten = dgvEncargados[3, posicion].Value.ToString();
 
 
 
@@ -509,6 +514,14 @@ namespace Metrologia
             {
                 MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnEliminarEn_Click(object sender, EventArgs e)
+        {
+            int posicion = dgvEncargados.CurrentRow.Index;
+            string codigoEncargado = dgvEncargados[0, posicion].Value.ToString();
+            Encargados formE = new Encargados();
+            formE.EliminarEncargado(codigoEncargado);
         }
     }
 }
