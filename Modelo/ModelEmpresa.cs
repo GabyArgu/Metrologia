@@ -171,8 +171,8 @@ namespace Modelo
         public static DataTable CargarEmpresas()
         {
             DataTable retorno;
-            string query = "SELECT E.CodigoEmpresa AS Codigo, EC.Nombre AS Encargado, CE.Nombre AS Categoria, " +
-                "E.Nombre as Empresa, E.RazonSocial, E.Informacion, E.Direccion, E.Telefono, E.Correo " +
+            string query = "SELECT E.CodigoEmpresa AS Codigo, E.Nombre as Empresa, E.RazonSocial, " +
+                "E.Informacion, E.Direccion, E.Telefono, E.Correo, EC.Nombre AS Encargado, CE.Nombre AS Categoria " +
                 "FROM Empresas E JOIN Encargado EC ON E.CodigoEncargado = EC.CodigoEncargado " +
                 "JOIN CategoriaEmpresa CE ON E.CodigoCategoria = CE.CodigoCategoria; ";
             try

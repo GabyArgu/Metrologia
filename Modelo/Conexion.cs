@@ -14,8 +14,8 @@ namespace Modelo
             SqlConnection connect;
             string server = "localhost";
             string database = "DB_Metrologia";
-            string user = "user";
-            string password = "administrador";
+            string user = "username";
+            string password = "admin12345";
             string puerto = "1433";
             try
             {
