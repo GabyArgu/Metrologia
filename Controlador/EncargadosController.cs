@@ -18,7 +18,7 @@ namespace Controlador
         //Atributos tb_Acta_Defuncion
         public string codigoEncargado { get; set; }
         public string Nombre { get; set; }
-        public DateTime Fecha { get; set; }
+        public string Fecha { get; set; }
         public int CodEmp { get; set; }
         public int CodCar { get; set; }
         public int CodEstEn { get; set; }
@@ -28,9 +28,9 @@ namespace Controlador
 
 
         //Métodos Paquetes Entierro
-        public DataTable CargarEmpresaEncargado_Controller(string codigoEncargado)
+        public DataTable CargarEmpresaEncargado_Controller(string CodEmp)
         {
-            return ModelEncargado.CargarEmpresaEncargado(codigoEncargado);
+            return ModelEncargado.CargarEmpresaEncargado(CodEmp);
         }
         public static DataTable CargarEmpresa_Controller()
         {
@@ -66,7 +66,12 @@ namespace Controlador
         }
         public bool EliminarEncargado()
         {
-            return ModelEncargado.EliminarEncargado(codigoEncargado,CodEstEn);
+            return ModelEncargado.EliminarEncargado(codigoEncargado, CodEstEn);
+        }
+
+        public static DataTable BuscarEncargado(string Busqueda)
+        {
+            return ModelEncargado.BuscarEncargado(Busqueda);
         }
     }
 }

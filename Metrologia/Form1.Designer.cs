@@ -42,6 +42,7 @@
             this.btnIngresar = new Guna.UI2.WinForms.Guna2Button();
             this.controlLogin = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
@@ -73,6 +74,7 @@
             this.btnMaximi.TabIndex = 2;
             this.btnMaximi.TabStop = false;
             this.btnMaximi.Click += new System.EventHandler(this.btnMaximi_Click);
+            this.btnMaximi.DoubleClick += new System.EventHandler(this.btnMaximi_DoubleClick);
             // 
             // btnMin
             // 
@@ -188,7 +190,7 @@
             this.txtContra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContra.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtContra.Name = "txtContra";
-            this.txtContra.PasswordChar = '\0';
+            this.txtContra.PasswordChar = '*';
             this.txtContra.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtContra.PlaceholderText = "  Digite su contraseña";
             this.txtContra.SelectedText = "";
@@ -239,6 +241,11 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 8;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -285,6 +292,7 @@
         private Guna.UI2.WinForms.Guna2Button btnIngresar;
         private Guna.UI2.WinForms.Guna2DragControl controlLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
 

@@ -128,7 +128,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT EE.CodigoEstadoEn, EE.Nombre FROM EstadoEncargado EE , Empleado E WHERE EE.CodigoEstadoEn=E.CodigoEstadoEn AND E.CodigoEncargado = @codigoencargado";
+                string query = "SELECT EE.CodigoEstadoEn, EE.Nombre FROM EstadoEncargado EE , Encargado E WHERE EE.CodigoEstadoEn= E.CodigoEstadoEn AND E.CodigoEncargado = @codigoencargado";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdselect.Parameters.Add(new SqlParameter("codigoencargado", codigoEncargado));
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
@@ -149,9 +149,10 @@ namespace Modelo
         public static DataTable CargarEncargados()
         {
             DataTable retorno;
-            string query = "SELECT E.CodigoEncargado AS Codigo, Em.CodigoEmpresa AS Empresa, CE.CodigoCargo AS Cargo, " +
-                           "EE.CodigoEstadoEn AS Estado, E.Nombre, E.FechaContratado FROM Encargado E" +
-                           "JOIN Empresas Em ON E.CodigoEmpresa = Em.CodigoEmpresa JOIN CargoEncargado CE ON E.CodigoCargo = CE.CodigoCargo" +
+            string query = "SELECT E.CodigoEncargado AS Codigo, Em.Nombre AS Empresa, CE.Nombre AS Cargo, " +
+                           "EE.Nombre AS Estado, E.Nombre, E.FechaContratado FROM Encargado E " +
+                           "JOIN Empresas Em ON E.CodigoEmpresa = Em.CodigoEmpresa " +
+                           "JOIN CargoEncargado CE ON E.CodigoCargo = CE.CodigoCargo " +
                            "JOIN EstadoEncargado EE ON E.CodigoEstadoEn = EE.CodigoEstadoEn";
             try
             {
@@ -172,7 +173,7 @@ namespace Modelo
                 Conexion.getConnect().Close();
             }
         }
-        public static bool AgregarEncargado( string Nombre, DateTime Fecha, int CodEmp, int CodCar, int CodEstEn)
+        public static bool AgregarEncargado( string Nombre, string Fecha, int CodEmp, int CodCar, int CodEstEn)
         {
             bool retorno;
             try
@@ -193,12 +194,13 @@ namespace Modelo
             }
 
         }
-        public static bool ActualizarEncargado(string CodigoEncargado, string Nombre, DateTime Fecha, int CodEmp, int CodCar, int CodEstEn)
+        public static bool ActualizarEncargado(string CodigoEncargado, string Nombre, string Fecha, int CodEmp, int CodCar, int CodEstEn)
         {
             bool retorno;
             try
             {
-                string query = "UPDATE [dbo].[Encargado] SET [CodigoEmpresa] = @codemp ,[CodigoCargo] = @codcar ,[CodigoEstadoEn] = @codesten ,[Nombre] = @nombre ,[FechaContratado] = @fecha WHERE [CodigoEncargado] = @codigoencargado   ";
+                string query = "UPDATE Encargado SET CodigoEmpresa = @codemp ,CodigoCargo = @codcar , " +
+                    "CodigoEstadoEn = @codesten ,Nombre = @nombre ,FechaContratado = @fecha WHERE CodigoEncargado = @codigoencargado";
                 SqlCommand cmdinsert = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdinsert.Parameters.Add(new SqlParameter("codigoencargado", CodigoEncargado));
                 cmdinsert.Parameters.Add(new SqlParameter("nombre", Nombre));
@@ -214,21 +216,46 @@ namespace Modelo
                 return retorno = false;
             }
         }
-        public static bool EliminarEncargado(string CodigoEncargado, int Codesten)
+        public static bool EliminarEncargado(string codigoEncargado, int CodEstEn)
         {
             bool retorno;
             try
             {
                 string query = "UPDATE [dbo].[Encargado] SET [CodigoEstadoEn] = @codesten WHERE [CodigoEncargado] = @codigoencargado   ";
                 SqlCommand cmdinsert = new SqlCommand(string.Format(query), Conexion.getConnect());
-                cmdinsert.Parameters.Add(new SqlParameter("codigoencargado", CodigoEncargado));
-                cmdinsert.Parameters.Add(new SqlParameter("codesten", Codesten));
+                cmdinsert.Parameters.Add(new SqlParameter("codigoencargado", codigoEncargado));
+                cmdinsert.Parameters.Add(new SqlParameter("codesten", CodEstEn));
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
                 return retorno = true;
             }
             catch (Exception)
             {
                 return retorno = false;
+            }
+        }
+
+        public static DataTable BuscarEncargado(string Busqueda)
+        {
+            DataTable retorno;
+            string query = "SELECT * FROM CargarEncargados WHERE Nombre LIKE @Busqueda OR Estado LIKE @Busqueda";
+            try
+            {
+                SqlCommand cmdsearch = new SqlCommand(string.Format(query), Conexion.getConnect());
+                cmdsearch.Parameters.Add(new SqlParameter("Busqueda", "%" + Busqueda + "%"));
+                SqlDataAdapter adp = new SqlDataAdapter(cmdsearch);
+                retorno = new DataTable();
+                adp.Fill(retorno);
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno = null;
+            }
+
+            finally
+            {
+                Conexion.getConnect().Close();
             }
         }
     }

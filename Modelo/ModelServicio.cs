@@ -144,7 +144,11 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT Ser.CodigoServicio, Ser.CodigoTipo, Ser.CodigoArea, Ser.CodigoEmpleado, Ser.CodigoEstadoSe, Ser.Precio, Ser.FechaEntrega, Ser.HoraEntrega, Ser.Comentarios FROM Servicio Ser, TipoServicio TSer, AreaMetrologia AM, Empleado Emp, EstadoServicio ESer WHERE Ser.CodigoTipo=TSer.CodigoTipo AND Ser.CodigoArea=AM.CodigoArea AND Ser.CodigoEmpleado=Emp.CodigoEmpleado AND Ser.CodigoEstadoSe=ESer.CodigoEstadoSe AND Ser.Comentarios = @comentario";
+                string query = "SELECT Ser.CodigoServicio,Ser.CodigoTipo, TSer.Nombre AS NombreTipoServicio, Ser.CodigoArea, Ser.CodigoEmpleado, " +
+                    "Ser.CodigoEstadoSe, Ser.Precio, Ser.FechaEntrega, Ser.HoraEntrega, Ser.Comentarios " +
+                    "FROM Servicio Ser, TipoServicio TSer, AreaMetrologia AM, Empleado Emp, EstadoServicio ESer " +
+                    "WHERE Ser.CodigoTipo = TSer.CodigoTipo AND Ser.CodigoArea = AM.CodigoArea " +
+                    "AND Ser.CodigoEmpleado = Emp.CodigoEmpleado AND Ser.CodigoEstadoSe = ESer.CodigoEstadoSe AND TSer.Nombre = @comentario";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdselect.Parameters.Add(new SqlParameter("comentario", Comentario));
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);

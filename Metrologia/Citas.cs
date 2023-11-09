@@ -14,7 +14,7 @@ namespace Metrologia
 {
     public partial class Citas : Form
     {
-        Dashboard dash = new Dashboard();
+        Dashboard dash = (Dashboard)formularios.DashboardFRM;
 
         public Citas()
         {
@@ -22,8 +22,44 @@ namespace Metrologia
             cargarEncargado();
             cargarEmpresa();
             cargarEstadoCi();
+            /*dtpFecha.Validating += dtpFecha_Validating;*/
+
         }
 
+        public bool EsFechaValida(DateTime fecha)
+        {
+            DateTime selectedDateTime = dtpFecha.Value.Date + dtpHora.Value.TimeOfDay;
+            DateTime currentDateTime = DateTime.Now;
+
+            // Verifica si la fecha seleccionada es anterior a la fecha actual
+            if (selectedDateTime < currentDateTime)
+            {
+                // Muestra un mensaje de error
+                MessageBox.Show("Selecciona una fecha y hora posterior a la fecha actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false; // La fecha no es válida
+            }
+            else
+            {
+                return true; // La fecha es válida
+            }
+
+        }
+
+        /*private void dtpFecha_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            DateTime selectedDate = dtpFecha.Value;
+            DateTime currentDate = DateTime.Now;
+
+            // Verifica si la fecha seleccionada es igual o posterior a la fecha actual
+            if (selectedDate < currentDate)
+            {
+                // Muestra un mensaje de error
+                MessageBox.Show("Selecciona una fecha anterior a la fecha actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Cancel = true; // Cancela la validación
+            }
+        }
+        */
+        
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -84,8 +120,8 @@ namespace Metrologia
             citacontrol.Encargado = Convert.ToInt16(cbEncargado.SelectedValue); ;
             citacontrol.Empresa = Convert.ToInt16(cbEmpresa.SelectedValue);
             citacontrol.EstadoCi = Convert.ToInt16(cbEstadoCi.SelectedValue);
-
-            if (citacontrol.AgregarCita() == true)
+            
+            if (citacontrol.AgregarCita() == true && EsFechaValida(Fecha) == true)
             {
                 MessageBox.Show("Cita agendada con exito");
                 this.Hide();
@@ -94,7 +130,7 @@ namespace Metrologia
             }
             else
             {
-                MessageBox.Show("Error al agendar cita");
+                MessageBox.Show("Error al agendar cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -111,7 +147,7 @@ namespace Metrologia
             citacontrol.Empresa = Convert.ToInt16(cbEmpresa.SelectedValue);
             citacontrol.EstadoCi = Convert.ToInt16(cbEstadoCi.SelectedValue);
 
-            if (citacontrol.ActualizarCita() == true)
+            if (citacontrol.ActualizarCita() == true && EsFechaValida(Fecha) == true)
             {
                 MessageBox.Show("Cita actualizada con exito");
                 this.Hide();
@@ -120,7 +156,7 @@ namespace Metrologia
             }
             else
             {
-                MessageBox.Show("Error al actualizar cita");
+                MessageBox.Show("Error al actualizar cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -144,6 +180,7 @@ namespace Metrologia
             object valorEm = codigoEm.Rows[0]["CodigoEmpresa"];            
             cbEmpresa.SelectedIndex = int.Parse(valorEm.ToString()) - 1;
 
+            cargarEstadoCi();
             DataTable codigoEstadoC = objselect.CargarEstado_Controller(EstadoCi);
             object valorEstado = codigoEstadoC.Rows[0]["CodigoEstadoCi"];
             cbEstadoCi.SelectedIndex = int.Parse(valorEstado.ToString()) - 1;
@@ -165,7 +202,7 @@ namespace Metrologia
             }
             else
             {
-                MessageBox.Show("Error al eliminar Cita");
+                MessageBox.Show("Error al eliminar Cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

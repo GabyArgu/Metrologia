@@ -310,7 +310,7 @@
             this.dtpHora.BorderRadius = 12;
             this.dtpHora.Checked = true;
             this.dtpHora.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.dtpHora.CustomFormat = "hh:mm";
+            this.dtpHora.CustomFormat = "hh:mm tt";
             this.dtpHora.CustomizableEdges.BottomLeft = false;
             this.dtpHora.CustomizableEdges.TopLeft = false;
             this.dtpHora.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));

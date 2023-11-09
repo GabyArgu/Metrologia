@@ -418,7 +418,7 @@
             this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
             this.txtCodigoEmpleado.PasswordChar = '\0';
             this.txtCodigoEmpleado.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtCodigoEmpleado.PlaceholderText = "  Digite el nombre de usuario";
+            this.txtCodigoEmpleado.PlaceholderText = "Codigo";
             this.txtCodigoEmpleado.ReadOnly = true;
             this.txtCodigoEmpleado.SelectedText = "";
             this.txtCodigoEmpleado.Size = new System.Drawing.Size(413, 47);

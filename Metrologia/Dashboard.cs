@@ -34,9 +34,14 @@ namespace Metrologia
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void btnMin_Click(object sender, EventArgs e)
+        private void btnMaximi_DoubleClick(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -472,19 +477,19 @@ namespace Metrologia
         private void dgvEncargados_DoubleClick(object sender, EventArgs e)
         {
             int posicion;
-            string codigoEncargado, nombre, codemp, codcar, codesten;
+            string codigoEncargado, nombre, fecha, codemp, codcar, codesten;
 
             posicion = dgvEncargados.CurrentRow.Index;
 
             codigoEncargado = dgvEncargados[0, posicion].Value.ToString();
-            nombre = dgvEncargados[1, posicion].Value.ToString();
-            DateTime fecha = (DateTime)dgvEncargados[2, posicion].Value;
+            nombre = dgvEncargados[4, posicion].Value.ToString();
+            fecha = dgvEncargados[5, posicion].Value.ToString();
 
-            codemp = dgvEncargados[3, posicion].Value.ToString();
+            codemp = dgvEncargados[1, posicion].Value.ToString();
 
-            codcar = dgvEncargados[4, posicion].Value.ToString();
+            codcar = dgvEncargados[2, posicion].Value.ToString();
 
-            codesten = dgvEncargados[5, posicion].Value.ToString();
+            codesten = dgvEncargados[3, posicion].Value.ToString();
 
 
 
@@ -508,6 +513,74 @@ namespace Metrologia
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEliminarEn_Click(object sender, EventArgs e)
+        {
+            int posicion = dgvEncargados.CurrentRow.Index;
+            string codigoEncargado = dgvEncargados[0, posicion].Value.ToString();
+            Encargados formE = new Encargados();
+            formE.EliminarEncargado(codigoEncargado);
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscar.Text))
+            {
+                dgvEmpleados.DataSource = UsuarioController.CargarUsuarios_Controller();
+            }
+            else
+            {
+                dgvEmpleados.DataSource = UsuarioController.BuscarUsuario(txtBuscar.Text);
+            }
+        }
+
+        private void txtBuscarEn_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarEn.Text))
+            {
+                dgvEncargados.DataSource = EncargadosController.CargarEncargados_Controller();
+            }
+            else
+            {
+                dgvEncargados.DataSource = EncargadosController.BuscarEncargado(txtBuscarEn.Text);
+            }
+        }
+
+        private void txtBuscarC_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarC.Text))
+            {
+                dgvCitas.DataSource = CitasController.CargarCitas_Controller();
+            }
+            else
+            {
+                dgvCitas.DataSource = CitasController.BuscarCita(txtBuscarC.Text);
+            }
+        }
+
+        private void txtBuscarEq_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarEq.Text))
+            {
+                dgvEquipos.DataSource = EquiposController.CargarEquipos_Controller();
+            }
+            else
+            {
+                dgvEquipos.DataSource = EquiposController.BuscarEquipos(txtBuscarEq.Text);
+            }
+        }
+
+        private void txtBuscarUb_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarUb.Text))
+            {
+                dgvUbicacion.DataSource = UbicacionController.CargarUbicacion_Controller();
+            }
+            else
+            {
+                dgvUbicacion.DataSource = UbicacionController.BuscarUbicacion(txtBuscarUb.Text);
             }
         }
     }

@@ -13,7 +13,7 @@ namespace Metrologia
 {
     public partial class Equipos : Form
     {
-        Dashboard dash = new Dashboard();
+        Dashboard dash = (Dashboard)formularios.DashboardFRM;
         public Equipos()
         {
             InitializeComponent();

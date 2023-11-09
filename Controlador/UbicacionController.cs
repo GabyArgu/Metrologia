@@ -41,5 +41,10 @@ namespace Controlador
         {
             return ModelUbicacion.EliminarUbicacion(codigoUbicacion);
         }
+
+        public static DataTable BuscarUbicacion(string Busqueda)
+        {
+            return ModelUbicacion.BuscarUbicacion(Busqueda);
+        }
     }
 }

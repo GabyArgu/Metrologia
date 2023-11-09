@@ -42,9 +42,13 @@ namespace Metrologia
 
         private void btnMin_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            this.WindowState = FormWindowState.Minimized;
         }
 
+        private void btnMaximi_DoubleClick(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+        }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -53,10 +57,10 @@ namespace Metrologia
 
             if (LoginController.Acceso_Controller()==true)
             {
-                Dashboard form2 = new Dashboard();
+                formularios.DashboardFRM = new Dashboard();
 
                 // Mostrar el formulario
-                form2.Show();
+                formularios.DashboardFRM.Show();
 
                 // Cerrar el formulario actual
                 this.Hide();

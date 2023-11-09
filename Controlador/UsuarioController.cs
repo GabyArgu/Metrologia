@@ -63,5 +63,10 @@ namespace Controlador
         {
             return ModelUsuario.EliminarUsuario(codigoEmpleado,EstadoE);
         }
+
+        public static DataTable BuscarUsuario(string Busqueda)
+        {
+            return ModelUsuario.BuscarUsuario(Busqueda);
+        }
     }
 }

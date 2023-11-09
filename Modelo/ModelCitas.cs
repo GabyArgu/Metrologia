@@ -144,11 +144,14 @@ namespace Modelo
         public static DataTable CargarCitas()
         {
             DataTable retorno;
-            string query = "SELECT Ci.CodigoCita AS Código, En.Nombre AS Encargado, Empr.Nombre AS Empresa, Esci.Nombre AS Estado, Se.Comentarios AS Servicio, Ci.FechaCita AS Fecha, Ci.Comentarios, Ci.HoraCita AS Hora FROM Cita Ci"
-                            +" INNER JOIN Encargado En ON Ci.CodigoEncargado = En.CodigoEncargado"
-                            +" LEFT JOIN Servicio Se ON Ci.CodigoServicio = Se.CodigoServicio"
-                            +" INNER JOIN Empresas Empr ON Ci.CodigoEmpresa = Empr.CodigoEmpresa"
-                            +" INNER JOIN EstadoCita Esci ON Ci.CodigoEstadoCi = Esci.CodigoEstadoCi";
+            string query = "SELECT Ci.CodigoCita AS Código, En.Nombre AS Encargado," +
+                " Empr.Nombre AS Empresa, Esci.Nombre AS Estado, TS.Nombre AS Servicio," +
+                " Ci.FechaCita AS Fecha, Ci.Comentarios, Ci.HoraCita AS Hora FROM Cita Ci " +
+                "INNER JOIN Encargado En ON Ci.CodigoEncargado = En.CodigoEncargado " +
+                "LEFT JOIN Servicio Se ON Ci.CodigoServicio = Se.CodigoServicio " +
+                "INNER JOIN Empresas Empr ON Ci.CodigoEmpresa = Empr.CodigoEmpresa " +
+                "INNER JOIN EstadoCita Esci ON Ci.CodigoEstadoCi = Esci.CodigoEstadoCi " +
+                "LEFT JOIN TipoServicio TS ON Se.CodigoTipo = TS.CodigoTipo";
             try
             {
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
@@ -195,7 +198,8 @@ namespace Modelo
             bool retorno;
             try
             {
-                string query = "UPDATE Cita SET CodigoEncargado = @codigoEn,CodigoEmpresa = @codigoEm,CodigoEstadoCi = @codigoEstadoCi,FechaCita = @fecha,Comentarios = @comentarios,HoraCita = @hora WHERE CodigoCita =@codigoCi";
+                string query = "UPDATE Cita SET CodigoEncargado = @codigoEn,CodigoEmpresa = @codigoEm," +
+                    "CodigoEstadoCi = @codigoEstadoCi,FechaCita = @fecha,Comentarios = @comentarios,HoraCita = @hora WHERE CodigoCita =@codigoCi";
                 SqlCommand cmdinsert = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdinsert.Parameters.Add(new SqlParameter("codigoCi", CodigoCita));
                 cmdinsert.Parameters.Add(new SqlParameter("codigoEn", Encargado));
@@ -244,6 +248,31 @@ namespace Modelo
             catch (Exception)
             {
                 return retorno = false;
+            }
+        }
+
+        public static DataTable BuscarCita(string Busqueda)
+        {
+            DataTable retorno;
+            string query = "SELECT * FROM CargarCitas WHERE Encargado LIKE @Busqueda OR Empresa LIKE @Busqueda OR Servicio LIKE @Busqueda";
+            try
+            {
+                SqlCommand cmdsearch = new SqlCommand(string.Format(query), Conexion.getConnect());
+                cmdsearch.Parameters.Add(new SqlParameter("Busqueda", "%" + Busqueda + "%"));
+                SqlDataAdapter adp = new SqlDataAdapter(cmdsearch);
+                retorno = new DataTable();
+                adp.Fill(retorno);
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno = null;
+            }
+
+            finally
+            {
+                Conexion.getConnect().Close();
             }
         }
     }
