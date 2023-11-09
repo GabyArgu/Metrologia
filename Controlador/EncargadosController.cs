@@ -68,5 +68,10 @@ namespace Controlador
         {
             return ModelEncargado.EliminarEncargado(codigoEncargado, CodEstEn);
         }
+
+        public static DataTable BuscarEncargado(string Busqueda)
+        {
+            return ModelEncargado.BuscarEncargado(Busqueda);
+        }
     }
 }

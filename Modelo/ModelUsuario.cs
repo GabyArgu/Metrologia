@@ -122,7 +122,7 @@ namespace Modelo
                 Conexion.getConnect().Close();
             }
         }
-        public static bool AgregarUsuario( string Nombre, string Apellido, string Correo, string Telefono, string Username, string ContraUser, int CargoE, int EstadoE)
+        public static bool AgregarUsuario(string Nombre, string Apellido, string Correo, string Telefono, string Username, string ContraUser, int CargoE, int EstadoE)
         {
             bool retorno;
             try
@@ -184,6 +184,31 @@ namespace Modelo
             catch (Exception)
             {
                 return retorno = false;
+            }
+        }
+
+        public static DataTable BuscarUsuario(string Busqueda)
+        {
+            DataTable retorno;
+            string query = "SELECT * FROM CargarEmpleados WHERE Usuario LIKE @Busqueda OR Nombre LIKE @Busqueda";
+            try
+            {
+                SqlCommand cmdsearch = new SqlCommand(string.Format(query), Conexion.getConnect());
+                cmdsearch.Parameters.Add(new SqlParameter("Busqueda", "%" + Busqueda + "%"));
+                SqlDataAdapter adp = new SqlDataAdapter(cmdsearch);
+                retorno = new DataTable();
+                adp.Fill(retorno);
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno = null;
+            }
+
+            finally
+            {
+                Conexion.getConnect().Close();
             }
         }
     }

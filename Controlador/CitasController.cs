@@ -74,5 +74,10 @@ namespace Controlador
         {
             return ModelCitas.servicioCitas(codigoCita, Servicio);
         }
+
+        public static DataTable BuscarCita(string Busqueda)
+        {
+            return ModelCitas.BuscarCita(Busqueda);
+        }
     }
 }

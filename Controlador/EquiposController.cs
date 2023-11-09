@@ -49,5 +49,10 @@ namespace Controlador
         {
             return ModelEquipos.EliminarEquipo(codigoEquipos);
         }
+
+        public static DataTable BuscarEquipos(string Busqueda)
+        {
+            return ModelEquipos.BuscarEquipos(Busqueda);
+        }
     }
 }

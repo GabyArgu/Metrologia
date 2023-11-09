@@ -130,5 +130,30 @@ namespace Modelo
                 return retorno = false;
             }
         }
+
+        public static DataTable BuscarEquipos(string Busqueda)
+        {
+            DataTable retorno;
+            string query = "SELECT * FROM CargarEquipos WHERE Nombre LIKE @Busqueda OR Ubicacion LIKE @Busqueda";
+            try
+            {
+                SqlCommand cmdsearch = new SqlCommand(string.Format(query), Conexion.getConnect());
+                cmdsearch.Parameters.Add(new SqlParameter("Busqueda", "%" + Busqueda + "%"));
+                SqlDataAdapter adp = new SqlDataAdapter(cmdsearch);
+                retorno = new DataTable();
+                adp.Fill(retorno);
+                return retorno;
+            }
+            catch (Exception)
+            {
+
+                return retorno = null;
+            }
+
+            finally
+            {
+                Conexion.getConnect().Close();
+            }
+        }
     }
 }

@@ -523,5 +523,65 @@ namespace Metrologia
             Encargados formE = new Encargados();
             formE.EliminarEncargado(codigoEncargado);
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscar.Text))
+            {
+                dgvEmpleados.DataSource = UsuarioController.CargarUsuarios_Controller();
+            }
+            else
+            {
+                dgvEmpleados.DataSource = UsuarioController.BuscarUsuario(txtBuscar.Text);
+            }
+        }
+
+        private void txtBuscarEn_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarEn.Text))
+            {
+                dgvEncargados.DataSource = EncargadosController.CargarEncargados_Controller();
+            }
+            else
+            {
+                dgvEncargados.DataSource = EncargadosController.BuscarEncargado(txtBuscarEn.Text);
+            }
+        }
+
+        private void txtBuscarC_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarC.Text))
+            {
+                dgvCitas.DataSource = CitasController.CargarCitas_Controller();
+            }
+            else
+            {
+                dgvCitas.DataSource = CitasController.BuscarCita(txtBuscarC.Text);
+            }
+        }
+
+        private void txtBuscarEq_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarEq.Text))
+            {
+                dgvEquipos.DataSource = EquiposController.CargarEquipos_Controller();
+            }
+            else
+            {
+                dgvEquipos.DataSource = EquiposController.BuscarEquipos(txtBuscarEq.Text);
+            }
+        }
+
+        private void txtBuscarUb_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarUb.Text))
+            {
+                dgvUbicacion.DataSource = UbicacionController.CargarUbicacion_Controller();
+            }
+            else
+            {
+                dgvUbicacion.DataSource = UbicacionController.BuscarUbicacion(txtBuscarUb.Text);
+            }
+        }
     }
 }
