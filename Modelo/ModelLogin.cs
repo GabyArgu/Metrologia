@@ -27,6 +27,10 @@ namespace Modelo
             {
                 return retorno;
             }
+            finally
+            {
+                Conexion.getConnect().Close();
+            }
         }
         //
         public static DataTable nivelUser(string User, string txt1)
@@ -53,61 +57,6 @@ namespace Modelo
             {
                 Conexion.getConnect().Close();
             }
-        }
-
-
-
-
-        //Verificar Pimer Uso del Sistema
-        public static int ObtenerFunerarias()
-        {
-            int retorno;
-            string query = "SELECT * FROM tb_funeraria";
-            try
-            {
-                SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
-                retorno = Convert.ToInt16(cmdselect.ExecuteScalar());
-                return retorno;
-            }
-            catch (Exception)
-            {
-                return retorno = -1;
-            }
-        }
-        public static int ObtenerUsuarios()
-        {
-            int retorno;
-            string query = "SELECT * FROM tb_usuario";
-            try
-            {
-                SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
-                retorno = Convert.ToInt16(cmdselect.ExecuteScalar());
-                return retorno;
-            }
-            catch (Exception)
-            {
-                return retorno = -1;
-            }
-        }
-
-
-
-        //Registro de Funeraria en Primer Uso de Sistema
-        public static bool registrarFuneraria(string NombreFuneraria, string Registro, string Telefono, string CorreoElectronico, string Direccion, string Representante, string NIT)
-        {
-            bool retorno;
-            try
-            {
-                SqlCommand cmdinsert = new SqlCommand(string.Format("INSERT INTO tb_funeraria (Nombre_Funeraria, N°_Registro, Num_Telefono, Correo_Electronico, Direccion, Representante_Legal, NIT) VALUES ('{0}', '{1}', '{2}' , '{3}', '{4}', '{5}', '{6}')", NombreFuneraria, Registro, Telefono, CorreoElectronico, Direccion, Representante, NIT), Conexion.getConnect());
-                retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
-                return retorno;
-            }
-            catch (Exception)
-            {
-
-                return retorno = false;
-            }
-
-        }
+        }       
     }
 }
