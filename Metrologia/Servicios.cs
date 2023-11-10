@@ -89,7 +89,14 @@ namespace Metrologia
         {
             if (txtCodigoServicio.Visible == true)
             {
-                modificarServicio();
+                if (dtpFechaEntrega.Value > ServicioController.GetFechaCita(int.Parse(txtcodigoCita.Text)))
+                {
+                    modificarServicio();
+                }
+                else
+                {
+                    MessageBox.Show("La fecha del servicio debe ser mayor a la fecha de la cita");
+                }
             }
             else
             {
@@ -107,7 +114,7 @@ namespace Metrologia
             DateTime Fecha = dtpFechaEntrega.Value;
             serviciocontrol.Fecha = Fecha.ToString("MM/dd/yyyy");
             serviciocontrol.Hora = Convert.ToString(dtpHoraEntrega.Value);
-            serviciocontrol.Area = Convert.ToInt16(cbArea.SelectedValue); ;
+            serviciocontrol.Area = Convert.ToInt16(cbArea.SelectedValue);
             serviciocontrol.Empleado = Convert.ToInt16(cbEmpleado.SelectedValue);
             serviciocontrol.TipoSer = Convert.ToInt16(cbTipoSer.SelectedValue);
             serviciocontrol.EstadoSer = Convert.ToInt16(cbEstadoSer.SelectedValue);

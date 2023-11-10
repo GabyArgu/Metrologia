@@ -46,6 +46,7 @@
     <Compile Include="ModelEmpresa.cs" />
     <Compile Include="ModelEncargado.cs" />
     <Compile Include="ModelEquipos.cs" />
+    <Compile Include="ModelRevision.cs" />
     <Compile Include="ModelUbicacion.cs" />
     <Compile Include="ModelServicio.cs" />
     <Compile Include="ModelLogin.cs" />

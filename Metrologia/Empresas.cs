@@ -20,6 +20,7 @@ namespace Metrologia
             InitializeComponent();
             cargarEncargado();
             cargarCategoria();
+            cargarEstadoEM();
         }
 
         void cargarEncargado()
@@ -34,6 +35,13 @@ namespace Metrologia
             cbCategoria.DataSource = EmpresasController.CargarCategoria_Controller();
             cbCategoria.DisplayMember = "Nombre";
             cbCategoria.ValueMember = "CodigoCategoria";
+        }
+
+        void cargarEstadoEM()
+        {
+            cbEstadoE.DataSource = UsuarioController.CargarEstado_Controller();
+            cbEstadoE.DisplayMember = "Nombre";
+            cbEstadoE.ValueMember = "CodigoEstadoEm";
         }
 
         public void ocultarCodigo()
@@ -60,6 +68,7 @@ namespace Metrologia
             empresacontrol.Correo = txtCorreo.Text;
             empresacontrol.CodigoEnc = Convert.ToInt16(cbEncargado.SelectedValue);
             empresacontrol.CodigoCat = Convert.ToInt16(cbCategoria.SelectedValue);
+            empresacontrol.EstadoE = Convert.ToInt16(cbEstadoE.SelectedValue);
 
             if (empresacontrol.AgregarEmpresa() == true)
             {
@@ -79,6 +88,7 @@ namespace Metrologia
         {
             EmpresasController empresacontrol = new EmpresasController();
 
+            empresacontrol.codigoEmpresa = txtCodigoEmpresa.Text;
             empresacontrol.Nombre = txtNombreEmpresa.Text;
             empresacontrol.RazonSocial = txtRazonSocial.Text;
             empresacontrol.Informacion = txtInformacion.Text;
@@ -87,6 +97,7 @@ namespace Metrologia
             empresacontrol.Correo = txtCorreo.Text;
             empresacontrol.CodigoEnc = Convert.ToInt16(cbEncargado.SelectedValue);
             empresacontrol.CodigoCat = Convert.ToInt16(cbCategoria.SelectedValue);
+            empresacontrol.EstadoE = Convert.ToInt16(cbEstadoE.SelectedValue);
 
             if (empresacontrol.ActualizarEmpresa() == true)
             {
@@ -101,7 +112,7 @@ namespace Metrologia
             }
         }
 
-        public void llenarModal(string codigoEmpresa, string nombre, string razonsocial, string informacion, string direccion, string telefono, string correo, string codigoenc, string codigocat)
+        public void llenarModal(string codigoEmpresa, string nombre, string razonsocial, string informacion, string direccion, string telefono, string correo, string codigoenc, string codigocat, string EstadoE)
         {
             EmpresasController objselect = new EmpresasController();
 
@@ -111,15 +122,22 @@ namespace Metrologia
             txtInformacion.Text = informacion;
             txtDireccion.Text = direccion;
             txtTelefono.Text = telefono;
-            txtCorreo.Text = correo;                       
+            txtCorreo.Text = correo;
 
-            cbEncargado.DataSource = objselect.CargarEncargadoEmpresa_Controller(codigoEmpresa);
-            cbEncargado.DisplayMember = "Nombre";
-            cbEncargado.ValueMember = "CodigoEncargado";
+            cargarEncargado();
+            DataTable codigoE = objselect.CargarEncargadoEmpresa_Controller(codigoEmpresa);
+            object valorE = codigoE.Rows[0]["CodigoEncargado"];
+            cbEncargado.SelectedIndex = int.Parse(valorE.ToString()) - 1;
 
-            cbCategoria.DataSource = objselect.CargarCategoriaEmpresa_Controller(codigoEmpresa);
-            cbCategoria.DisplayMember = "Nombre";
-            cbCategoria.ValueMember = "CodigoCategoria";
+            cargarCategoria();
+            DataTable codigoC = objselect.CargarCategoriaEmpresa_Controller(codigoEmpresa);
+            object valorC = codigoC.Rows[0]["CodigoCategoria"];
+            cbCategoria.SelectedIndex = int.Parse(valorC.ToString()) - 1;
+
+            cargarEstadoEM();
+            DataTable codigoEstado = objselect.CargarEstadoEM_Controller(codigoEmpresa);
+            object valorEstado = codigoEstado.Rows[0]["CodigoEstadoE"];
+            cbEstadoE.SelectedIndex = int.Parse(valorEstado.ToString()) - 1;
         }
 
         public void eliminarEmpresa(string codigoEmpresa)

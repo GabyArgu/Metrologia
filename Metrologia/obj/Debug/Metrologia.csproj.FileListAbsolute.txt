@@ -183,3 +183,4 @@ C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.CoreCompileInp
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.CopyComplete
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.exe
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.pdb
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Revision.resources

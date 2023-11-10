@@ -82,6 +82,7 @@ namespace Metrologia
         {
             // Se muestra el panel 6 de tabControl
             tbcCruds.SelectedIndex = 5;
+            CargarDatosRevisiones();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -146,6 +147,20 @@ namespace Metrologia
                 dgvEquipos.DataSource = null;
                 dgvEquipos.DataSource = EquiposController.CargarEquipos_Controller();
                 dgvEquipos.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos existentes en la base de datos, consulte con su administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void CargarDatosRevisiones()
+        {
+            try
+            {
+                tbcCruds.SelectedIndex = 5;
+                dgvRevisiones.DataSource = null;
+                dgvRevisiones.DataSource = RevisionController.CargarRevision_Controller();
+                dgvRevisiones.Refresh();
             }
             catch (Exception ex)
             {
@@ -417,7 +432,7 @@ namespace Metrologia
         private void dgvEmpresas_DoubleClick(object sender, EventArgs e)
         {
             int posicion;
-            string codigoEmpresa, nombre, razonsocial, informacion, direccion, telefono, correo, encargado, categoria;
+            string codigoEmpresa, nombre, razonsocial, informacion, direccion, telefono, correo, encargado, categoria, estado;
             posicion = dgvEmpresas.CurrentRow.Index;
 
             codigoEmpresa = dgvEmpresas[0, posicion].Value.ToString();
@@ -432,11 +447,13 @@ namespace Metrologia
 
             categoria = dgvEmpresas[8, posicion].Value.ToString();
 
+            estado = dgvEmpresas[9, posicion].Value.ToString();
+
             Empresas formEmpresa = new Empresas();
 
             // Mostrar el formulario
             formEmpresa.mostrarCodigo();
-            formEmpresa.llenarModal(codigoEmpresa, nombre, razonsocial, informacion, direccion, telefono, correo, encargado, categoria);
+            formEmpresa.llenarModal(codigoEmpresa, nombre, razonsocial, informacion, direccion, telefono, correo, encargado, categoria, estado);
             formEmpresa.Show();
         }
 
@@ -582,6 +599,46 @@ namespace Metrologia
             {
                 dgvUbicacion.DataSource = UbicacionController.BuscarUbicacion(txtBuscarUb.Text);
             }
+        }
+
+        private void btnAgregarSe_Click(object sender, EventArgs e)
+        {
+            Revision formRevision = new Revision();
+            formRevision.ocultarCodigo();
+            formRevision.Show();
+        }
+
+        private void dgvRevisiones_DoubleClick(object sender, EventArgs e)
+        {
+            int posicion;
+            string CodigoRevision, Comentario, Fecha, Equipo, Empleado, Motivo, EstadoR;
+
+            posicion = dgvRevisiones.CurrentRow.Index;
+
+            CodigoRevision = dgvRevisiones[0, posicion].Value.ToString();
+            Equipo = dgvRevisiones[1, posicion].Value.ToString();
+            Empleado = dgvRevisiones[2, posicion].Value.ToString();
+            Motivo = dgvRevisiones[3, posicion].Value.ToString();
+            EstadoR = dgvRevisiones[4, posicion].Value.ToString();
+            Comentario = dgvRevisiones[5, posicion].Value.ToString();
+            Fecha = dgvRevisiones[6, posicion].Value.ToString();
+
+
+
+            Revision formRevision = new Revision();
+
+            // Mostrar el formulario
+            formRevision.mostrarCodigo();
+            formRevision.llenarModal(CodigoRevision, Comentario, Fecha, Equipo, Empleado, Motivo, EstadoR);
+            formRevision.Show();
+        }
+
+        private void btnEliminarSe_Click(object sender, EventArgs e)
+        {
+            int posicion = dgvRevisiones.CurrentRow.Index;
+            string codigoRevision = dgvRevisiones[0, posicion].Value.ToString();
+            Revision formRevision = new Revision();
+            formRevision.eliminarRevision(codigoRevision);
         }
     }
 }
