@@ -184,3 +184,6 @@ C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.CopyComplete
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.exe
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.pdb
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Revision.resources
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Empresas.resources
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Encargados.resources
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Revision.resources

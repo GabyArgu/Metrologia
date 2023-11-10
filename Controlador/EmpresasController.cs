@@ -35,14 +35,10 @@ namespace Controlador
         public  DataTable CargarEstadoEM_Controller(string codigoEmpresa)
         {
             return ModelEmpresa.CargarEstadoEM(codigoEmpresa);
-        }
-        public DataTable CargarEncargadoEmpresa_Controller(string codigoEmpresa)
+        }        
+        public static DataTable CargarEncargado_Controller(string codigoEmpresa)
         {
-            return ModelEmpresa.CargarEncargadoEmpresa(codigoEmpresa);
-        }
-        public static DataTable CargarEncargado_Controller()
-        {
-            return ModelEmpresa.CargarEncargado();
+            return ModelEmpresa.CargarEncargado(codigoEmpresa);
         }
         public DataTable CargarCategoriaEmpresa_Controller(string codigoEmpresa)
         {
@@ -58,7 +54,7 @@ namespace Controlador
         }
         public bool AgregarEmpresa()
         {
-            return ModelEmpresa.AgregarEmpresa(Nombre, RazonSocial, Informacion, Direccion, Telefono, Correo, CodigoEnc, CodigoCat, EstadoE);
+            return ModelEmpresa.AgregarEmpresa(Nombre, RazonSocial, Informacion, Direccion, Telefono, Correo, CodigoCat, EstadoE);
         }
         public bool ActualizarEmpresa()
         {
@@ -66,7 +62,7 @@ namespace Controlador
         }
         public bool EliminarEmpresa()
         {
-            return ModelEmpresa.EliminarEmpresa(codigoEmpresa,CodigoEnc);
+            return ModelEmpresa.EliminarEmpresa(codigoEmpresa, EstadoE);
         }
     }
 }

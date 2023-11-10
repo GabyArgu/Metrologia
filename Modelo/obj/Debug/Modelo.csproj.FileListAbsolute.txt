@@ -50,17 +50,6 @@ C:\Users\home\Desktop\JosuéArg\ITR\Josué\1° Bachillerato (Desarrollo de Softw
 C:\Users\home\Desktop\JosuéArg\ITR\Josué\1° Bachillerato (Desarrollo de Software)\Expo 2020\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Modelo\bin\Debug\MySql.Data.xml
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\Modelo.dll
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\Modelo.pdb
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\Google.Protobuf.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\Zstandard.Net.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\Ubiety.Dns.Core.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\Renci.SshNet.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\System.Buffers.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\K4os.Compression.LZ4.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\bin\Debug\MySql.Data.xml
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Modelo\obj\Debug\Modelo.csproj.CopyComplete

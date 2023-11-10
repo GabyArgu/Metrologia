@@ -18,16 +18,8 @@ namespace Metrologia
         public Empresas()
         {
             InitializeComponent();
-            cargarEncargado();
             cargarCategoria();
             cargarEstadoEM();
-        }
-
-        void cargarEncargado()
-        {
-            cbEncargado.DataSource = EmpresasController.CargarEncargado_Controller();
-            cbEncargado.DisplayMember = "Nombre";
-            cbEncargado.ValueMember = "CodigoEncargado";
         }
 
         void cargarCategoria()
@@ -66,7 +58,6 @@ namespace Metrologia
             empresacontrol.Direccion = txtDireccion.Text;
             empresacontrol.Telefono = txtTelefono.Text;
             empresacontrol.Correo = txtCorreo.Text;
-            empresacontrol.CodigoEnc = Convert.ToInt16(cbEncargado.SelectedValue);
             empresacontrol.CodigoCat = Convert.ToInt16(cbCategoria.SelectedValue);
             empresacontrol.EstadoE = Convert.ToInt16(cbEstadoE.SelectedValue);
 
@@ -112,7 +103,7 @@ namespace Metrologia
             }
         }
 
-        public void llenarModal(string codigoEmpresa, string nombre, string razonsocial, string informacion, string direccion, string telefono, string correo, string codigoenc, string codigocat, string EstadoE)
+        public void llenarModal(string codigoEmpresa, string nombre, string razonsocial, string informacion, string direccion, string telefono, string correo, string nombreenc, string codigocat, string EstadoE)
         {
             EmpresasController objselect = new EmpresasController();
 
@@ -124,10 +115,20 @@ namespace Metrologia
             txtTelefono.Text = telefono;
             txtCorreo.Text = correo;
 
-            cargarEncargado();
-            DataTable codigoE = objselect.CargarEncargadoEmpresa_Controller(codigoEmpresa);
-            object valorE = codigoE.Rows[0]["CodigoEncargado"];
-            cbEncargado.SelectedIndex = int.Parse(valorE.ToString()) - 1;
+            if (nombreenc == "")
+            {
+                cbEncargado.DataSource = EmpresasController.CargarEncargado_Controller(codigoEmpresa);
+                cbEncargado.DisplayMember = "Nombre";
+                cbEncargado.ValueMember = "CodigoEncargado";
+            }
+            else 
+            {
+                cbEncargado.DataSource = EmpresasController.CargarEncargado_Controller(codigoEmpresa);
+                cbEncargado.DisplayMember = "Nombre";
+                cbEncargado.ValueMember = "CodigoEncargado";
+                int indice = cbEncargado.FindStringExact(nombreenc);
+                cbEncargado.SelectedIndex = indice;
+            }
 
             cargarCategoria();
             DataTable codigoC = objselect.CargarCategoriaEmpresa_Controller(codigoEmpresa);
@@ -145,6 +146,7 @@ namespace Metrologia
             EmpresasController empresacontrol = new EmpresasController();
 
             empresacontrol.codigoEmpresa = codigoEmpresa;
+            empresacontrol.EstadoE = 2;
 
             if (empresacontrol.EliminarEmpresa() == true)
             {
