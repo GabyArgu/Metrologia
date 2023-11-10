@@ -63,5 +63,10 @@ namespace Controlador
         {
             return ModelServicio.obtenerServicio();
         }
+
+        public static DateTime GetFechaCita(int IdCita)
+        {
+            return ModelServicio.GetFechaCita(IdCita);
+        }
     }
 }

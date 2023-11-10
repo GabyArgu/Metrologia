@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Diagnostics.Contracts;
+using System.Reflection.Emit;
 
 namespace Modelo
 {
@@ -228,6 +229,30 @@ namespace Modelo
             catch (Exception)
             {
                 return data = null;
+            }
+            finally
+            {
+                Conexion.getConnect().Close();
+            }
+        }
+
+        public static DateTime GetFechaCita(int IdCita)
+        {
+            try
+            {
+                string query = "SELECT FechaCita FROM Cita WHERE CodigoCita = @IdCita";
+                SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
+                cmdselect.Parameters.Add(new SqlParameter("IdCita", IdCita));
+                SqlDataReader data = cmdselect.ExecuteReader();
+                if (data.Read())
+                {
+                    return (DateTime)data["FechaCita"];
+                }
+                return DateTime.Now;
+            }
+            catch (Exception)
+            {
+                return DateTime.Now;
             }
             finally
             {

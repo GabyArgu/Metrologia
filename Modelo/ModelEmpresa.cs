@@ -11,12 +11,12 @@ namespace Modelo
 {
     public class ModelEmpresa
     {
-        public static bool AgregarEmpresa(string Nombre, string RazonSocial, string Informacion, string Direccion, string Telefono, string Correo, int CodigoEnc, int CodigoCat)
+        public static bool AgregarEmpresa(string Nombre, string RazonSocial, string Informacion, string Direccion, string Telefono, string Correo, int CodigoEnc, int CodigoCat, int EstadoE)
         {
             bool retorno;
             try
             {
-                string query = "INSERT INTO [dbo].[Empresas] ([Nombre],[RazonSocial],[Informacion],[Direccion],[Telefono],[Correo],[CodigoEncargado],[CodigoCategoria]) VALUES (@nombre,@razonsocial,@informacion,@direccion,@telefono,@correo,@encargado,@categoria)";
+                string query = "INSERT INTO [dbo].[Empresas] ([Nombre],[RazonSocial],[Informacion],[Direccion],[Telefono],[Correo],[CodigoEncargado],[CodigoCategoria], [CodigoEstadoE]) VALUES (@nombre,@razonsocial,@informacion,@direccion,@telefono,@correo,@encargado,@categoria ,@estado)";
                 SqlCommand cmdinsert = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdinsert.Parameters.Add(new SqlParameter("nombre", Nombre));
                 cmdinsert.Parameters.Add(new SqlParameter("razonsocial", RazonSocial));
@@ -26,6 +26,7 @@ namespace Modelo
                 cmdinsert.Parameters.Add(new SqlParameter("correo", Correo));
                 cmdinsert.Parameters.Add(new SqlParameter("encargado", CodigoEnc));
                 cmdinsert.Parameters.Add(new SqlParameter("categoria", CodigoCat));
+                cmdinsert.Parameters.Add(new SqlParameter("estado", EstadoE));
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
                 return retorno;
             }
@@ -35,12 +36,12 @@ namespace Modelo
             }
         }
 
-        public static bool ActualizarEmpresa(string CodigoEmpresa, string Nombre, string RazonSocial, string Informacion, string Direccion, string Telefono, string Correo, int CodigoEnc, int CodigoCat)
+        public static bool ActualizarEmpresa(string CodigoEmpresa, string Nombre, string RazonSocial, string Informacion, string Direccion, string Telefono, string Correo, int CodigoEnc, int CodigoCat, int EstadoE)
         {
             bool retorno;
             try
             {
-                string query = "UPDATE [dbo].[Empleado] SET [CodigoEncargado] = @encargado ,[CodigoCategoria] = @categoria ,[Nombre] = @nombre ,[RazonSocial] = @razonsocial, [Informacion] = @informacion, [Direccion] = @direccion, [Telefono] = @telefono , [Correo] = @correo WHERE [CodigoEmpresa] = @codigoemp  ";
+                string query = "UPDATE [dbo].[Empresas] SET [CodigoEncargado] = @encargado ,[CodigoCategoria] = @categoria ,[Nombre] = @nombre ,[RazonSocial] = @razonsocial, [Informacion] = @informacion, [Direccion] = @direccion, [Telefono] = @telefono , [Correo] = @correo, [CodigoEstadoE] = @estado WHERE [CodigoEmpresa] = @codigoemp  ";
                 SqlCommand cmdinsert = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdinsert.Parameters.Add(new SqlParameter("codigoemp", CodigoEmpresa));
                 cmdinsert.Parameters.Add(new SqlParameter("nombre", Nombre));
@@ -51,6 +52,7 @@ namespace Modelo
                 cmdinsert.Parameters.Add(new SqlParameter("correo", Correo));
                 cmdinsert.Parameters.Add(new SqlParameter("encargado", CodigoEnc));
                 cmdinsert.Parameters.Add(new SqlParameter("categoria", CodigoCat));
+                cmdinsert.Parameters.Add(new SqlParameter("estado", EstadoE));
                 retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
                 return retorno = true;
             }
@@ -123,12 +125,34 @@ namespace Modelo
             }
         }
 
+        public static DataTable CargarEstadoEM(string codigoEmpresa)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM EstadoEmpresa";
+                SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
+                SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+            finally
+            {
+                Conexion.getConnect().Close();
+            }
+        }
+
         public static DataTable CargarEncargadoEmpresa(string codigoEmpresa)
         {
             DataTable data;
             try
             {
-                string query = "SELECT EC.CodigoEncargado, EC.Nombre FROM Empresas E , Encargado EC WHERE EC.CodigoEncargado=E.CodigoEncargado AND E.CodigoEmpresa = @codigoemp";
+                string query = "SELECT EC.CodigoEncargado, EC.Nombre FROM Empresas E INNER JOIN Encargado EC ON E.CodigoEncargado = EC.CodigoEncargado WHERE E.CodigoEmpresa  = @codigoemp";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdselect.Parameters.Add(new SqlParameter("codigoemp", codigoEmpresa));
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
@@ -171,10 +195,12 @@ namespace Modelo
         public static DataTable CargarEmpresas()
         {
             DataTable retorno;
-            string query = "SELECT E.CodigoEmpresa AS Codigo, EC.Nombre AS Encargado, CE.Nombre AS Categoria, " +
-                "E.Nombre as Empresa, E.RazonSocial, E.Informacion, E.Direccion, E.Telefono, E.Correo " +
-                "FROM Empresas E JOIN Encargado EC ON E.CodigoEncargado = EC.CodigoEncargado " +
-                "JOIN CategoriaEmpresa CE ON E.CodigoCategoria = CE.CodigoCategoria; ";
+            string query = "SELECT E.CodigoEmpresa AS Codigo, E.Nombre AS Empresa, E.RazonSocial, " +
+                "E.Informacion, E.Direccion, E.Telefono, E.Correo, EC.Nombre AS Encargado, CE.Nombre AS Categoria, " +
+                "EE.Nombre AS Estado FROM Empresas E " +
+                "LEFT JOIN Encargado EC ON E.CodigoEncargado = EC.CodigoEncargado " +
+                "INNER JOIN CategoriaEmpresa CE ON E.CodigoCategoria = CE.CodigoCategoria " +
+                "LEFT JOIN EstadoEmpresa EE ON E.CodigoEstadoE = EE.CodigoEstadoE";
             try
             {
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());

@@ -24,13 +24,18 @@ namespace Controlador
         public string Telefono { get; set; }
         public string Correo { get; set; }
         public int CodigoEnc { get; set; }
-        public int CodigoCat { get; set; }        
+        public int CodigoCat { get; set; }
+        public int EstadoE { get; set; }
 
         //Constructor
         public EmpresasController() { }
 
 
         //Métodos Paquetes Entierro
+        public  DataTable CargarEstadoEM_Controller(string codigoEmpresa)
+        {
+            return ModelEmpresa.CargarEstadoEM(codigoEmpresa);
+        }
         public DataTable CargarEncargadoEmpresa_Controller(string codigoEmpresa)
         {
             return ModelEmpresa.CargarEncargadoEmpresa(codigoEmpresa);
@@ -53,11 +58,11 @@ namespace Controlador
         }
         public bool AgregarEmpresa()
         {
-            return ModelEmpresa.AgregarEmpresa(Nombre, RazonSocial, Informacion, Direccion, Telefono, Correo, CodigoEnc, CodigoCat);
+            return ModelEmpresa.AgregarEmpresa(Nombre, RazonSocial, Informacion, Direccion, Telefono, Correo, CodigoEnc, CodigoCat, EstadoE);
         }
         public bool ActualizarEmpresa()
         {
-            return ModelEmpresa.ActualizarEmpresa(codigoEmpresa , Nombre, RazonSocial, Informacion, Direccion, Telefono, Correo, CodigoEnc, CodigoCat);
+            return ModelEmpresa.ActualizarEmpresa(codigoEmpresa , Nombre, RazonSocial, Informacion, Direccion, Telefono, Correo, CodigoEnc, CodigoCat, EstadoE);
         }
         public bool EliminarEmpresa()
         {

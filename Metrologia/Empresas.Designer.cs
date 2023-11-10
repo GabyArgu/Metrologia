@@ -54,6 +54,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.elipseEmpre = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgcEmpre = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.cbEstadoE = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
@@ -343,7 +345,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnCancelar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnCancelar.Location = new System.Drawing.Point(139, 745);
+            this.btnCancelar.Location = new System.Drawing.Point(140, 813);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.MaximumSize = new System.Drawing.Size(525, 64);
             this.btnCancelar.Name = "btnCancelar";
@@ -366,7 +368,7 @@
             this.btnAceptar.ForeColor = System.Drawing.Color.Black;
             this.btnAceptar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.btnAceptar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(214)))));
-            this.btnAceptar.Location = new System.Drawing.Point(346, 745);
+            this.btnAceptar.Location = new System.Drawing.Point(347, 813);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptar.MaximumSize = new System.Drawing.Size(525, 64);
             this.btnAceptar.Name = "btnAceptar";
@@ -501,12 +503,48 @@
             this.dgcEmpre.TargetControl = this.panel1;
             this.dgcEmpre.UseTransparentDrag = true;
             // 
+            // cbEstadoE
+            // 
+            this.cbEstadoE.BackColor = System.Drawing.Color.Transparent;
+            this.cbEstadoE.BorderRadius = 12;
+            this.cbEstadoE.CustomizableEdges.BottomLeft = false;
+            this.cbEstadoE.CustomizableEdges.TopLeft = false;
+            this.cbEstadoE.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbEstadoE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstadoE.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.cbEstadoE.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEstadoE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEstadoE.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
+            this.cbEstadoE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbEstadoE.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEstadoE.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEstadoE.ItemHeight = 30;
+            this.cbEstadoE.Location = new System.Drawing.Point(71, 742);
+            this.cbEstadoE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbEstadoE.Name = "cbEstadoE";
+            this.cbEstadoE.Size = new System.Drawing.Size(414, 36);
+            this.cbEstadoE.TabIndex = 84;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.BackgroundImage = global::Metrologia.Properties.Resources.tipo;
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel9.ForeColor = System.Drawing.Color.Coral;
+            this.panel9.Location = new System.Drawing.Point(20, 740);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(51, 50);
+            this.panel9.TabIndex = 85;
+            // 
             // Empresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(226)))), ((int)(((byte)(144)))));
-            this.ClientSize = new System.Drawing.Size(516, 815);
+            this.ClientSize = new System.Drawing.Size(516, 886);
+            this.Controls.Add(this.cbEstadoE);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlCodigoEmpresa);
             this.Controls.Add(this.txtCodigoEmpresa);
@@ -530,7 +568,7 @@
             this.Controls.Add(this.pnl9);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Empresas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empresas";
@@ -568,5 +606,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse elipseEmpre;
         private Guna.UI2.WinForms.Guna2DragControl dgcEmpre;
+        private Guna.UI2.WinForms.Guna2ComboBox cbEstadoE;
+        private System.Windows.Forms.Panel panel9;
     }
 }
