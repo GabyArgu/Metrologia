@@ -24,9 +24,9 @@ namespace Controlador
         public AtributosLogin() { }
 
 
-        public static List<string> Nivel_Controller()
+        public DataTable nivelUsuario_Controller()
         {
-            return ModelLogin.ObtenerDatos(Username);
+            return ModelLogin.nivelUser(Username, txt2);
         }
     }
 }

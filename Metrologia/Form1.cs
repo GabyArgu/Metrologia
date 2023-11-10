@@ -11,7 +11,7 @@ namespace Metrologia
     public partial class Form1 : Form
     {
         string usuario;
-        string contrasena;
+        string txt2;
         
         public Form1()
         {
@@ -30,7 +30,7 @@ namespace Metrologia
             DialogResult cerrar = MessageBox.Show("¿Quieres salir del programa?", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
             if (cerrar == DialogResult.Yes)
             {
-                this.Close();
+                Application.Exit();
             }
         }
 
@@ -53,11 +53,13 @@ namespace Metrologia
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             AtributosLogin.Username = txtUsuario.Text;
-            AtributosLogin.txt2 = txtContra.Text;
+            AtributosLogin.txt2 = txtContra.Text;           
 
             if (LoginController.Acceso_Controller()==true)
             {
-                formularios.DashboardFRM = new Dashboard();
+                usuario = txtUsuario.Text;
+                txt2 = txtContra.Text;
+                formularios.DashboardFRM = new Dashboard(usuario, txt2);
 
                 // Mostrar el formulario
                 formularios.DashboardFRM.Show();

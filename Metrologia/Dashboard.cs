@@ -14,9 +14,58 @@ namespace Metrologia
 {
     public partial class Dashboard : Form
     {
-        public Dashboard()
+        string usuario;
+        string txt3;
+        string roluser;
+
+        public Dashboard(string usuario, string txt2)
         {
             InitializeComponent();
+            ObtenerDatos(usuario, txt2);
+        }
+
+        void ObtenerDatos(string user, string pass) 
+        {
+            usuario = user;
+            txt3 = pass;
+
+            LoginController logincontrol = new LoginController();
+
+            AtributosLogin.Username = usuario;
+            AtributosLogin.txt2 = txt3;
+
+            DataTable rolusuario = logincontrol.nivelUsuario_Controller();
+            object valorRol = rolusuario.Rows[0]["Nombre"];
+            roluser = valorRol.ToString();
+            rolesUsuario(roluser);
+        }
+
+        void rolesUsuario(string rol) 
+        {
+            if (rol == "Directora")
+            {
+                btnEmpleados.Visible = true;
+                btnCitas.Visible = true;
+                btnEmpresas.Visible = true;
+                btnEquipos.Visible = true;
+                btnExtras.Visible = true;
+            }
+            else if (rol == "Asistente")
+            {
+                btnEmpleados.Visible = false;
+                btnCitas.Visible = true;
+                btnEmpresas.Visible = false;
+                btnEquipos.Visible = false;
+                btnExtras.Visible = true;
+            }
+            else
+            {
+                btnEmpleados.Visible = false;
+                btnCitas.Visible = false;
+                btnEmpresas.Visible = false;
+                btnEquipos.Visible = false;
+                btnExtras.Visible = false;
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -639,6 +688,17 @@ namespace Metrologia
             string codigoRevision = dgvRevisiones[0, posicion].Value.ToString();
             Revision formRevision = new Revision();
             formRevision.eliminarRevision(codigoRevision);
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            DialogResult dr1 = MessageBox.Show("¿Está seguro de cerrar sesión?", "Confirmación de Cierre de Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr1 == DialogResult.Yes)
+            {
+                this.Hide();
+                Form1 frmlogin = new Form1();
+                frmlogin.Show();
+            }
         }
     }
 }
