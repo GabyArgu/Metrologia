@@ -13,7 +13,8 @@ namespace Metrologia
     {
         string usuario;
         string txt2;
-        
+        private bool botonClicado = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -78,17 +79,19 @@ namespace Metrologia
 
         private void txtContra_IconRightClick(object sender, EventArgs e)
         {
-            txtContra.PasswordChar = '\0';
-            this.txtContra.IconRight = global::Metrologia.Properties.Resources.ojo_cruzado;
+            if (!botonClicado)
+            {
+                txtContra.PasswordChar = '\0';
+                txtContra.IconRight = Properties.Resources.ojo_cruzado;
+                botonClicado = true;
+            }
+            else
+            {
+                txtContra.PasswordChar = '*';
+                txtContra.IconRight = Properties.Resources.ojo__1_;
+                botonClicado = false;
+            }
+
         }
-
-        private void txtContra_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            txtContra.PasswordChar = '*';
-            this.txtContra.IconRight = global::Metrologia.Properties.Resources.ojo__1_;
-            
-        }
-
-
     }
 }

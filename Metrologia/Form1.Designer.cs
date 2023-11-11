@@ -201,7 +201,6 @@
             this.txtContra.Size = new System.Drawing.Size(349, 50);
             this.txtContra.TabIndex = 11;
             this.txtContra.IconRightClick += new System.EventHandler(this.txtContra_IconRightClick);
-            this.txtContra.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtContra_MouseDoubleClick);
             // 
             // btnIngresar
             // 
