@@ -202,7 +202,6 @@
             this.txtContra.TabIndex = 11;
             this.txtContra.IconRightClick += new System.EventHandler(this.txtContra_IconRightClick);
             this.txtContra.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtContra_MouseDoubleClick);
-            this.txtContra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtContra_MouseDown);
             // 
             // btnIngresar
             // 

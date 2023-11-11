@@ -84,21 +84,11 @@ namespace Metrologia
 
         private void txtContra_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            // Verificar si el doble clic ocurrió en el icono derecho
-            if (e.Button == MouseButtons.Left && e.X > txtContra.Width - SystemInformation.VerticalScrollBarWidth)
-            {
-                txtContra.PasswordChar = '*';
-                this.txtContra.IconRight = global::Metrologia.Properties.Resources.ojo__1_;
-            }
+            txtContra.PasswordChar = '*';
+            this.txtContra.IconRight = global::Metrologia.Properties.Resources.ojo__1_;
+            
         }
 
-        private void txtContra_MouseDown(object sender, MouseEventArgs e)
-        {
-            // Este método ayuda a evitar la selección de texto al hacer clic en el icono derecho
-            if (e.Button == MouseButtons.Left && e.X > txtContra.Width - SystemInformation.VerticalScrollBarWidth)
-            {
-                txtContra.SelectionLength = 0;
-            }
-        }
+
     }
 }
