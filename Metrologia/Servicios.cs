@@ -128,7 +128,7 @@ namespace Metrologia
                 citacontrol.Servicio = int.Parse(valorServi.ToString());
                 citacontrol.codigoCita = txtcodigoCita.Text;
 
-                if (citacontrol.servicioCitas() == true)
+                if (citacontrol.servicioCitas() == true && citacontrol.citasServicio() == true)
                 {
                     MessageBox.Show("Servicio agregado con exito");
                     this.Hide();
@@ -172,12 +172,12 @@ namespace Metrologia
                 MessageBox.Show("Error al actualizar servicio");
             }
         }
-        public void llenarModal(string Servicio)
+        public void llenarModal(string codigoCita)
         {
             string[] formatos = { "d/M/yyyy H:mm:ss", "M/d/yyyy H:mm:ss" };
             ServicioController objselect = new ServicioController();
 
-            DataTable servicioModal = objselect.CargarModal_Controller(Servicio);
+            DataTable servicioModal = objselect.CargarModal_Controller(codigoCita);
             txtCodigoServicio.Text = servicioModal.Rows[0]["CodigoServicio"].ToString();
             txtPrecio.Text = servicioModal.Rows[0]["Precio"].ToString();
             txtComentarioServicio.Text = servicioModal.Rows[0]["Comentarios"].ToString();

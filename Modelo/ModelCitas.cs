@@ -250,7 +250,23 @@ namespace Modelo
                 return retorno = false;
             }
         }
-
+        public static bool citasServicio(string CodigoCita, int codigoServicio)
+        {
+            bool retorno;
+            try
+            {
+                string query = "UPDATE Servicio SET CodigoCita = @codigoCi WHERE CodigoServicio = @codigoSer ";
+                SqlCommand cmdinsert = new SqlCommand(string.Format(query), Conexion.getConnect());
+                cmdinsert.Parameters.Add(new SqlParameter("codigoCi", CodigoCita));
+                cmdinsert.Parameters.Add(new SqlParameter("codigoSer", codigoServicio));
+                retorno = Convert.ToBoolean(cmdinsert.ExecuteNonQuery());
+                return retorno = true;
+            }
+            catch (Exception)
+            {
+                return retorno = false;
+            }
+        }
         public static DataTable BuscarCita(string Busqueda)
         {
             DataTable retorno;

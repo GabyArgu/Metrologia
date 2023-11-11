@@ -59,7 +59,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT CodigoTipo,Nombre FROM TipoServicio";
+                string query = "SELECT CodigoTipo,Nombre FROM TipoServicio ORDER BY CodigoTipo";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -140,7 +140,7 @@ namespace Modelo
                 Conexion.getConnect().Close();
             }
         }
-        public static DataTable CargarServicio(string Comentario)
+        public static DataTable CargarServicio(string CodigoC)
         {
             DataTable data;
             try
@@ -149,9 +149,9 @@ namespace Modelo
                     "Ser.CodigoEstadoSe, Ser.Precio, Ser.FechaEntrega, Ser.HoraEntrega, Ser.Comentarios " +
                     "FROM Servicio Ser, TipoServicio TSer, AreaMetrologia AM, Empleado Emp, EstadoServicio ESer " +
                     "WHERE Ser.CodigoTipo = TSer.CodigoTipo AND Ser.CodigoArea = AM.CodigoArea " +
-                    "AND Ser.CodigoEmpleado = Emp.CodigoEmpleado AND Ser.CodigoEstadoSe = ESer.CodigoEstadoSe AND TSer.Nombre = @comentario";
+                    "AND Ser.CodigoEmpleado = Emp.CodigoEmpleado AND Ser.CodigoEstadoSe = ESer.CodigoEstadoSe AND Ser.CodigoCita = @codigoC";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
-                cmdselect.Parameters.Add(new SqlParameter("comentario", Comentario));
+                cmdselect.Parameters.Add(new SqlParameter("codigoC", CodigoC));
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
                 data = new DataTable();
                 adp.Fill(data);

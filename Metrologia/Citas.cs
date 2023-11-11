@@ -104,17 +104,21 @@ namespace Metrologia
             citacontrol.Empresa = Convert.ToInt16(cbEmpresa.SelectedValue);
             citacontrol.EstadoCi = Convert.ToInt16(cbEstadoCi.SelectedValue);
             
-            if (citacontrol.AgregarCita() == true && EsFechaValida(Fecha) == true)
+            if (EsFechaValida(Fecha) == true)
             {
-                MessageBox.Show("Cita agendada con exito");
-                this.Hide();
-                dash.CargarDatosCitas();
-                dash.Refresh();
+                if (citacontrol.AgregarCita() == true)
+                {
+                    MessageBox.Show("Cita agendada con exito");
+                    this.Hide();
+                    dash.CargarDatosCitas();
+                    dash.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Error al agendar cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show("Error al agendar cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
         void modificarCita()

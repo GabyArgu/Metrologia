@@ -289,11 +289,11 @@ namespace Metrologia
 
             codigoCitas = dgvCitas[0, posicion].Value.ToString();
             Encargado = dgvCitas[1, posicion].Value.ToString();
-            Empresa = dgvCitas[2, posicion].Value.ToString();
-            EstadoCi = dgvCitas[7, posicion].Value.ToString();
+            Empresa = dgvCitas[2, posicion].Value.ToString();            
             Fecha = dgvCitas[4, posicion].Value.ToString();
             Comentarios = dgvCitas[5, posicion].Value.ToString();
             Hora = dgvCitas[6, posicion].Value.ToString();
+            EstadoCi = dgvCitas[7, posicion].Value.ToString();
 
             Citas formC = new Citas();
 
@@ -324,7 +324,7 @@ namespace Metrologia
             {
                 formS.mostrarCodigo();
                 formS.cargarCodigoCita(codigoCita);
-                formS.llenarModal(servicio);
+                formS.llenarModal(codigoCita);
                 formS.Show();
             }
         }
