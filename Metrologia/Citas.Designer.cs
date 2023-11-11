@@ -63,6 +63,7 @@
             this.cbEncargado.CustomizableEdges.BottomLeft = false;
             this.cbEncargado.CustomizableEdges.TopLeft = false;
             this.cbEncargado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbEncargado.DropDownHeight = 250;
             this.cbEncargado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEncargado.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbEncargado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -71,6 +72,7 @@
             this.cbEncargado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbEncargado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEncargado.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEncargado.IntegralHeight = false;
             this.cbEncargado.ItemHeight = 30;
             this.cbEncargado.Location = new System.Drawing.Point(85, 395);
             this.cbEncargado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -108,7 +110,7 @@
             this.txtComentarios.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtComentarios.Font = new System.Drawing.Font("Mohave Medium", 13F, System.Drawing.FontStyle.Bold);
             this.txtComentarios.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
-            this.txtComentarios.Location = new System.Drawing.Point(85, 324);
+            this.txtComentarios.Location = new System.Drawing.Point(85, 465);
             this.txtComentarios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtComentarios.MaximumSize = new System.Drawing.Size(475, 57);
             this.txtComentarios.Multiline = true;
@@ -210,6 +212,7 @@
             this.cbEmpresa.CustomizableEdges.BottomLeft = false;
             this.cbEmpresa.CustomizableEdges.TopLeft = false;
             this.cbEmpresa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbEmpresa.DropDownHeight = 250;
             this.cbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmpresa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbEmpresa.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -218,8 +221,9 @@
             this.cbEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEmpresa.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEmpresa.IntegralHeight = false;
             this.cbEmpresa.ItemHeight = 30;
-            this.cbEmpresa.Location = new System.Drawing.Point(85, 465);
+            this.cbEmpresa.Location = new System.Drawing.Point(85, 324);
             this.cbEmpresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEmpresa.Name = "cbEmpresa";
             this.cbEmpresa.Size = new System.Drawing.Size(387, 36);
@@ -269,6 +273,7 @@
             this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Location = new System.Drawing.Point(472, 6);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";

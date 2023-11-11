@@ -173,6 +173,7 @@
             this.cbUbicacion.CustomizableEdges.BottomLeft = false;
             this.cbUbicacion.CustomizableEdges.TopLeft = false;
             this.cbUbicacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbUbicacion.DropDownHeight = 250;
             this.cbUbicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUbicacion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbUbicacion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -181,6 +182,7 @@
             this.cbUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbUbicacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbUbicacion.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbUbicacion.IntegralHeight = false;
             this.cbUbicacion.ItemHeight = 30;
             this.cbUbicacion.Location = new System.Drawing.Point(85, 255);
             this.cbUbicacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Diagnostics.Contracts;
+using System.Reflection;
 
 namespace Modelo
 {
@@ -186,11 +187,12 @@ namespace Modelo
         public static DataTable CargarRevision()
         {
             DataTable retorno;
-            string query = "SELECT R.CodigoRevision,Eq.Nombre AS Equipo,Emp.Nombre+' '+Emp.Apellido AS Empleado,MoR.Nombre AS MotivoRevision,EstR.Nombre AS Estado,R.Comentarios,R.Fecha FROM Revisiones R "+
-                            "INNER JOIN Equipos Eq ON R.CodigoEquipo = Eq.CodigoEquipos " +
-                            "INNER JOIN Empleado Emp ON R.CodigoEmpleado=Emp.CodigoEmpleado " +
-                            "INNER JOIN MotivoRevision MoR ON R.CodigoMotivo = MoR.CodigoMotivo " +
-                            "INNER JOIN EstadoRevision EstR ON R.CodigoEstadoRev = EstR.CodigoEstadoRev";
+            string query = "SELECT R.CodigoRevision,Eq.Nombre AS Equipo,Emp.Nombre+' '+Emp.Apellido AS Empleado,MoR.Nombre " +
+                "AS MotivoRevision, R.Comentarios,R.Fecha, EstR.Nombre AS Estado FROM Revisiones R " +
+                "INNER JOIN Equipos Eq ON R.CodigoEquipo = Eq.CodigoEquipos " +
+                "INNER JOIN Empleado Emp ON R.CodigoEmpleado = Emp.CodigoEmpleado " +
+                "INNER JOIN MotivoRevision MoR ON R.CodigoMotivo = MoR.CodigoMotivo " +
+                "INNER JOIN EstadoRevision EstR ON R.CodigoEstadoRev = EstR.CodigoEstadoRev";
             try
             {
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
@@ -272,10 +274,10 @@ namespace Modelo
             }
         }
 
-        public static DataTable BuscarUbicacion(string Busqueda)
+        public static DataTable BuscarRevision(string Busqueda)
         {
             DataTable retorno;
-            string query = "SELECT * FROM CargarUbicacion WHERE Laboratorio LIKE @Busqueda OR Ubicacion LIKE @Busqueda";
+            string query = "SELECT * FROM CargarRevisiones WHERE Empleado LIKE @Busqueda OR Estado LIKE @Busqueda OR Equipo LIKE @Busqueda";
             try
             {
                 SqlCommand cmdsearch = new SqlCommand(string.Format(query), Conexion.getConnect());

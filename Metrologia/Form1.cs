@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Controlador;
+using Guna.UI2.WinForms;
 
 
 namespace Metrologia
@@ -23,6 +24,7 @@ namespace Metrologia
             txtUsuario.Clear();
             txtContra.Clear();
             txtUsuario.Focus();
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -74,5 +76,29 @@ namespace Metrologia
             }
         }
 
+        private void txtContra_IconRightClick(object sender, EventArgs e)
+        {
+            txtContra.PasswordChar = '\0';
+            this.txtContra.IconRight = global::Metrologia.Properties.Resources.ojo_cruzado;
+        }
+
+        private void txtContra_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            // Verificar si el doble clic ocurrió en el icono derecho
+            if (e.Button == MouseButtons.Left && e.X > txtContra.Width - SystemInformation.VerticalScrollBarWidth)
+            {
+                txtContra.PasswordChar = '*';
+                this.txtContra.IconRight = global::Metrologia.Properties.Resources.ojo__1_;
+            }
+        }
+
+        private void txtContra_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Este método ayuda a evitar la selección de texto al hacer clic en el icono derecho
+            if (e.Button == MouseButtons.Left && e.X > txtContra.Width - SystemInformation.VerticalScrollBarWidth)
+            {
+                txtContra.SelectionLength = 0;
+            }
+        }
     }
 }

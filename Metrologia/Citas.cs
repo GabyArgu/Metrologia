@@ -22,7 +22,6 @@ namespace Metrologia
             cargarEncargado();
             cargarEmpresa();
             cargarEstadoCi();
-            /*dtpFecha.Validating += dtpFecha_Validating;*/
 
         }
 
@@ -35,30 +34,14 @@ namespace Metrologia
             if (selectedDateTime < currentDateTime)
             {
                 // Muestra un mensaje de error
-                MessageBox.Show("Selecciona una fecha y hora posterior a la fecha actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Selecciona una fecha y hora posterior a la  actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false; // La fecha no es válida
             }
             else
             {
                 return true; // La fecha es válida
             }
-
         }
-
-        /*private void dtpFecha_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            DateTime selectedDate = dtpFecha.Value;
-            DateTime currentDate = DateTime.Now;
-
-            // Verifica si la fecha seleccionada es igual o posterior a la fecha actual
-            if (selectedDate < currentDate)
-            {
-                // Muestra un mensaje de error
-                MessageBox.Show("Selecciona una fecha anterior a la fecha actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Cancel = true; // Cancela la validación
-            }
-        }
-        */
         
         private void btnCancelar_Click(object sender, EventArgs e)
         {

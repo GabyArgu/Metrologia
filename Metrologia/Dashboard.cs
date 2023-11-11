@@ -24,7 +24,7 @@ namespace Metrologia
             ObtenerDatos(usuario, txt2);
         }
 
-        void ObtenerDatos(string user, string pass) 
+        void ObtenerDatos(string user, string pass)
         {
             usuario = user;
             txt3 = pass;
@@ -40,7 +40,7 @@ namespace Metrologia
             rolesUsuario(roluser);
         }
 
-        void rolesUsuario(string rol) 
+        void rolesUsuario(string rol)
         {
             if (rol == "Directora")
             {
@@ -141,7 +141,7 @@ namespace Metrologia
 
             // Mostrar el formulario
             formE.ocultarCodigo();
-            formE.Show();     
+            formE.Show();
         }
 
         public void CargarDatosUsuario()
@@ -290,10 +290,10 @@ namespace Metrologia
             codigoCitas = dgvCitas[0, posicion].Value.ToString();
             Encargado = dgvCitas[1, posicion].Value.ToString();
             Empresa = dgvCitas[2, posicion].Value.ToString();
-            EstadoCi = dgvCitas[3, posicion].Value.ToString();
-            Fecha = dgvCitas[5, posicion].Value.ToString();
-            Comentarios = dgvCitas[6, posicion].Value.ToString();
-            Hora = dgvCitas[7, posicion].Value.ToString();
+            EstadoCi = dgvCitas[7, posicion].Value.ToString();
+            Fecha = dgvCitas[4, posicion].Value.ToString();
+            Comentarios = dgvCitas[5, posicion].Value.ToString();
+            Hora = dgvCitas[6, posicion].Value.ToString();
 
             Citas formC = new Citas();
 
@@ -306,11 +306,11 @@ namespace Metrologia
         private void btnServicio_Click(object sender, EventArgs e)
         {
             int posicion;
-            string codigoCita,servicio;
+            string codigoCita, servicio;
             posicion = dgvCitas.CurrentRow.Index;
 
             codigoCita = dgvCitas[0, posicion].Value.ToString();
-            servicio = dgvCitas[4, posicion].Value.ToString();
+            servicio = dgvCitas[3, posicion].Value.ToString();
 
             Servicios formS = new Servicios();
 
@@ -414,7 +414,7 @@ namespace Metrologia
 
             codigoUbicacion = dgvUbicacion[0, posicion].Value.ToString();
             laboratorio = dgvUbicacion[1, posicion].Value.ToString();
-            ubiLab = dgvUbicacion[2, posicion].Value.ToString();            
+            ubiLab = dgvUbicacion[2, posicion].Value.ToString();
 
             Ubicacion formU = new Ubicacion();
 
@@ -444,7 +444,7 @@ namespace Metrologia
         private void dgvEquipos_DoubleClick(object sender, EventArgs e)
         {
             int posicion;
-            string codigoEquipo, nombre ,laboratorio, ubiLab;
+            string codigoEquipo, nombre, laboratorio, ubiLab;
             posicion = dgvEquipos.CurrentRow.Index;
 
             codigoEquipo = dgvEquipos[0, posicion].Value.ToString();
@@ -668,9 +668,9 @@ namespace Metrologia
             Equipo = dgvRevisiones[1, posicion].Value.ToString();
             Empleado = dgvRevisiones[2, posicion].Value.ToString();
             Motivo = dgvRevisiones[3, posicion].Value.ToString();
-            EstadoR = dgvRevisiones[4, posicion].Value.ToString();
-            Comentario = dgvRevisiones[5, posicion].Value.ToString();
-            Fecha = dgvRevisiones[6, posicion].Value.ToString();
+            EstadoR = dgvRevisiones[6, posicion].Value.ToString();
+            Comentario = dgvRevisiones[4, posicion].Value.ToString();
+            Fecha = dgvRevisiones[5, posicion].Value.ToString();
 
 
 
@@ -698,6 +698,29 @@ namespace Metrologia
                 this.Hide();
                 Form1 frmlogin = new Form1();
                 frmlogin.Show();
+            }
+        }
+
+        private void txtBuscarEm_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarEm.Text))
+            {
+                dgvEmpresas.DataSource = EmpresasController.CargarEmpresas_Controller();
+            }
+            else
+            {
+                dgvEmpresas.DataSource = EmpresasController.BuscarEmpresa(txtBuscarEm.Text);
+            }
+        }
+        private void txtBuscarRe_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarRe.Text))
+            {
+                dgvRevisiones.DataSource = RevisionController.CargarRevision_Controller();
+            }
+            else
+            {
+                dgvRevisiones.DataSource = RevisionController.BuscarRevision(txtBuscarRe.Text);
             }
         }
     }

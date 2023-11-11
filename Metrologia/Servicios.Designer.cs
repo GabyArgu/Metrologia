@@ -98,6 +98,7 @@
             this.cbTipoSer.CustomizableEdges.BottomLeft = false;
             this.cbTipoSer.CustomizableEdges.TopLeft = false;
             this.cbTipoSer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTipoSer.DropDownHeight = 250;
             this.cbTipoSer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoSer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbTipoSer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -106,6 +107,7 @@
             this.cbTipoSer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbTipoSer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbTipoSer.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbTipoSer.IntegralHeight = false;
             this.cbTipoSer.ItemHeight = 30;
             this.cbTipoSer.Location = new System.Drawing.Point(85, 612);
             this.cbTipoSer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -120,6 +122,7 @@
             this.cbEmpleado.CustomizableEdges.BottomLeft = false;
             this.cbEmpleado.CustomizableEdges.TopLeft = false;
             this.cbEmpleado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbEmpleado.DropDownHeight = 250;
             this.cbEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmpleado.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbEmpleado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -128,6 +131,7 @@
             this.cbEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbEmpleado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEmpleado.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEmpleado.IntegralHeight = false;
             this.cbEmpleado.ItemHeight = 30;
             this.cbEmpleado.Location = new System.Drawing.Point(85, 541);
             this.cbEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -202,6 +206,7 @@
             this.cbArea.CustomizableEdges.BottomLeft = false;
             this.cbArea.CustomizableEdges.TopLeft = false;
             this.cbArea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbArea.DropDownHeight = 250;
             this.cbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbArea.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbArea.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -210,6 +215,7 @@
             this.cbArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbArea.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbArea.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbArea.IntegralHeight = false;
             this.cbArea.ItemHeight = 30;
             this.cbArea.Location = new System.Drawing.Point(85, 470);
             this.cbArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -317,6 +323,7 @@
             this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Location = new System.Drawing.Point(472, 6);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
@@ -395,7 +402,7 @@
             this.dtpHoraEntrega.BorderRadius = 12;
             this.dtpHoraEntrega.Checked = true;
             this.dtpHoraEntrega.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.dtpHoraEntrega.CustomFormat = "hh:mm";
+            this.dtpHoraEntrega.CustomFormat = "hh:mm tt";
             this.dtpHoraEntrega.CustomizableEdges.BottomLeft = false;
             this.dtpHoraEntrega.CustomizableEdges.TopLeft = false;
             this.dtpHoraEntrega.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -526,7 +533,7 @@
             // dgcServicio
             // 
             this.dgcServicio.DockIndicatorTransparencyValue = 0.6D;
-            this.dgcServicio.TargetControl = this;
+            this.dgcServicio.TargetControl = this.panel6;
             this.dgcServicio.UseTransparentDrag = true;
             // 
             // Servicios

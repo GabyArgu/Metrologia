@@ -83,6 +83,7 @@
             this.cbCargo.CustomizableEdges.BottomLeft = false;
             this.cbCargo.CustomizableEdges.TopLeft = false;
             this.cbCargo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbCargo.DropDownHeight = 250;
             this.cbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCargo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbCargo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -91,6 +92,7 @@
             this.cbCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbCargo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbCargo.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbCargo.IntegralHeight = false;
             this.cbCargo.ItemHeight = 30;
             this.cbCargo.Location = new System.Drawing.Point(72, 388);
             this.cbCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -152,6 +154,7 @@
             this.cbEmpresa.CustomizableEdges.BottomLeft = false;
             this.cbEmpresa.CustomizableEdges.TopLeft = false;
             this.cbEmpresa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbEmpresa.DropDownHeight = 250;
             this.cbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmpresa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbEmpresa.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -160,6 +163,7 @@
             this.cbEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEmpresa.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.cbEmpresa.IntegralHeight = false;
             this.cbEmpresa.ItemHeight = 30;
             this.cbEmpresa.Location = new System.Drawing.Point(72, 319);
             this.cbEmpresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -184,8 +184,12 @@
             this.txtContra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.txtContra.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.txtContra.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(51)))));
-            this.txtContra.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContra.Font = new System.Drawing.Font("Mohave Medium", 15F, System.Drawing.FontStyle.Bold);
             this.txtContra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
+            this.txtContra.IconRight = global::Metrologia.Properties.Resources.ojo__1_;
+            this.txtContra.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtContra.IconRightOffset = new System.Drawing.Point(5, 0);
+            this.txtContra.IconRightSize = new System.Drawing.Size(25, 25);
             this.txtContra.Location = new System.Drawing.Point(213, 414);
             this.txtContra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContra.MaximumSize = new System.Drawing.Size(475, 57);
@@ -196,6 +200,9 @@
             this.txtContra.SelectedText = "";
             this.txtContra.Size = new System.Drawing.Size(349, 50);
             this.txtContra.TabIndex = 11;
+            this.txtContra.IconRightClick += new System.EventHandler(this.txtContra_IconRightClick);
+            this.txtContra.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtContra_MouseDoubleClick);
+            this.txtContra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtContra_MouseDown);
             // 
             // btnIngresar
             // 

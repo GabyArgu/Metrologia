@@ -64,5 +64,10 @@ namespace Controlador
         {
             return ModelEmpresa.EliminarEmpresa(codigoEmpresa, EstadoE);
         }
+
+        public static DataTable BuscarEmpresa(string Busqueda)
+        {
+            return ModelEmpresa.BuscarEmpresa(Busqueda);
+        }
     }
 }

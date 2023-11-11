@@ -41,6 +41,8 @@ namespace Metrologia
             }
         }
 
+
+
         void cargarArea()
         {
             cbArea.DataSource = ServicioController.CargarArea_Controller();

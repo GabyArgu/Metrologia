@@ -79,9 +79,9 @@ namespace Controlador
             return ModelRevision.EliminarRevision(codigoRevision, estado);
         }
 
-        public static DataTable BuscarUbicacion(string Busqueda)
+        public static DataTable BuscarRevision(string Busqueda)
         {
-            return ModelRevision.BuscarUbicacion(Busqueda);
+            return ModelRevision.BuscarRevision(Busqueda);
         }
     }
 }
