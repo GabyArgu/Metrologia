@@ -39,14 +39,14 @@ namespace Metrologia
 
         public void ocultarCodigo()
         {
-            pnlCodigoEmpleado.Visible = false;
-            txtCodigoEmpleado.Visible = false;
+            pnlCodigoEmpleado.Enabled = false;
+            txtCodigoEmpleado.Enabled = false;
         }
 
         public void mostrarCodigo()
         {
-            pnlCodigoEmpleado.Visible = true;
-            txtCodigoEmpleado.Visible = true;
+            pnlCodigoEmpleado.Enabled = true;
+            txtCodigoEmpleado.Enabled = true;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace Metrologia
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoEmpleado.Visible == true)
+            if (txtCodigoEmpleado.Enabled == true)
             {
                 modificarUsuario();
                 dash.CargarDatosUsuario();
@@ -154,10 +154,10 @@ namespace Metrologia
             object valorEstado = codigoEstado.Rows[0]["CodigoEstadoEm"];
             cbEstado.SelectedIndex = int.Parse(valorEstado.ToString()) - 1;
 
-            pnlContrasena.Visible = false;
-            txtContra.Visible = false;
-            pnlConfirmar.Visible = false;
-            txtConfirmContra.Visible = false;
+            pnlContrasena.Enabled = false;
+            txtContra.Enabled = false;
+            pnlConfirmar.Enabled = false;
+            txtConfirmContra.Enabled = false;
         }
 
         public void eliminarUsuario(string codigoEmpleado)
@@ -194,19 +194,17 @@ namespace Metrologia
             }
         }
 
-        private void txtCorreo_Leave(object sender, EventArgs e)
+        private void txtCorreo_Validating(object sender, CancelEventArgs e)
         {
-            if (validaremail(txtCorreo.Text))
+            if (!string.IsNullOrWhiteSpace(txtCorreo.Text))
             {
-                //si es correcto no debe hacer nada
+                if (!validaremail(txtCorreo.Text))
+                {
+                    MessageBox.Show("Dirección de correo no válida");
+                    txtCorreo.SelectAll();
+                    e.Cancel = true; // Cancela el evento Validating para evitar que el foco cambie
+                }
             }
-            else
-            {
-                MessageBox.Show("Dirección de correo no válida");
-                txtCorreo.SelectAll(); //selecciona todo lo de la casilla
-                txtCorreo.Focus(); //se posiciona ahí de nuevo
-            }
-
         }
 
         public static bool validaremail(string email)

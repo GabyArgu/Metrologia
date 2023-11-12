@@ -152,7 +152,7 @@
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.Size = new System.Drawing.Size(413, 47);
             this.txtCorreo.TabIndex = 15;
-            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
+            this.txtCorreo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCorreo_Validating);
             // 
             // txtTelefono
             // 

@@ -23,6 +23,23 @@ namespace Metrologia
             cargarEquipo();
             cargarMotivo();
             cargarEstadoR();
+            dtpFecha.Value = DateTime.Now;
+            // Asocia el evento Validating con el control DateTimePicker
+            dtpFecha.Validating += dtpFecha_Validating;
+        }
+
+        private void dtpFecha_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            DateTime selectedDate = dtpFecha.Value;
+            DateTime currentDate = DateTime.Now;
+
+            // Verifica si la fecha seleccionada es igual o posterior a la fecha actual
+            if (selectedDate >= currentDate)
+            {
+                // Muestra un mensaje de error
+                MessageBox.Show("Selecciona una fecha anterior a la fecha actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Cancel = true; // Cancela la validación
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -58,19 +75,19 @@ namespace Metrologia
         }
         public void ocultarCodigo()
         {
-            pnlCodigoRevision.Visible = false;
-            txtCodigoRevison.Visible = false;
+            pnlCodigoRevision.Enabled = false;
+            txtCodigoRevison.Enabled = false;
         }
 
         public void mostrarCodigo()
         {
-            pnlCodigoRevision.Visible = true;
-            txtCodigoRevison.Visible = true;
+            pnlCodigoRevision.Enabled = true;
+            txtCodigoRevison.Enabled = true;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoRevison.Visible == true)
+            if (txtCodigoRevison.Enabled == true)
             {
                 modificarRevision();
             }

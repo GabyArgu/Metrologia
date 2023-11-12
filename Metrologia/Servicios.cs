@@ -69,14 +69,14 @@ namespace Metrologia
         }
         public void ocultarCodigo()
         {
-            pnlCodigoServicio.Visible = false;
-            txtCodigoServicio.Visible = false;
+            pnlCodigoServicio.Enabled = false;
+            txtCodigoServicio.Enabled = false;
         }
 
         public void mostrarCodigo()
         {
-            pnlCodigoServicio.Visible = true;
-            txtCodigoServicio.Visible = true;
+            pnlCodigoServicio.Enabled = true;
+            txtCodigoServicio.Enabled = true;
         }
         public void cargarCodigoCita(string codigoCita)
         {
@@ -89,7 +89,7 @@ namespace Metrologia
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoServicio.Visible == true)
+            if (txtCodigoServicio.Enabled == true)
             {
                 if (dtpFechaEntrega.Value > ServicioController.GetFechaCita(int.Parse(txtcodigoCita.Text)))
                 {

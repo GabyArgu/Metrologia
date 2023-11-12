@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
@@ -38,14 +39,16 @@ namespace Metrologia
 
         public void ocultarCodigo()
         {
-            pnlCodigoEmpresa.Visible = false;
-            txtCodigoEmpresa.Visible = false;
+            pnlCodigoEmpresa.Enabled = false;
+            txtCodigoEmpresa.Enabled = false;
+            cbEncargado.Enabled = false;
         }
 
         public void mostrarCodigo()
         {
-            pnlCodigoEmpresa.Visible = true;
-            txtCodigoEmpresa.Visible = true;
+            pnlCodigoEmpresa.Enabled = true;
+            txtCodigoEmpresa.Enabled = true;
+            cbEncargado.Enabled = true;
         }
 
         void agregarEmpresa()
@@ -172,8 +175,94 @@ namespace Metrologia
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoEmpresa.Visible == true) modificarEmpresa();
+            if (txtCodigoEmpresa.Enabled == true) modificarEmpresa();
             else agregarEmpresa();
+        }
+
+        //Validaciones
+        private void txtSoloLetras(object sender, KeyPressEventArgs e)
+        {
+            if (!((e.KeyChar >= 'A' && e.KeyChar <= 'Z') ||  // Letras mayúsculas
+                (e.KeyChar >= 'a' && e.KeyChar <= 'z') || // Letras minúsculas
+                (e.KeyChar == 'á' || e.KeyChar == 'é' || e.KeyChar == 'í' || e.KeyChar == 'ó' || e.KeyChar == 'ú' || // Letras con tildes
+                    e.KeyChar == 'Á' || e.KeyChar == 'É' || e.KeyChar == 'Í' || e.KeyChar == 'Ó' || e.KeyChar == 'Ú' || // Letras mayúsculas con tildes
+                    e.KeyChar == ' ' || e.KeyChar == (char)Keys.Back))) // Espacio en blanco o tecla "Borrar"
+            {
+                // Validación de caracteres no permitidos
+                MessageBox.Show("Solo se aceptan letras, letras con tildes y espacios en blanco", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
+        }
+
+        public static bool validaremail(string email)
+        {
+            //cadena o expresion regular que verifica a un formato de correo electrónico
+            string expresion = "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@(([a-zA-Z]+[\\w-]+\\.){1,2}[a-zA-Z]{2,4})$";
+            //verifica que el email ingresado corresponda con la expresion válida
+            if (Regex.IsMatch(email, expresion))
+            {//verifica que la direccion corresponda y que la longitud de la cadena no sté vacía
+                if (Regex.Replace(email, expresion, string.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Solo permitir números del 0 al 9, guion y control de edición (por ejemplo, retroceso)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
+            {
+                //Validacion de solo teclas numericas
+                MessageBox.Show("Solo se aceptan valores numericos y positivos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+                return;
+            }
+
+            // Permitir un guion en la posición 4
+            if (e.KeyChar == '-' && (sender as TextBox).Text.Contains("-"))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            string input = txtTelefono.Text.Replace("-", ""); // Eliminar guiones existentes
+            if (input.Length > 8)
+            {
+                input = input.Substring(0, 8); // Limitar a 8 dígitos
+            }
+
+            if (input.Length >= 4)
+            {
+                input = input.Insert(4, "-"); // Insertar guion después de los primeros 4 dígitos
+            }
+
+            txtTelefono.Text = input;
+            txtTelefono.SelectionStart = txtTelefono.Text.Length; // Colocar el cursor al final del texto
+        }
+
+
+        private void txtCorreo_Validating(object sender, CancelEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtCorreo.Text))
+            {
+                if (!validaremail(txtCorreo.Text))
+                {
+                    MessageBox.Show("Dirección de correo no válida");
+                    txtCorreo.SelectAll();
+                    e.Cancel = true; // Cancela el evento Validating para evitar que el foco cambie
+                }
+            }
         }
     }
 }

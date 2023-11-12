@@ -50,14 +50,14 @@ namespace Metrologia
 
         public void ocultarCodigo()
         {
-            pnlCodigoEncargado.Visible = false;
-            txtCodigoEncargado.Visible = false;
+            pnlCodigoEncargado.Enabled = false;
+            txtCodigoEncargado.Enabled = false;
         }
 
         public void mostrarCodigo()
         {
-            pnlCodigoEncargado.Visible = true;
-            txtCodigoEncargado.Visible = true;
+            pnlCodigoEncargado.Enabled = true;
+            txtCodigoEncargado.Enabled = true;
         }
 
         private void dtpFecha_Validating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -181,7 +181,7 @@ namespace Metrologia
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoEncargado.Visible == true) modificarEncargado();
+            if (txtCodigoEncargado.Enabled == true) modificarEncargado();
             else agregarEncargado();
         }
 

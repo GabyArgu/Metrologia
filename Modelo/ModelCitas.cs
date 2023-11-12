@@ -37,7 +37,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT CodigoEncargado,Nombre FROM Encargado";
+                string query = "SELECT CodigoEncargado, Nombre FROM Encargado";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -53,6 +53,7 @@ namespace Modelo
                 Conexion.getConnect().Close();
             }
         }
+
         public static DataTable CargarEmpresa()
         {
             DataTable data;

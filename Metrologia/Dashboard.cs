@@ -333,68 +333,68 @@ namespace Metrologia
         private void btnHome_MouseHover(object sender, EventArgs e)
         {
             //Hover cambiar imagen
-            btnHome.BackgroundImage = global::Metrologia.Properties.Resources.hogar__1_;
+            btnHome.BackgroundImage = Properties.Resources.hogar__1_;
 
         }
 
         private void btnHome_MouseLeave(object sender, EventArgs e)
         {
             //Hover regresar imagen
-            btnHome.BackgroundImage = global::Metrologia.Properties.Resources.hogar;
+            btnHome.BackgroundImage = Properties.Resources.hogar;
         }
 
         private void btnEmpleados_MouseHover(object sender, EventArgs e)
         {
             //Hover cambiar imagen
-            btnEmpleados.BackgroundImage = global::Metrologia.Properties.Resources.usuario_de_archivo__1_;
+            btnEmpleados.BackgroundImage = Properties.Resources.usuario_de_archivo__1_;
         }
 
         private void btnEmpleados_MouseLeave(object sender, EventArgs e)
         {
             //Hover regresar imagen
-            btnEmpleados.BackgroundImage = global::Metrologia.Properties.Resources.usuario_de_archivo;
+            btnEmpleados.BackgroundImage = Properties.Resources.usuario_de_archivo;
         }
 
         private void btnCitas_MouseHover(object sender, EventArgs e)
         {
             //Hover cambiar imagen
-            btnCitas.BackgroundImage = global::Metrologia.Properties.Resources.calendario_reloj__1_;
+            btnCitas.BackgroundImage = Properties.Resources.calendario_reloj__1_;
         }
 
         private void btnCitas_MouseLeave(object sender, EventArgs e)
         {
             //Hover regresar imagen
-            btnCitas.BackgroundImage = global::Metrologia.Properties.Resources.calendario_reloj;
+            btnCitas.BackgroundImage = Properties.Resources.calendario_reloj;
         }
 
         private void btnEmpresas_MouseHover(object sender, EventArgs e)
         {
-            btnEmpresas.BackgroundImage = global::Metrologia.Properties.Resources.edificio__1_;
+            btnEmpresas.BackgroundImage = Properties.Resources.edificio__1_;
         }
 
         private void btnEmpresas_MouseLeave(object sender, EventArgs e)
         {
-            btnEmpresas.BackgroundImage = global::Metrologia.Properties.Resources.edificio;
+            btnEmpresas.BackgroundImage = Properties.Resources.edificio;
         }
 
         private void btnEquipos_MouseHover(object sender, EventArgs e)
         {
-            btnEquipos.BackgroundImage = global::Metrologia.Properties.Resources.herramientas__1_;
+            btnEquipos.BackgroundImage = Properties.Resources.herramientas__1_;
         }
 
         private void btnEquipos_MouseLeave(object sender, EventArgs e)
         {
-            btnEquipos.BackgroundImage = global::Metrologia.Properties.Resources.herramientas;
+            btnEquipos.BackgroundImage = Properties.Resources.herramientas;
         }
 
         private void btnExtras_MouseHover(object sender, EventArgs e)
         {
-            btnExtras.BackgroundImage = global::Metrologia.Properties.Resources.ojo__2_;
+            btnExtras.BackgroundImage = Properties.Resources.ojo__2_;
         }
 
         private void btnExtras_MouseLeave(object sender, EventArgs e)
         {
-            btnExtras.BackgroundImage = global::Metrologia.Properties.Resources.ojo__1_;
+            btnExtras.BackgroundImage = Properties.Resources.ojo__1_;
         }
 
         private void btnAgregarUb_Click(object sender, EventArgs e)
@@ -722,6 +722,17 @@ namespace Metrologia
             {
                 dgvRevisiones.DataSource = RevisionController.BuscarRevision(txtBuscarRe.Text);
             }
+        }
+
+        private void btnUsuario_MouseHover(object sender, EventArgs e)
+        {
+            //Hover cambiar imagen
+            btnUsuario.BackgroundImage = Properties.Resources.salida__1_;
+        }
+
+        private void btnUsuario_ClientSizeChanged(object sender, EventArgs e)
+        {
+            btnUsuario.BackgroundImage = Properties.Resources.salida;
         }
     }
 }

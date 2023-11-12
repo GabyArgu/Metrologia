@@ -252,7 +252,7 @@
             this.txtCodigoCita.Name = "txtCodigoCita";
             this.txtCodigoCita.PasswordChar = '\0';
             this.txtCodigoCita.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtCodigoCita.PlaceholderText = "  Digite el nombre de usuario";
+            this.txtCodigoCita.PlaceholderText = "Codigo Cita";
             this.txtCodigoCita.ReadOnly = true;
             this.txtCodigoCita.SelectedText = "";
             this.txtCodigoCita.Size = new System.Drawing.Size(387, 47);

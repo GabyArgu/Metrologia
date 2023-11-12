@@ -46,6 +46,7 @@ namespace Controlador
         {
             return ModelCitas.CargarEncargado();
         }
+
         public DataTable CargarEmpresa_Controller(string Empresa)
         {
             return ModelCitas.CargarEmpresa(Empresa);

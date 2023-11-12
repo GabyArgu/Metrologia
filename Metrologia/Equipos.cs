@@ -32,19 +32,19 @@ namespace Metrologia
         }
         public void ocultarCodigo()
         {
-            pnlCodigoEquipo.Visible = false;
-            txtCodigoEquipo.Visible = false;
+            pnlCodigoEquipo.Enabled = false;
+            txtCodigoEquipo.Enabled = false;
         }
 
         public void mostrarCodigo()
         {
-            pnlCodigoEquipo.Visible = true;
-            txtCodigoEquipo.Visible = true;
+            pnlCodigoEquipo.Enabled = true;
+            txtCodigoEquipo.Enabled = true;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoEquipo.Visible == true)
+            if (txtCodigoEquipo.Enabled == true)
             {
                 modificarEquipo();
             }

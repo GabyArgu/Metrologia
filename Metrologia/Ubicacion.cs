@@ -23,14 +23,14 @@ namespace Metrologia
         }
         public void ocultarCodigo()
         {
-            pnlCodigoUbicacion.Visible = false;
-            txtCodigoUbicacion.Visible = false;
+            pnlCodigoUbicacion.Enabled = false;
+            txtCodigoUbicacion.Enabled = false;
         }
 
         public void mostrarCodigo()
         {
-            pnlCodigoUbicacion.Visible = true;
-            txtCodigoUbicacion.Visible = true;
+            pnlCodigoUbicacion.Enabled = true;
+            txtCodigoUbicacion.Enabled = true;
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace Metrologia
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoUbicacion.Visible == true)
+            if (txtCodigoUbicacion.Enabled == true)
             {
                 modificarUbicacion();
             }

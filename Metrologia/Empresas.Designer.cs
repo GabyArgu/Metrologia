@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empresas));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.txtRazonSocial = new Guna.UI2.WinForms.Guna2TextBox();
@@ -111,6 +112,7 @@
             this.txtRazonSocial.SelectedText = "";
             this.txtRazonSocial.Size = new System.Drawing.Size(413, 47);
             this.txtRazonSocial.TabIndex = 37;
+            this.txtRazonSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoloLetras);
             // 
             // cbEncargado
             // 
@@ -121,6 +123,7 @@
             this.cbEncargado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbEncargado.DropDownHeight = 250;
             this.cbEncargado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEncargado.Enabled = false;
             this.cbEncargado.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.cbEncargado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
             this.cbEncargado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
@@ -163,6 +166,7 @@
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.Size = new System.Drawing.Size(414, 47);
             this.txtCorreo.TabIndex = 43;
+            this.txtCorreo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCorreo_Validating);
             // 
             // txtTelefono
             // 
@@ -191,6 +195,8 @@
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.Size = new System.Drawing.Size(414, 47);
             this.txtTelefono.TabIndex = 42;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtDireccion
             // 
@@ -442,6 +448,7 @@
             this.txtNombreEmpresa.SelectedText = "";
             this.txtNombreEmpresa.Size = new System.Drawing.Size(413, 47);
             this.txtNombreEmpresa.TabIndex = 52;
+            this.txtNombreEmpresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoloLetras);
             // 
             // txtCodigoEmpresa
             // 
@@ -572,6 +579,7 @@
             this.Controls.Add(this.pnl9);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Empresas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

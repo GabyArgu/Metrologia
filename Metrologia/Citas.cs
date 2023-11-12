@@ -22,7 +22,8 @@ namespace Metrologia
             cargarEncargado();
             cargarEmpresa();
             cargarEstadoCi();
-
+            dtpFecha.Value = DateTime.Now;
+            dtpHora.Value = DateTime.Now;
         }
 
         public bool EsFechaValida(DateTime fecha)
@@ -70,18 +71,18 @@ namespace Metrologia
         }
         public void ocultarCodigo()
         {
-            pnlCodigoCita.Visible = false;
-            txtCodigoCita.Visible = false;
+            pnlCodigoCita.Enabled = false;
+            txtCodigoCita.Enabled = false;
         }
 
         public void mostrarCodigo()
         {
-            pnlCodigoCita.Visible = true;
-            txtCodigoCita.Visible = true;
+            pnlCodigoCita.Enabled = true;
+            txtCodigoCita.Enabled = true;
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoCita.Visible == true)
+            if (txtCodigoCita.Enabled == true)
             {
                 modificarCita();
             }

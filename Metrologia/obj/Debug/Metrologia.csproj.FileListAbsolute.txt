@@ -89,6 +89,10 @@ C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrol
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Servicios.resources
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Ubicacion.resources
 C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Equipos.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.AssemblyReference.cache
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Empresas.resources
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Encargados.resources
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Revision.resources
 C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\Metrologia.exe.config
 C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\Metrologia.exe
 C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\Metrologia.pdb
@@ -166,7 +170,6 @@ C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\pt-BR\Microsoft.Data.SqlClient.r
 C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\xampp\htdocs\Metrologia\Metrologia\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
-C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.AssemblyReference.cache
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.SuggestedBindingRedirects.cache
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Citas.resources
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Dashboard.resources
@@ -176,6 +179,7 @@ C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Encargados.resources
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Equipos.resources
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Form1.resources
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Properties.Resources.resources
+C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Revision.resources
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Servicios.resources
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Ubicacion.resources
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.GenerateResource.cache
@@ -183,7 +187,3 @@ C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.CoreCompileInp
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.csproj.CopyComplete
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.exe
 C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.pdb
-C:\xampp\htdocs\Metrologia\Metrologia\obj\Debug\Metrologia.Revision.resources
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Empresas.resources
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Encargados.resources
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Metrologia\obj\Debug\Metrologia.Revision.resources
