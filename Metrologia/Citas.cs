@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Metrologia
 {
@@ -18,8 +19,7 @@ namespace Metrologia
 
         public Citas()
         {
-            InitializeComponent();
-            cargarEncargado();
+            InitializeComponent();            
             cargarEmpresa();
             cargarEstadoCi();
             dtpFecha.Value = DateTime.Now;
@@ -49,9 +49,9 @@ namespace Metrologia
             this.Hide();
         }        
 
-        void cargarEncargado()
+        void cargarEncargado(int codigoEmpresa)
         {
-            cbEncargado.DataSource = CitasController.CargarEncargado_Controller();
+            cbEncargado.DataSource = CitasController.CargarEncargado_Controller(codigoEmpresa);
             cbEncargado.DisplayMember = "Nombre";
             cbEncargado.ValueMember = "CodigoEncargado";
         }
@@ -61,6 +61,15 @@ namespace Metrologia
             cbEmpresa.DataSource = CitasController.CargarEmpresa_Controller();
             cbEmpresa.DisplayMember = "Nombre";
             cbEmpresa.ValueMember = "CodigoEmpresa";
+            int Empresa = Convert.ToInt16(cbEmpresa.SelectedValue);
+            cargarEncargado(Empresa);
+        }
+        private void cbEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView codigoEm = (DataRowView)cbEmpresa.SelectedItem;
+            object valorEm = codigoEm.Row["CodigoEmpresa"];
+            int Empresa = int.Parse(valorEm.ToString());
+            cargarEncargado(Empresa);
         }
 
         void cargarEstadoCi()
@@ -100,7 +109,8 @@ namespace Metrologia
             citacontrol.Comentarios = txtComentarios.Text;
             DateTime Fecha = dtpFecha.Value;
             citacontrol.Fecha = Fecha.ToString("MM/dd/yyyy");
-            citacontrol.Hora = Convert.ToString(dtpHora.Value);
+            DateTime Hora = dtpHora.Value;
+            citacontrol.Hora = Hora.ToString("hh:mm");
             citacontrol.Encargado = Convert.ToInt16(cbEncargado.SelectedValue); ;
             citacontrol.Empresa = Convert.ToInt16(cbEmpresa.SelectedValue);
             citacontrol.EstadoCi = Convert.ToInt16(cbEstadoCi.SelectedValue);
@@ -130,22 +140,26 @@ namespace Metrologia
             citacontrol.Comentarios = txtComentarios.Text;
             DateTime Fecha = dtpFecha.Value;
             citacontrol.Fecha = Fecha.ToString("MM/dd/yyyy");
-            citacontrol.Hora = Convert.ToString(dtpHora.Value);
+            DateTime Hora = dtpHora.Value;
+            citacontrol.Hora = Hora.ToString("hh:mm");
             citacontrol.Encargado = Convert.ToInt16(cbEncargado.SelectedValue); ;
             citacontrol.Empresa = Convert.ToInt16(cbEmpresa.SelectedValue);
             citacontrol.EstadoCi = Convert.ToInt16(cbEstadoCi.SelectedValue);
 
-            if (citacontrol.ActualizarCita() == true && EsFechaValida(Fecha) == true)
+            if (EsFechaValida(Fecha) == true)
             {
+                if (citacontrol.ActualizarCita())
+                { 
                 MessageBox.Show("Cita actualizada con exito");
                 this.Hide();
                 dash.CargarDatosCitas();
                 dash.Refresh();
-            }
-            else
-            {
-                MessageBox.Show("Error al actualizar cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }            
         }
 
         public void llenarModal(string CodigoCita, string Comentarios, string Fecha, string Hora, string Encargado, string Empresa, string EstadoCi)
@@ -157,16 +171,15 @@ namespace Metrologia
             txtComentarios.Text = Comentarios;
             dtpFecha.Value = DateTime.ParseExact(Fecha, formatos, CultureInfo.InvariantCulture, DateTimeStyles.None);
             dtpHora.Value = DateTime.ParseExact(Hora, "HH:mm:ss", CultureInfo.InvariantCulture);
-            
-            cargarEncargado();
-            DataTable codigoEn = objselect.CargarEncargado_Controller(Encargado);
-            object valorEn = codigoEn.Rows[0]["CodigoEncargado"];
-            cbEncargado.SelectedIndex = int.Parse(valorEn.ToString()) - 1;
 
             cargarEmpresa();
             DataTable codigoEm = objselect.CargarEmpresa_Controller(Empresa);
             object valorEm = codigoEm.Rows[0]["CodigoEmpresa"];            
             cbEmpresa.SelectedIndex = int.Parse(valorEm.ToString()) - 1;
+
+            cargarEncargado(int.Parse(valorEm.ToString()));
+            int indice = cbEncargado.FindStringExact(Encargado);
+            cbEncargado.SelectedIndex = indice;
 
             cargarEstadoCi();
             DataTable codigoEstadoC = objselect.CargarEstado_Controller(EstadoCi);
@@ -198,5 +211,7 @@ namespace Metrologia
         {
             this.Hide();
         }
+
+        
     }
 }

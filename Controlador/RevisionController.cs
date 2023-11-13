@@ -33,9 +33,9 @@ namespace Controlador
         {
             return ModelRevision.CargarRevision();
         }
-        public static DataTable CargarEmpleado_Controller()
+        public static DataTable CargarEmpleado_Controller(string user, string txt2)
         {
-            return ModelRevision.CargarEmpleado();
+            return ModelRevision.CargarEmpleado(user, txt2);
         }
         public static DataTable CargarEquipo_Controller()
         {

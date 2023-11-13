@@ -35,9 +35,9 @@ namespace Controlador
         {
             return ModelServicio.CargarArea();
         }
-        public static DataTable CargarEmpleado_Controller()
+        public static DataTable CargarEmpleado_Controller(string user, string txt2)
         {
-            return ModelServicio.CargarEmpleado();
+            return ModelServicio.CargarEmpleado(user, txt2);
         }
         public DataTable CargarModal_Controller(string CodigoC)
         {

@@ -14,24 +14,26 @@ namespace Metrologia
 {
     public partial class Dashboard : Form
     {
-        string usuario;
-        string txt3;
-        string roluser;
+        public string usua;
+        public string txt3;
 
         public Dashboard(string usuario, string txt2)
         {
             InitializeComponent();
             ObtenerDatos(usuario, txt2);
+            usua = usuario;
+            txt3 = txt2;
         }
 
         void ObtenerDatos(string user, string pass)
-        {
-            usuario = user;
+        {            
+            string roluser;
+            usua = user;
             txt3 = pass;
 
             LoginController logincontrol = new LoginController();
 
-            AtributosLogin.Username = usuario;
+            AtributosLogin.Username = usua;
             AtributosLogin.txt2 = txt3;
 
             DataTable rolusuario = logincontrol.nivelUsuario_Controller();
@@ -652,6 +654,7 @@ namespace Metrologia
 
         private void btnAgregarSe_Click(object sender, EventArgs e)
         {
+            
             Revision formRevision = new Revision();
             formRevision.ocultarCodigo();
             formRevision.Show();

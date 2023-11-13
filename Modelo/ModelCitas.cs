@@ -32,13 +32,14 @@ namespace Modelo
                 Conexion.getConnect().Close();
             }
         }
-        public static DataTable CargarEncargado()
+        public static DataTable CargarEncargado(int codigoEmpresa)
         {
             DataTable data;
             try
             {
-                string query = "SELECT CodigoEncargado, Nombre FROM Encargado";
+                string query = "SELECT CodigoEncargado, Nombre FROM Encargado WHERE CodigoEstadoEn = 1 AND CodigoEmpresa = @empresa";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
+                cmdselect.Parameters.Add(new SqlParameter("empresa", codigoEmpresa));
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
                 data = new DataTable();
                 adp.Fill(data);
@@ -59,7 +60,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT CodigoEmpresa,Nombre FROM Empresas";
+                string query = "SELECT CodigoEmpresa,Nombre FROM Empresas WHERE CodigoEstadoE = 1";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
                 data = new DataTable();

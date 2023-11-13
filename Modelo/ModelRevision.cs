@@ -54,13 +54,15 @@ namespace Modelo
                 Conexion.getConnect().Close();
             }
         }
-        public static DataTable CargarEmpleado()
+        public static DataTable CargarEmpleado(string username, string txt2)
         {
             DataTable data;
             try
             {
-                string query = "SELECT CodigoEmpleado,Nombre+' '+Apellido AS Nombre FROM Empleado";
+                string query = "SELECT CodigoEmpleado,Nombre+' '+Apellido AS Nombre FROM Empleado WHERE Usuario = @user AND Contrasena = @txt";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
+                cmdselect.Parameters.Add(new SqlParameter("user", username));
+                cmdselect.Parameters.Add(new SqlParameter("txt", txt2));
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
                 data = new DataTable();
                 adp.Fill(data);

@@ -51,7 +51,7 @@ namespace Metrologia
         }
         void cargarEmpleado()
         {
-            cbEmpleado.DataSource = ServicioController.CargarEmpleado_Controller();
+            cbEmpleado.DataSource = ServicioController.CargarEmpleado_Controller(dash.usua, dash.txt3);
             cbEmpleado.DisplayMember = "Nombre";
             cbEmpleado.ValueMember = "CodigoEmpleado";
         }
@@ -191,8 +191,6 @@ namespace Metrologia
             cbArea.SelectedIndex = int.Parse(valorA.ToString()) - 1;
 
             cargarEmpleado();
-            object valorEm = servicioModal.Rows[0]["CodigoEmpleado"];
-            cbEmpleado.SelectedIndex = int.Parse(valorEm.ToString()) - 1;
 
             cargarTipoSer();
             object valorTipoS = servicioModal.Rows[0]["CodigoTipo"];

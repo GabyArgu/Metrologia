@@ -49,7 +49,7 @@ namespace Metrologia
 
         void cargarEmpleado()
         {
-            cbEmpleado.DataSource = RevisionController.CargarEmpleado_Controller();
+            cbEmpleado.DataSource = RevisionController.CargarEmpleado_Controller(dash.usua, dash.txt3);
             cbEmpleado.DisplayMember = "Nombre";
             cbEmpleado.ValueMember = "CodigoEmpleado";
         }
@@ -158,9 +158,6 @@ namespace Metrologia
             dtpFecha.Value = DateTime.ParseExact(Fecha, formatos, CultureInfo.InvariantCulture, DateTimeStyles.None);
 
             cargarEmpleado();
-            DataTable codigoEm = objselect.CargarEmpleado_Controller(Empleado);
-            object valorEm = codigoEm.Rows[0]["CodigoEmpleado"];
-            cbEmpleado.SelectedIndex = int.Parse(valorEm.ToString()) - 1;
 
             cargarEquipo();
             DataTable codigoEq = objselect.CargarEquipo_Controller(Equipo);

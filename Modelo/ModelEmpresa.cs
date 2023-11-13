@@ -86,7 +86,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string query = "SELECT EC.CodigoEncargado, EC.Nombre FROM Encargado EC WHERE EC.CodigoEmpresa  =  @codigoemp";
+                string query = "SELECT EC.CodigoEncargado, EC.Nombre FROM Encargado EC WHERE EC.CodigoEstadoEn = 1 AND EC.CodigoEmpresa  =  @codigoemp";
                 SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
                 cmdselect.Parameters.Add(new SqlParameter("codigoemp", codigoEmpresa));
                 SqlDataAdapter adp = new SqlDataAdapter(cmdselect);

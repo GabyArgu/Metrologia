@@ -42,9 +42,9 @@ namespace Controlador
         {
             return ModelCitas.CargarEncargado(Encargado);
         }
-        public static DataTable CargarEncargado_Controller()
+        public static DataTable CargarEncargado_Controller(int codigoEmpresa)
         {
-            return ModelCitas.CargarEncargado();
+            return ModelCitas.CargarEncargado(codigoEmpresa);
         }
 
         public DataTable CargarEmpresa_Controller(string Empresa)
