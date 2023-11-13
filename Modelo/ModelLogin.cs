@@ -57,6 +57,31 @@ namespace Modelo
             {
                 Conexion.getConnect().Close();
             }
-        }       
+        }
+        public static DataTable estadoUser(string User, string txt1)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT E.CodigoEstadoEm, EE.Nombre FROM Empleado E " +                               
+                               "INNER JOIN EstadoEmpleado EE ON E.CodigoEstadoEm = EE.CodigoEstadoEm " +
+                               "WHERE E.Usuario = @usua AND E.Contrasena = @contra";
+                SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
+                cmdselect.Parameters.Add(new SqlParameter("usua", User));
+                cmdselect.Parameters.Add(new SqlParameter("contra", txt1));
+                SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+            finally
+            {
+                Conexion.getConnect().Close();
+            }
+        }
     }
 }

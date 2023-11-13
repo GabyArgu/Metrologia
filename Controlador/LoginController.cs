@@ -28,5 +28,10 @@ namespace Controlador
         {
             return ModelLogin.nivelUser(Username, txt2);
         }
+
+        public DataTable estadoUsuario_Controller()
+        {
+            return ModelLogin.estadoUser(Username, txt2);
+        }
     }
 }

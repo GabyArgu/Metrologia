@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Controlador;
+using System.Data;
 using Guna.UI2.WinForms;
 
 
@@ -55,20 +56,32 @@ namespace Metrologia
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            LoginController objlogin = new LoginController();
             AtributosLogin.Username = txtUsuario.Text;
             AtributosLogin.txt2 = txtContra.Text;           
 
             if (LoginController.Acceso_Controller()==true)
             {
-                usuario = txtUsuario.Text;
-                txt2 = txtContra.Text;
-                formularios.DashboardFRM = new Dashboard(usuario, txt2);
+                DataTable estEm = objlogin.estadoUsuario_Controller();
+                object estadoEm = estEm.Rows[0]["Nombre"];
+                string estado = estadoEm.ToString();
+                if (estado == "Activo")
+                {
+                    usuario = txtUsuario.Text;
+                    txt2 = txtContra.Text;
+                    formularios.DashboardFRM = new Dashboard(usuario, txt2);
 
-                // Mostrar el formulario
-                formularios.DashboardFRM.Show();
+                    // Mostrar el formulario
+                    formularios.DashboardFRM.Show();
 
-                // Cerrar el formulario actual
-                this.Hide();
+                    // Cerrar el formulario actual
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrectos, intentelo denuevo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    limpiarCampos();
+                }
             }
             else
             {
