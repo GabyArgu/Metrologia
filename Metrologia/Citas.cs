@@ -22,8 +22,6 @@ namespace Metrologia
             InitializeComponent();            
             cargarEmpresa();
             cargarEstadoCi();
-            dtpFecha.Value = DateTime.Now;
-            dtpHora.Value = DateTime.Now;
         }
 
         public bool EsFechaValida(DateTime fecha)
