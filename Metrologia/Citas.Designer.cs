@@ -336,7 +336,7 @@
             this.dtpHora.Size = new System.Drawing.Size(387, 47);
             this.dtpHora.TabIndex = 70;
             this.dtpHora.UseTransparentBackground = true;
-            this.dtpHora.Value = new System.DateTime(2023, 11, 6, 2, 3, 31, 380);
+            this.dtpHora.Value = new System.DateTime(2023, 11, 14, 10, 15, 0, 0);
             // 
             // elipCita
             // 
@@ -376,7 +376,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = global::Metrologia.Properties.Resources.empre;
+            this.panel3.BackgroundImage = global::Metrologia.Properties.Resources.comen;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.ForeColor = System.Drawing.Color.Coral;
             this.panel3.Location = new System.Drawing.Point(35, 463);
@@ -424,7 +424,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = global::Metrologia.Properties.Resources.comen;
+            this.panel2.BackgroundImage = global::Metrologia.Properties.Resources.empre;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.ForeColor = System.Drawing.Color.Coral;
             this.panel2.Location = new System.Drawing.Point(35, 322);
@@ -460,7 +460,7 @@
             this.Controls.Add(this.dtpHora);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Citas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Citas";

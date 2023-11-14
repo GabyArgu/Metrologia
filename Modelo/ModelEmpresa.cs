@@ -202,7 +202,7 @@ namespace Modelo
         public static DataTable BuscarEmpresa(string Busqueda)
         {
             DataTable retorno;
-            string query = "SELECT * FROM CargarEmpresa WHERE Empresa LIKE @Busqueda OR Categoria LIKE @Busqueda OR Estado LIKE @Busqueda";
+            string query = "SELECT * FROM CargarEmpresas WHERE Empresa LIKE @Busqueda OR Categoria LIKE @Busqueda OR Estado LIKE @Busqueda";
             try
             {
                 SqlCommand cmdsearch = new SqlCommand(string.Format(query), Conexion.getConnect());

@@ -18,8 +18,8 @@ namespace Controlador
         //Atributos tb_Acta_Defuncion
         public string codigoCita { get; set; }
         public string Comentarios { get; set; }
-        public string Fecha { get; set; }
-        public string Hora { get; set; }
+        public DateTime Fecha { get; set; }
+        public DateTime Hora { get; set; }
         public int Encargado { get; set; }
         public int Empresa { get; set; }
         public int Servicio { get; set; }
@@ -61,7 +61,7 @@ namespace Controlador
         }
         public bool AgregarCita()
         {
-            return ModelCitas.AgregarCita(Comentarios, Fecha, Hora, Encargado, Empresa, EstadoCi);
+            return ModelCitas.AgregarCita(Comentarios,  Fecha,  Hora, Encargado, Empresa, EstadoCi);
         }
         public bool ActualizarCita()
         {

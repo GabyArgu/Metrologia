@@ -286,15 +286,16 @@ namespace Metrologia
         private void dgvCitas_DoubleClick(object sender, EventArgs e)
         {
             int posicion;
-            string codigoCitas, Encargado, Empresa, EstadoCi, Fecha, Comentarios, Hora;
+            string codigoCitas, Encargado, Empresa, EstadoCi, Comentarios;
+            DateTime Fecha, Hora;
             posicion = dgvCitas.CurrentRow.Index;
 
             codigoCitas = dgvCitas[0, posicion].Value.ToString();
             Encargado = dgvCitas[1, posicion].Value.ToString();
-            Empresa = dgvCitas[2, posicion].Value.ToString();            
-            Fecha = dgvCitas[4, posicion].Value.ToString();
+            Empresa = dgvCitas[2, posicion].Value.ToString();
+            Fecha = Convert.ToDateTime(dgvCitas[4, posicion].Value);  // Convertir a DateTime directamente
             Comentarios = dgvCitas[5, posicion].Value.ToString();
-            Hora = dgvCitas[6, posicion].Value.ToString();
+            Hora = DateTime.Today.Add((TimeSpan)dgvCitas[6, posicion].Value);  // Convertir a DateTime directamente
             EstadoCi = dgvCitas[7, posicion].Value.ToString();
 
             Citas formC = new Citas();
@@ -545,13 +546,14 @@ namespace Metrologia
         private void dgvEncargados_DoubleClick(object sender, EventArgs e)
         {
             int posicion;
-            string codigoEncargado, nombre, fecha, codemp, codcar, codesten;
+            string codigoEncargado, nombre, codemp, codcar, codesten;
+            DateTime fecha;
 
             posicion = dgvEncargados.CurrentRow.Index;
 
             codigoEncargado = dgvEncargados[0, posicion].Value.ToString();
             nombre = dgvEncargados[3, posicion].Value.ToString();
-            fecha = dgvEncargados[4, posicion].Value.ToString();
+            fecha = Convert.ToDateTime(dgvRevisiones[4, posicion].Value);
 
             codemp = dgvEncargados[1, posicion].Value.ToString();
 
@@ -663,7 +665,8 @@ namespace Metrologia
         private void dgvRevisiones_DoubleClick(object sender, EventArgs e)
         {
             int posicion;
-            string CodigoRevision, Comentario, Fecha, Equipo, Empleado, Motivo, EstadoR;
+            string CodigoRevision, Comentario,  Equipo, Empleado, Motivo, EstadoR;
+            DateTime Fecha;
 
             posicion = dgvRevisiones.CurrentRow.Index;
 
@@ -673,7 +676,7 @@ namespace Metrologia
             Motivo = dgvRevisiones[3, posicion].Value.ToString();
             EstadoR = dgvRevisiones[6, posicion].Value.ToString();
             Comentario = dgvRevisiones[4, posicion].Value.ToString();
-            Fecha = dgvRevisiones[5, posicion].Value.ToString();
+            Fecha = Convert.ToDateTime(dgvRevisiones[5, posicion].Value);  // Convertir a DateTime directamente
 
 
 
@@ -733,7 +736,8 @@ namespace Metrologia
             btnUsuario.BackgroundImage = Properties.Resources.salida__1_;
         }
 
-        private void btnUsuario_ClientSizeChanged(object sender, EventArgs e)
+
+        private void btnUsuario_MouseLeave(object sender, EventArgs e)
         {
             btnUsuario.BackgroundImage = Properties.Resources.salida;
         }

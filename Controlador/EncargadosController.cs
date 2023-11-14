@@ -18,7 +18,7 @@ namespace Controlador
         //Atributos tb_Acta_Defuncion
         public string codigoEncargado { get; set; }
         public string Nombre { get; set; }
-        public string Fecha { get; set; }
+        public DateTime Fecha { get; set; }
         public int CodEmp { get; set; }
         public int CodCar { get; set; }
         public int CodEstEn { get; set; }

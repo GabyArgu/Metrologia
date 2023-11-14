@@ -19,8 +19,8 @@ namespace Controlador
         public string codigoServicio { get; set; }
         public string Precio { get; set; }
         public string Comentarios { get; set; }
-        public string Fecha { get; set; }
-        public string Hora { get; set; }
+        public DateTime Fecha { get; set; }
+        public DateTime Hora { get; set; }
         public int Area { get; set; }
         public int Empleado { get; set; }
         public int TipoSer { get; set; }

@@ -22,6 +22,9 @@ namespace Metrologia
             InitializeComponent();            
             cargarEmpresa();
             cargarEstadoCi();
+            dtpHora.Value = DateTime.Now;
+            dtpHora.CustomFormat = "hh:mm tt";
+            dtpHora.Format = DateTimePickerFormat.Custom;
         }
 
         public bool EsFechaValida(DateTime fecha)
@@ -106,9 +109,9 @@ namespace Metrologia
 
             citacontrol.Comentarios = txtComentarios.Text;
             DateTime Fecha = dtpFecha.Value;
-            citacontrol.Fecha = Fecha.ToString("MM/dd/yyyy");
+            citacontrol.Fecha = Fecha;
             DateTime Hora = dtpHora.Value;
-            citacontrol.Hora = Hora.ToString("hh:mm");
+            citacontrol.Hora = Hora;
             citacontrol.Encargado = Convert.ToInt16(cbEncargado.SelectedValue); ;
             citacontrol.Empresa = Convert.ToInt16(cbEmpresa.SelectedValue);
             citacontrol.EstadoCi = Convert.ToInt16(cbEstadoCi.SelectedValue);
@@ -137,9 +140,9 @@ namespace Metrologia
             citacontrol.codigoCita = txtCodigoCita.Text;
             citacontrol.Comentarios = txtComentarios.Text;
             DateTime Fecha = dtpFecha.Value;
-            citacontrol.Fecha = Fecha.ToString("MM/dd/yyyy");
+            citacontrol.Fecha = Fecha;
             DateTime Hora = dtpHora.Value;
-            citacontrol.Hora = Hora.ToString("hh:mm");
+            citacontrol.Hora = Hora;
             citacontrol.Encargado = Convert.ToInt16(cbEncargado.SelectedValue); ;
             citacontrol.Empresa = Convert.ToInt16(cbEmpresa.SelectedValue);
             citacontrol.EstadoCi = Convert.ToInt16(cbEstadoCi.SelectedValue);
@@ -160,15 +163,14 @@ namespace Metrologia
             }            
         }
 
-        public void llenarModal(string CodigoCita, string Comentarios, string Fecha, string Hora, string Encargado, string Empresa, string EstadoCi)
+        public void llenarModal(string CodigoCita, string Comentarios, DateTime Fecha, DateTime Hora, string Encargado, string Empresa, string EstadoCi)
         {
-            string[] formatos = { "d/M/yyyy H:mm:ss", "M/d/yyyy H:mm:ss" };
             CitasController objselect = new CitasController();
 
             txtCodigoCita.Text = CodigoCita;
             txtComentarios.Text = Comentarios;
-            dtpFecha.Value = DateTime.ParseExact(Fecha, formatos, CultureInfo.InvariantCulture, DateTimeStyles.None);
-            dtpHora.Value = DateTime.ParseExact(Hora, "HH:mm:ss", CultureInfo.InvariantCulture);
+            dtpFecha.Value = Fecha;
+            dtpHora.Value = Hora;
 
             cargarEmpresa();
             DataTable codigoEm = objselect.CargarEmpresa_Controller(Empresa);

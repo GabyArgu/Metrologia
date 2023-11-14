@@ -214,7 +214,7 @@ namespace Modelo
                 Conexion.getConnect().Close();
             }
         }
-        public static bool AgregarRevision(string Comentario, string Fecha, int CodigoEq, int CodigoEm, int CodigoMo, int CodigoEstR)
+        public static bool AgregarRevision(string Comentario, DateTime Fecha, int CodigoEq, int CodigoEm, int CodigoMo, int CodigoEstR)
         {
             bool retorno;
             try
@@ -236,7 +236,7 @@ namespace Modelo
             }
 
         }
-        public static bool ActualizaRevision(string CodigoRevision, string Comentario, string Fecha, int CodigoEq, int CodigoEm, int CodigoMo, int CodigoEstR)
+        public static bool ActualizaRevision(string CodigoRevision, string Comentario, DateTime Fecha, int CodigoEq, int CodigoEm, int CodigoMo, int CodigoEstR)
         {
             bool retorno;
             try

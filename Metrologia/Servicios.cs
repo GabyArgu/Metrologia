@@ -23,6 +23,10 @@ namespace Metrologia
             cargarEmpleado();
             cargarTipoSer();
             cargarEstadoSer();
+            dtpFechaEntrega.Value = DateTime.Now;
+            dtpHoraEntrega.Value = DateTime.Now;
+            dtpHoraEntrega.CustomFormat = "hh:mm tt";
+            dtpHoraEntrega.Format = DateTimePickerFormat.Custom;
             // Asocia el evento Validating con el control DateTimePicker
             dtpFechaEntrega.Validating += dtpFecha_Validating;
         }
@@ -114,9 +118,9 @@ namespace Metrologia
             serviciocontrol.Comentarios = txtComentarioServicio.Text;
             serviciocontrol.Precio = txtPrecio.Text;
             DateTime Fecha = dtpFechaEntrega.Value;
-            serviciocontrol.Fecha = Fecha.ToString("MM/dd/yyyy");
+            serviciocontrol.Fecha = Fecha;
             DateTime Hora = dtpHoraEntrega.Value;
-            serviciocontrol.Hora = Hora.ToString("hh:mm");
+            serviciocontrol.Hora = Hora;
             serviciocontrol.Area = Convert.ToInt16(cbArea.SelectedValue);
             serviciocontrol.Empleado = Convert.ToInt16(cbEmpleado.SelectedValue);
             serviciocontrol.TipoSer = Convert.ToInt16(cbTipoSer.SelectedValue);
@@ -154,9 +158,9 @@ namespace Metrologia
             serviciocontrol.Comentarios = txtComentarioServicio.Text;
             serviciocontrol.Precio = txtPrecio.Text;
             DateTime Fecha = dtpFechaEntrega.Value;
-            serviciocontrol.Fecha = Fecha.ToString("MM/dd/yyyy");
+            serviciocontrol.Fecha = Fecha;
             DateTime Hora = dtpHoraEntrega.Value;
-            serviciocontrol.Hora = Hora.ToString("hh:mm");
+            serviciocontrol.Hora = Hora;
             serviciocontrol.Area = Convert.ToInt16(cbArea.SelectedValue); ;
             serviciocontrol.Empleado = Convert.ToInt16(cbEmpleado.SelectedValue);
             serviciocontrol.TipoSer = Convert.ToInt16(cbTipoSer.SelectedValue);
@@ -176,17 +180,27 @@ namespace Metrologia
         }
         public void llenarModal(string codigoCita)
         {
-            string[] formatos = { "d/M/yyyy H:mm:ss", "M/d/yyyy H:mm:ss" };
             ServicioController objselect = new ServicioController();
 
             DataTable servicioModal = objselect.CargarModal_Controller(codigoCita);
             txtCodigoServicio.Text = servicioModal.Rows[0]["CodigoServicio"].ToString();
             txtPrecio.Text = servicioModal.Rows[0]["Precio"].ToString();
             txtComentarioServicio.Text = servicioModal.Rows[0]["Comentarios"].ToString();
-            string Fecha = servicioModal.Rows[0]["FechaEntrega"].ToString();
-            string Hora = servicioModal.Rows[0]["HoraEntrega"].ToString();
-            dtpFechaEntrega.Value = DateTime.ParseExact(Fecha, formatos, CultureInfo.InvariantCulture, DateTimeStyles.None);
-            dtpHoraEntrega.Value = DateTime.ParseExact(Hora, "HH:mm:ss", CultureInfo.InvariantCulture);
+
+            DateTime Fecha = (DateTime)servicioModal.Rows[0]["FechaEntrega"];
+            DateTime Hora;
+            if (DateTime.TryParse(servicioModal.Rows[0]["HoraEntrega"].ToString(), out Hora))
+            {
+                // La conversión fue exitosa
+                dtpHoraEntrega.Value = Hora;
+            }
+            else
+            {
+                // Manejar el caso en el que la conversión no es exitosa
+                MessageBox.Show("No se puede convertir el valor de HoraEntrega a DateTime.");
+            }
+            dtpFechaEntrega.Value = Fecha;
+
 
             cargarArea();
             object valorA = servicioModal.Rows[0]["CodigoArea"];

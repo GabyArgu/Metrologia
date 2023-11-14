@@ -168,7 +168,7 @@ namespace Modelo
                 Conexion.getConnect().Close();
             }
         }
-        public static bool AgregarServicio(string Precio, string Comentarios, string Fecha, string Hora, int Area, int Empleado, int TipoSer, int EstadoSer)
+        public static bool AgregarServicio(string Precio, string Comentarios, DateTime Fecha, DateTime Hora, int Area, int Empleado, int TipoSer, int EstadoSer)
         {
             bool retorno;
             try
@@ -192,7 +192,7 @@ namespace Modelo
             }
 
         }
-        public static bool ActualizaServicio(string CodigoServicio, string Precio, string Comentarios, string Fecha, string Hora, int Area, int Empleado, int TipoSer, int EstadoSer)
+        public static bool ActualizaServicio(string CodigoServicio, string Precio, string Comentarios, DateTime Fecha, DateTime Hora, int Area, int Empleado, int TipoSer, int EstadoSer)
         {
             bool retorno;
             try

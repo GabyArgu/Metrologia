@@ -173,7 +173,7 @@ namespace Modelo
                 Conexion.getConnect().Close();
             }
         }
-        public static bool AgregarCita(string Comentarios, string Fecha, string Hora, int Encargado, int Empresa, int EstadoCi)
+        public static bool AgregarCita(string Comentarios, DateTime Fecha, DateTime Hora, int Encargado, int Empresa, int EstadoCi)
         {
             bool retorno;
             try
@@ -195,7 +195,7 @@ namespace Modelo
             }
 
         }
-        public static bool ActualizaCita(string CodigoCita, string Comentarios, string Fecha, string Hora, int Encargado, int Empresa, int EstadoCi)
+        public static bool ActualizaCita(string CodigoCita, string Comentarios, DateTime Fecha, DateTime Hora, int Encargado, int Empresa, int EstadoCi)
         {
             bool retorno;
             try

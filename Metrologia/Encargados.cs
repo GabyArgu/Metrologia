@@ -23,6 +23,7 @@ namespace Metrologia
             cargarEmpresa();
             cargarCargo();
             cargarEstado();
+            dtpFecha.Value = DateTime.Now;
             // Asocia el evento Validating con el control DateTimePicker
             dtpFecha.Validating += dtpFecha_Validating;
         }
@@ -80,7 +81,7 @@ namespace Metrologia
 
             encargadocontrol.Nombre = txtNombreEncargado.Text;
             DateTime fechas = dtpFecha.Value;
-            encargadocontrol.Fecha = fechas.ToString("MM/dd/yyyy");
+            encargadocontrol.Fecha = fechas;
             encargadocontrol.CodEmp = Convert.ToInt16(cbEmpresa.SelectedValue);
             encargadocontrol.CodCar = Convert.ToInt16(cbCargo.SelectedValue);
             encargadocontrol.CodEstEn = Convert.ToInt16(cbEstado.SelectedValue);
@@ -106,7 +107,7 @@ namespace Metrologia
             encargadocontrol.codigoEncargado = txtCodigoEncargado.Text;
             encargadocontrol.Nombre = txtNombreEncargado.Text;
             DateTime fechas = dtpFecha.Value;
-            encargadocontrol.Fecha = fechas.ToString("MM/dd/yyyy");
+            encargadocontrol.Fecha = fechas;
             encargadocontrol.CodEmp = Convert.ToInt16(cbEmpresa.SelectedValue);
             encargadocontrol.CodCar = Convert.ToInt16(cbCargo.SelectedValue);
             encargadocontrol.CodEstEn = Convert.ToInt16(cbEstado.SelectedValue);
@@ -143,15 +144,15 @@ namespace Metrologia
             }
         }
 
-        public void llenarModal(string codigoEncargado, string nombre, string fecha, string codemp, string codcar, string codesten)
+        public void llenarModal(string codigoEncargado, string nombre, DateTime fecha, string codemp, string codcar, string codesten)
         {
-            string[] formato = { "d/M/yyyy H:mm:ss", "M/d/yyyy H:mm:ss" };
+            
             EncargadosController objselect = new EncargadosController();
 
             txtCodigoEncargado.Text = codigoEncargado;
             txtNombreEncargado.Text = nombre;
 
-            dtpFecha.Value = DateTime.ParseExact(fecha, formato, CultureInfo.InvariantCulture, DateTimeStyles.None);
+            dtpFecha.Value = fecha;
 
             cargarEmpresa();
             DataTable codigoEmpresa = objselect.CargarEmpresaEncargado_Controller(codigoEncargado);

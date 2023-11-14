@@ -18,7 +18,7 @@ namespace Controlador
         //Atributos tb_Acta_Defuncion
         public string codigoRevision { get; set; }
         public string comentario { get; set; }
-        public string fecha { get; set; }
+        public DateTime fecha { get; set; }
         public int equipo { get; set; }
         public int empleado { get; set; }
         public int motivo { get; set; }

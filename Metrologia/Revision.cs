@@ -103,7 +103,7 @@ namespace Metrologia
 
             revisioncontrol.comentario = txtComentarios.Text;
             DateTime Fecha = dtpFecha.Value;
-            revisioncontrol.fecha = Fecha.ToString("MM/dd/yyyy");
+            revisioncontrol.fecha = Fecha;
             revisioncontrol.equipo = Convert.ToInt16(cbEquipo.SelectedValue);
             revisioncontrol.empleado = Convert.ToInt16(cbEmpleado.SelectedValue);
             revisioncontrol.motivo = Convert.ToInt16(cbMotivo.SelectedValue);
@@ -129,7 +129,7 @@ namespace Metrologia
             revisioncontrol.codigoRevision = txtCodigoRevison.Text;
             revisioncontrol.comentario = txtComentarios.Text;
             DateTime Fecha = dtpFecha.Value;
-            revisioncontrol.fecha = Fecha.ToString("MM/dd/yyyy");
+            revisioncontrol.fecha = Fecha;
             revisioncontrol.equipo = Convert.ToInt16(cbEquipo.SelectedValue);
             revisioncontrol.empleado = Convert.ToInt16(cbEmpleado.SelectedValue);
             revisioncontrol.motivo = Convert.ToInt16(cbMotivo.SelectedValue);
@@ -148,14 +148,13 @@ namespace Metrologia
             }
         }
 
-        public void llenarModal(string CodigoRevision, string Comentario, string Fecha, string Equipo, string Empleado, string Motivo, string EstadoR)
+        public void llenarModal(string CodigoRevision, string Comentario, DateTime Fecha, string Equipo, string Empleado, string Motivo, string EstadoR)
         {
-            string[] formatos = { "d/M/yyyy H:mm:ss", "M/d/yyyy H:mm:ss" };
             RevisionController objselect = new RevisionController();
 
             txtCodigoRevison.Text = CodigoRevision;
             txtComentarios.Text = Comentario;
-            dtpFecha.Value = DateTime.ParseExact(Fecha, formatos, CultureInfo.InvariantCulture, DateTimeStyles.None);
+            dtpFecha.Value = Fecha;
 
             cargarEmpleado();
 

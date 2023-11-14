@@ -173,7 +173,7 @@ namespace Modelo
                 Conexion.getConnect().Close();
             }
         }
-        public static bool AgregarEncargado( string Nombre, string Fecha, int CodEmp, int CodCar, int CodEstEn)
+        public static bool AgregarEncargado( string Nombre, DateTime Fecha, int CodEmp, int CodCar, int CodEstEn)
         {
             bool retorno;
             try
@@ -194,7 +194,7 @@ namespace Modelo
             }
 
         }
-        public static bool ActualizarEncargado(string CodigoEncargado, string Nombre, string Fecha, int CodEmp, int CodCar, int CodEstEn)
+        public static bool ActualizarEncargado(string CodigoEncargado, string Nombre, DateTime Fecha, int CodEmp, int CodCar, int CodEstEn)
         {
             bool retorno;
             try
