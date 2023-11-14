@@ -22,6 +22,7 @@ namespace Metrologia
             InitializeComponent();            
             cargarEmpresa();
             cargarEstadoCi();
+            dtpFecha.Value = DateTime.Now;
             dtpHora.Value = DateTime.Now;
             dtpHora.CustomFormat = "hh:mm tt";
             dtpHora.Format = DateTimePickerFormat.Custom;
