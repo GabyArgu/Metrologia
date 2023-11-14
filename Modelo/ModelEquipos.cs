@@ -134,7 +134,7 @@ namespace Modelo
         public static DataTable BuscarEquipos(string Busqueda)
         {
             DataTable retorno;
-            string query = "SELECT * FROM CargarEquipos WHERE Nombre LIKE @Busqueda OR Ubicacion LIKE @Busqueda";
+            string query = "SELECT * FROM CargarEquipos WHERE Nombre LIKE @Busqueda OR Laboratorio LIKE @Busqueda";
             try
             {
                 SqlCommand cmdsearch = new SqlCommand(string.Format(query), Conexion.getConnect());

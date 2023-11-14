@@ -150,7 +150,7 @@ namespace Modelo
         {
             DataTable retorno;
             string query = "SELECT E.CodigoEncargado AS Codigo, Em.Nombre AS Empresa, CE.Nombre AS Cargo, " +
-                           "EE.Nombre AS Estado, E.Nombre, E.FechaContratado FROM Encargado E " +
+                           " E.Nombre, E.FechaContratado , EE.Nombre AS Estado FROM Encargado E " +
                            "JOIN Empresas Em ON E.CodigoEmpresa = Em.CodigoEmpresa " +
                            "JOIN CargoEncargado CE ON E.CodigoCargo = CE.CodigoCargo " +
                            "JOIN EstadoEncargado EE ON E.CodigoEstadoEn = EE.CodigoEstadoEn";
@@ -237,7 +237,7 @@ namespace Modelo
         public static DataTable BuscarEncargado(string Busqueda)
         {
             DataTable retorno;
-            string query = "SELECT * FROM CargarEncargados WHERE Nombre LIKE @Busqueda OR Estado LIKE @Busqueda";
+            string query = "SELECT * FROM CargarEncargados WHERE Nombre LIKE @Busqueda OR Estado LIKE @Busqueda OR Empresa LIKE @Busqueda";
             try
             {
                 SqlCommand cmdsearch = new SqlCommand(string.Format(query), Conexion.getConnect());

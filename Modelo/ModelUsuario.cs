@@ -190,7 +190,7 @@ namespace Modelo
         public static DataTable BuscarUsuario(string Busqueda)
         {
             DataTable retorno;
-            string query = "SELECT * FROM CargarEmpleados WHERE Usuario LIKE @Busqueda OR Nombre LIKE @Busqueda";
+            string query = "SELECT * FROM CargarEmpleados WHERE Usuario LIKE @Busqueda OR Nombre LIKE @Busqueda OR Apellido LIKE @Busqueda OR Estado LIKE @Busqueda";
             try
             {
                 SqlCommand cmdsearch = new SqlCommand(string.Format(query), Conexion.getConnect());

@@ -550,14 +550,14 @@ namespace Metrologia
             posicion = dgvEncargados.CurrentRow.Index;
 
             codigoEncargado = dgvEncargados[0, posicion].Value.ToString();
-            nombre = dgvEncargados[4, posicion].Value.ToString();
-            fecha = dgvEncargados[5, posicion].Value.ToString();
+            nombre = dgvEncargados[3, posicion].Value.ToString();
+            fecha = dgvEncargados[4, posicion].Value.ToString();
 
             codemp = dgvEncargados[1, posicion].Value.ToString();
 
             codcar = dgvEncargados[2, posicion].Value.ToString();
 
-            codesten = dgvEncargados[3, posicion].Value.ToString();
+            codesten = dgvEncargados[5, posicion].Value.ToString();
 
 
 

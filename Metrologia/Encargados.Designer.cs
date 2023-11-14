@@ -351,7 +351,7 @@
             this.dtpFecha.CustomizableEdges.BottomLeft = false;
             this.dtpFecha.CustomizableEdges.TopLeft = false;
             this.dtpFecha.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.dtpFecha.Font = new System.Drawing.Font("Mohave Regular", 12F);
+            this.dtpFecha.Font = new System.Drawing.Font("Mohave Regular", 12.5F);
             this.dtpFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpFecha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(43)))));
