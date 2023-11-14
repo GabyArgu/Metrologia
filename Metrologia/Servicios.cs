@@ -115,7 +115,8 @@ namespace Metrologia
             serviciocontrol.Precio = txtPrecio.Text;
             DateTime Fecha = dtpFechaEntrega.Value;
             serviciocontrol.Fecha = Fecha.ToString("MM/dd/yyyy");
-            serviciocontrol.Hora = Convert.ToString(dtpHoraEntrega.Value);
+            DateTime Hora = dtpHoraEntrega.Value;
+            serviciocontrol.Hora = Hora.ToString("hh:mm");
             serviciocontrol.Area = Convert.ToInt16(cbArea.SelectedValue);
             serviciocontrol.Empleado = Convert.ToInt16(cbEmpleado.SelectedValue);
             serviciocontrol.TipoSer = Convert.ToInt16(cbTipoSer.SelectedValue);
@@ -154,7 +155,8 @@ namespace Metrologia
             serviciocontrol.Precio = txtPrecio.Text;
             DateTime Fecha = dtpFechaEntrega.Value;
             serviciocontrol.Fecha = Fecha.ToString("MM/dd/yyyy");
-            serviciocontrol.Hora = Convert.ToString(dtpHoraEntrega.Value);
+            DateTime Hora = dtpHoraEntrega.Value;
+            serviciocontrol.Hora = Hora.ToString("hh:mm");
             serviciocontrol.Area = Convert.ToInt16(cbArea.SelectedValue); ;
             serviciocontrol.Empleado = Convert.ToInt16(cbEmpleado.SelectedValue);
             serviciocontrol.TipoSer = Convert.ToInt16(cbTipoSer.SelectedValue);

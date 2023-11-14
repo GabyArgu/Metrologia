@@ -174,12 +174,13 @@ namespace Metrologia
 
             cargarEmpresa();
             DataTable codigoEm = objselect.CargarEmpresa_Controller(Empresa);
-            object valorEm = codigoEm.Rows[0]["CodigoEmpresa"];            
-            cbEmpresa.SelectedIndex = int.Parse(valorEm.ToString()) - 1;
+            object valorEm = codigoEm.Rows[0]["CodigoEmpresa"];
+            int indiceEmpresa = cbEmpresa.FindStringExact(Empresa);
+            cbEmpresa.SelectedIndex = indiceEmpresa;
 
             cargarEncargado(int.Parse(valorEm.ToString()));
-            int indice = cbEncargado.FindStringExact(Encargado);
-            cbEncargado.SelectedIndex = indice;
+            int indiceEncargado = cbEncargado.FindStringExact(Encargado);
+            cbEncargado.SelectedIndex = indiceEncargado;
 
             cargarEstadoCi();
             DataTable codigoEstadoC = objselect.CargarEstado_Controller(EstadoCi);

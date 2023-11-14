@@ -54,15 +54,6 @@ C:\Users\home\Desktop\JosuéArg\ITR\Josué\1° Bachillerato (Desarrollo de Softw
 C:\Users\home\Desktop\JosuéArg\ITR\Josué\1° Bachillerato (Desarrollo de Software)\Expo 2020\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
 C:\Users\home\Desktop\JosuéArg\ITR\Josué\1° Bachillerato (Desarrollo de Software)\Expo 2020\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\obj\Debug\Controlador.dll
 C:\Users\home\Desktop\JosuéArg\ITR\Josué\1° Bachillerato (Desarrollo de Software)\Expo 2020\Sistema de Administración para Funeraria Integral\Proyecto\SAFIN\Controlador\obj\Debug\Controlador.pdb
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Debug\Controlador.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Debug\Controlador.pdb
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Debug\Modelo.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Debug\Modelo.pdb
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Debug\Controlador.csproj.AssemblyReference.cache
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Debug\Controlador.csproj.CopyComplete
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Debug\Controlador.dll
-C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Debug\Controlador.pdb
 C:\xampp\htdocs\Metrologia\Controlador\bin\Debug\Controlador.dll
 C:\xampp\htdocs\Metrologia\Controlador\bin\Debug\Controlador.pdb
 C:\xampp\htdocs\Metrologia\Controlador\bin\Debug\Modelo.dll
@@ -72,3 +63,12 @@ C:\xampp\htdocs\Metrologia\Controlador\obj\Debug\Controlador.csproj.CoreCompileI
 C:\xampp\htdocs\Metrologia\Controlador\obj\Debug\Controlador.csproj.CopyComplete
 C:\xampp\htdocs\Metrologia\Controlador\obj\Debug\Controlador.dll
 C:\xampp\htdocs\Metrologia\Controlador\obj\Debug\Controlador.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Debug\Controlador.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Debug\Controlador.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Debug\Modelo.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\bin\Debug\Modelo.pdb
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Debug\Controlador.csproj.AssemblyReference.cache
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Debug\Controlador.csproj.CopyComplete
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Debug\Controlador.dll
+C:\Users\elmer\OneDrive\Documentos\GitHub\Metrologia\Controlador\obj\Debug\Controlador.pdb
