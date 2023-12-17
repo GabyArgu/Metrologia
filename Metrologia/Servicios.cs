@@ -255,5 +255,13 @@ namespace Metrologia
                 e.Handled = true;
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Codigo formE = new Codigo();
+
+            // Mostrar el formulario
+            formE.Show();
+        }
     }
 }

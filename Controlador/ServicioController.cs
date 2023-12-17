@@ -43,6 +43,12 @@ namespace Controlador
         {
             return ModelServicio.CargarServicio(CodigoC);
         }
+
+        public DataTable Reporte_Controller(string codigoServicio)
+        {
+            return ModelServicio.Reporte(codigoServicio);
+        }
+
         public static DataTable CargarTipoSer_Controller()
         {
             return ModelServicio.CargarTipoSer();

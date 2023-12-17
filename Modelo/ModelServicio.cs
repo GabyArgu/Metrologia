@@ -12,6 +12,34 @@ namespace Modelo
 {
     public class ModelServicio
     {
+        public static DataTable Reporte(string CodigoServicio)
+        {
+            DataTable data;
+            try
+            {
+                string query = "SELECT" +
+                    "   E.RazonSocial AS Razón_Social,E.Direccion, S.FechaEntrega, TS.Nombre AS Tipo_Servicio, S.Comentarios, " +
+                    " S.Precio FROM Servicio S INNER JOIN Cita C ON S.CodigoCita = C.CodigoCita " +
+                    "INNER JOIN Empresas E ON C.CodigoEmpresa = E.CodigoEmpresa " +
+                    "INNER JOIN TipoServicio TS ON S.CodigoTipo = TS.CodigoTipo " +
+                    "WHERE S.CodigoServicio = @codigoSer";
+                SqlCommand cmdselect = new SqlCommand(string.Format(query), Conexion.getConnect());
+                cmdselect.Parameters.Add(new SqlParameter("codigoSer", CodigoServicio));
+                SqlDataAdapter adp = new SqlDataAdapter(cmdselect);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+            finally
+            {
+                Conexion.getConnect().Close();
+            }
+        }
+
         public static DataTable CargarArea()
         {
             DataTable data;

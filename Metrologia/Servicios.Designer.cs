@@ -41,11 +41,13 @@
             this.cbEstadoSer = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtcodigoCita = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.txtPrecio = new Guna.UI2.WinForms.Guna2TextBox();
             this.elipServ = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dtpFechaEntrega = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpHoraEntrega = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dgcServicio = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.btnImprimir = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlCodigoServicio = new System.Windows.Forms.Panel();
@@ -55,7 +57,6 @@
             this.pnlCodigoEmpleado = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgcServicio = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
@@ -318,20 +319,6 @@
             this.panel6.Size = new System.Drawing.Size(510, 32);
             this.panel6.TabIndex = 91;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Location = new System.Drawing.Point(472, 6);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(20, 20);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // txtPrecio
             // 
             this.txtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -421,6 +408,40 @@
             this.dtpHoraEntrega.TabIndex = 94;
             this.dtpHoraEntrega.UseTransparentBackground = true;
             this.dtpHoraEntrega.Value = new System.DateTime(2023, 11, 6, 2, 3, 31, 380);
+            // 
+            // dgcServicio
+            // 
+            this.dgcServicio.DockIndicatorTransparencyValue = 0.6D;
+            this.dgcServicio.TargetControl = this.panel6;
+            this.dgcServicio.UseTransparentDrag = true;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.Transparent;
+            this.btnImprimir.BackgroundImage = global::Metrologia.Properties.Resources.imprimirS;
+            this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.ForeColor = System.Drawing.Color.Coral;
+            this.btnImprimir.Location = new System.Drawing.Point(34, 762);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(51, 47);
+            this.btnImprimir.TabIndex = 83;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSalir.BackgroundImage = global::Metrologia.Properties.Resources.x;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Location = new System.Drawing.Point(472, 6);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // panel5
             // 
@@ -530,18 +551,13 @@
             this.panel2.Size = new System.Drawing.Size(51, 50);
             this.panel2.TabIndex = 68;
             // 
-            // dgcServicio
-            // 
-            this.dgcServicio.DockIndicatorTransparencyValue = 0.6D;
-            this.dgcServicio.TargetControl = this.panel6;
-            this.dgcServicio.UseTransparentDrag = true;
-            // 
             // Servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(226)))), ((int)(((byte)(144)))));
             this.ClientSize = new System.Drawing.Size(505, 829);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.dtpHoraEntrega);
             this.Controls.Add(this.dtpFechaEntrega);
             this.Controls.Add(this.panel6);
@@ -606,5 +622,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpFechaEntrega;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpHoraEntrega;
         private Guna.UI2.WinForms.Guna2DragControl dgcServicio;
+        private System.Windows.Forms.Panel btnImprimir;
     }
 }
